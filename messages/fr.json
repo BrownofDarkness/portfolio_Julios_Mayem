@@ -5,7 +5,7 @@
   },
   "nav": {
     "work": "Travail",
-    "caseStudy": "Étude de cas",
+    "about": "À propos",
     "notes": "Notes",
     "distinctions": "Distinctions",
     "contact": "Contact",
@@ -37,6 +37,8 @@
     "footnote": "En ce moment, je débogue une pipeline OpenCV qui refuse de tourner correctement sur du matériel ARM."
   },
   "sections": {
+    "aboutTitle": "À propos",
+    "aboutAside": "Parcours · vision · engagement",
     "projectsTitle": "Projets sélectionnés",
     "projectsAside": "Cinq projets · 2022 — 2026",
     "caseStudyTitle": "Étude de cas",
@@ -44,7 +46,36 @@
     "notesSubtitle": "Un carnet de notes courtes sur des sujets techniques précis — pour documenter la façon dont je réfléchis et je résous des problèmes concrets.",
     "notesAside": "À venir — trois premiers sujets",
     "distinctionsTitle": "Distinctions",
-    "distinctionsAside": "Trois · académique & communauté"
+    "distinctionsAside": "Trois · académique & communauté",
+    "contactTitle": "Contact",
+    "contactAside": "Yaoundé, Cameroun — septembre 2026",
+    "skillsTitle": "Compétences",
+    "skillsAside": "Langages · frameworks · outils"
+  },
+  "skills": {
+    "lead": "Un tour d'horizon des technologies que je pratique — pas une liste exhaustive, seulement ce que j'utilise vraiment. Le reste s'apprend au moment où il faut.",
+    "groups": {
+      "languages": "Langages",
+      "frameworks": "Frameworks",
+      "data": "Bases de données",
+      "tools": "Outils & embarqué"
+    }
+  },
+  "about": {
+    "p1": "Je suis né à Yaoundé, j'y ai grandi, et c'est là que je code aujourd'hui. Mon parcours technique a commencé à l'IUT de Ngaoundéré (DUT en génie logiciel, classé 3ᵉ sur 100, mention Bien), puis s'est poursuivi à l'Institut universitaire des sciences des technologies et éthique où j'ai obtenu ma licence professionnelle avec la mention Très Bien — premier de promotion, moyenne de 17,75/20.",
+    "p2": "En 2024, j'ai rejoint BkSquare SARL en tant que stagiaire de recherche pour concevoir un système de reconnaissance faciale. Le projet a été validé, adopté en interne, et l'entreprise m'a recruté à l'issue du stage. Depuis, je travaille sur la maintenance des applications, la digitalisation des processus internes et l'optimisation des flux de données.",
+    "p3": "En parallèle, j'ai coordonné les communautés informatiques des régions de l'Adamaoua et de l'Extrême-Nord (2023–2024), présidé le Club Informatique de l'IUT de Ngaoundéré (2021–2022), et donné des cours particuliers de mathématiques et d'informatique. Enseigner m'a appris à choisir mes mots — c'est utile pour écrire du code lisible.",
+    "signature": "Rigueur conceptuelle et impact tangible : mettre l'intelligence artificielle et l'ingénierie logicielle au service de solutions concrètes et mesurables.",
+    "side": {
+      "education": "Formation",
+      "eduLine1": "Licence pro. génie logiciel",
+      "eduLine2": "Mention Très Bien · 1ᵉʳ / 25",
+      "role": "En poste",
+      "roleLine1": "Développeur — BkSquare SARL",
+      "roleLine2": "Yaoundé, depuis 2024",
+      "languages": "Langues",
+      "languagesValue": "Français (langue maternelle) · Anglais (B2)"
+    }
   },
   "distinctions": {
     "items": [
@@ -69,8 +100,9 @@
     ]
   },
   "footer": {
-    "contact": "Écrire à",
-    "location": "Yaoundé, Cameroun",
+    "contact": "Contact",
+    "networks": "Réseaux",
+    "location": "Basé à",
     "buildLabel": "édition",
     "buildDate": "sept. 2026"
   }

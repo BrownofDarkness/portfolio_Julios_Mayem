@@ -39,6 +39,38 @@ body {
   color: var(--bg);
 }
 
+/* ---------- Grille de fond globale (subtile, sur tout le body) ---------- */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.014) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.014) 1px, transparent 1px);
+  background-size: 48px 48px;
+  /* Un très léger dégradé radial pour éviter l'effet "quadrillage uniforme" */
+  mask-image: radial-gradient(
+    ellipse 80% 80% at 50% 30%,
+    black 0%,
+    rgba(0, 0, 0, 0.75) 40%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse 80% 80% at 50% 30%,
+    black 0%,
+    rgba(0, 0, 0, 0.75) 40%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+}
+
+/* Tout le contenu est au-dessus de la grille */
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
 img,
 picture,
 svg,

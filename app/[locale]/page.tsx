@@ -4,6 +4,8 @@ import { routing, type Locale } from "@/i18n/routing";
 import { getProjects } from "@/lib/content";
 
 import { Hero } from "@/components/hero/Hero";
+import { About } from "@/components/about/About";
+import { Skills } from "@/components/skills/Skills";
 import { SectionHead } from "@/components/section/SectionHead";
 import { ProjectsGrid } from "@/components/project/ProjectsGrid";
 import { ProjectCard } from "@/components/project/ProjectCard";
@@ -48,10 +50,30 @@ export default async function HomePage({
           </ProjectsGrid>
         </section>
 
+        {/* ---------- Section À propos ---------- */}
+        <section className={styles.block} id="a-propos">
+          <SectionHead
+            index="02."
+            title={t("sections.aboutTitle")}
+            aside={t("sections.aboutAside")}
+          />
+          <About />
+        </section>
+
+        {/* ---------- Section Compétences ---------- */}
+        <section className={styles.block} id="competences">
+          <SectionHead
+            index="03."
+            title={t("sections.skillsTitle")}
+            aside={t("sections.skillsAside")}
+          />
+          <Skills />
+        </section>
+
         {/* ---------- Section Notes ---------- */}
         <section className={styles.block} id="notes">
           <SectionHead
-            index="02."
+            index="04."
             title={t("sections.notesTitle")}
             aside={t("sections.notesAside")}
           />
@@ -61,7 +83,7 @@ export default async function HomePage({
         {/* ---------- Section Distinctions ---------- */}
         <section className={styles.block} id="distinctions">
           <SectionHead
-            index="03."
+            index="05."
             title={t("sections.distinctionsTitle")}
             aside={t("sections.distinctionsAside")}
           />

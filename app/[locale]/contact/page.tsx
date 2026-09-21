@@ -1,39 +1,118 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
-import { routing } from "@/i18n/routing";
+import { routing, type Locale } from "@/i18n/routing";
+import { SectionHead } from "@/components/section/SectionHead";
+import { Socials } from "@/components/socials/Socials";
+
+import styles from "./contact.module.css";
 
 export default async function ContactPage({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
-  if (!routing.locales.includes(locale as (typeof routing.locales)[number])) {
-    return null;
-  }
+  const { locale: raw } = await params;
+  if (!routing.locales.includes(raw as Locale)) return null;
+  const locale = raw as Locale;
   setRequestLocale(locale);
 
   const t = await getTranslations();
 
   return (
-    <main className="wrap" style={{ padding: "6rem 2rem" }}>
-      <h1>{t("nav.contact")}</h1>
-      <p style={{ color: "var(--text-2)", marginTop: "1rem" }}>
-        {t("footer.contact")}{" "}
-        <a href="mailto:maesjulios@gmail.com" className="inline">
-          maesjulios@gmail.com
-        </a>
-        .
-      </p>
-      <p
-        className="mono"
-        style={{
-          color: "var(--muted)",
-          fontSize: "11px",
-          marginTop: "3rem",
-        }}
-      >
-        {t("footer.location")}
-      </p>
-    </main>
+    <div className={`wrap ${styles.wrap}`}>
+      <SectionHead
+        index="—"
+        title={t("sections.contactTitle")}
+        aside={t("sections.contactAside")}
+      />
+
+      <div className={styles.grid}>
+        <div className={styles.left}>
+          <p className={styles.lead}>
+            {locale === "fr" ? (
+              <>
+                Le formulaire arrive bientôt. En attendant, écrivez-moi
+                directement — je réponds sous <b>48 heures</b>, ou plus
+                vite selon le fuseau.
+              </>
+            ) : (
+              <>
+                A proper form is coming soon. In the meantime, reach out
+                directly — I answer within <b>48 hours</b>, faster
+                depending on the timezone.
+              </>
+            )}
+          </p>
+
+          <div className={styles.channels}>
+            <div className={styles.channel}>
+              <div className={styles.label}>Email</div>
+              <a
+                href="mailto:maesjulios@gmail.com"
+                className={styles.mainLink}
+              >
+                maesjulios@gmail.com
+              </a>
+            </div>
+
+            <div className={styles.channel}>
+              <div className={styles.label}>
+                {locale === "fr" ? "Téléphone" : "Phone"}
+              </div>
+              <ul className={styles.list}>
+                <li>
+                  <a href="tel:+237678542195" className={styles.item}>
+                    <span className={styles.itemKey}>tel</span>
+                    <span className={styles.itemVal}>+237 678 54 21 95</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+237656788959" className={styles.item}>
+                    <span className={styles.itemKey}>tel</span>
+                    <span className={styles.itemVal}>+237 656 78 89 59</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className={styles.channel}>
+              <div className={styles.label}>
+                {locale === "fr" ? "Réseaux" : "Networks"}
+              </div>
+              <Socials size={22} />
+            </div>
+          </div>
+        </div>
+
+        <aside className={styles.side}>
+          <div className={styles.sideBlock}>
+            <div className={styles.label}>
+              {locale === "fr" ? "Basé à" : "Based in"}
+            </div>
+            <div className={styles.sideValue}>Yaoundé, Cameroun</div>
+            <div className={styles.sideMuted}>UTC+1</div>
+          </div>
+          <div className={styles.sideBlock}>
+            <div className={styles.label}>
+              {locale === "fr" ? "Ouvert à" : "Open to"}
+            </div>
+            <div className={styles.sideValue}>
+              {locale === "fr" ? (
+                <>
+                  Master / doctorat<br />
+                  Mission de recherche<br />
+                  Poste en labo IA
+                </>
+              ) : (
+                <>
+                  Master's / PhD<br />
+                  Research contracts<br />
+                  AI-lab positions
+                </>
+              )}
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
   );
 }

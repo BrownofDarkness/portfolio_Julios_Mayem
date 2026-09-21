@@ -1,0 +1,137 @@
+.wrap {
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 14rem;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+.left { max-width: 36rem; }
+
+.lead {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--text);
+  margin: 0 0 2.5rem;
+}
+.lead b { font-weight: 500; }
+
+.channels {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.channel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  font-variant-caps: all-small-caps;
+  font-feature-settings: "smcp" 1, "c2sc" 1, "lnum" 1;
+}
+
+.mainLink {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.012em;
+  border-bottom: 1px solid var(--border-2);
+  padding-bottom: 2px;
+  align-self: flex-start;
+  transition: color var(--dur-med) var(--ease),
+              border-color var(--dur-med) var(--ease);
+}
+.mainLink:hover { color: var(--blue); border-color: var(--blue); }
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.item {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.85rem;
+  color: var(--text);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 15px;
+  transition: color var(--dur-med) var(--ease);
+}
+.item:hover { color: var(--blue); }
+.item:hover .ext { color: var(--blue); transform: translate(1px, -1px); }
+
+.itemKey {
+  color: var(--muted);
+  font-size: 13px;
+  min-width: 6ch;
+}
+
+.itemVal {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.ext {
+  color: var(--dim);
+  font-size: 0.8em;
+  transform: translateY(-0.05em);
+  transition: transform var(--dur-med) var(--ease),
+              color var(--dur-med) var(--ease);
+}
+
+/* ---------- Side ---------- */
+.side {
+  padding-left: 1.75rem;
+  border-left: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+@media (max-width: 900px) {
+  .side {
+    padding-left: 1.25rem;
+    margin-top: 1rem;
+  }
+}
+
+.sideBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.sideValue {
+  color: var(--text);
+  line-height: 1.55;
+  font-size: 14.5px;
+}
+
+.sideMuted {
+  color: var(--muted);
+  font-size: 13px;
+  font-family: var(--font-mono);
+}

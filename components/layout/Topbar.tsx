@@ -15,10 +15,10 @@ export async function Topbar() {
 
   const items = [
     { href: "#travail", key: "work", num: "01" },
-    { href: "#kkbsecu", key: "caseStudy", num: "02" },
+    { href: "#a-propos", key: "about", num: "02" },
     { href: "#notes", key: "notes", num: "03" },
     { href: "#distinctions", key: "distinctions", num: "04" },
-    { href: "#contact", key: "contact", num: "05" },
+    { href: "#contact-footer", key: "contact", num: "05" },
   ] as const;
 
   return (

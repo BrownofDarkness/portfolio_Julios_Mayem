@@ -1,0 +1,86 @@
+.wrap {
+  display: grid;
+  grid-template-columns: 1fr 15rem;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .wrap { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+.body {
+  max-width: 42rem;
+}
+
+.p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--text);
+  margin: 0 0 1.15rem;
+}
+.p:last-of-type { margin-bottom: 2rem; }
+
+.signature {
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.sigLabel {
+  color: var(--gold);
+  font-family: var(--font-mono);
+  font-size: 15px;
+}
+
+.sigQuote {
+  font-style: italic;
+  color: var(--text-2);
+  font-size: 16px;
+  line-height: 1.55;
+  max-width: 36rem;
+}
+
+/* ---------- Side ---------- */
+.side {
+  padding-left: 1.75rem;
+  border-left: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .side {
+    padding-left: 1.25rem;
+    margin-top: 1rem;
+  }
+}
+
+.sideBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.sideLabel {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  font-variant-caps: all-small-caps;
+  font-feature-settings: "smcp" 1, "c2sc" 1, "lnum" 1;
+}
+
+.sideValue {
+  color: var(--text);
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.sideMuted {
+  color: var(--muted);
+  font-size: 13px;
+}

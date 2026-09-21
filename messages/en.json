@@ -5,7 +5,7 @@
   },
   "nav": {
     "work": "Work",
-    "caseStudy": "Case study",
+    "about": "About",
     "notes": "Notes",
     "distinctions": "Awards",
     "contact": "Contact",
@@ -37,6 +37,8 @@
     "footnote": "Currently debugging an OpenCV pipeline that refuses to run properly on ARM hardware."
   },
   "sections": {
+    "aboutTitle": "About",
+    "aboutAside": "Path · vision · engagement",
     "projectsTitle": "Selected work",
     "projectsAside": "Five projects · 2022 — 2026",
     "caseStudyTitle": "Case study",
@@ -44,7 +46,36 @@
     "notesSubtitle": "A short-form notebook on precise technical topics — documenting how I think and solve concrete problems.",
     "notesAside": "Coming soon — first three topics",
     "distinctionsTitle": "Distinctions",
-    "distinctionsAside": "Three · academic & community"
+    "distinctionsAside": "Three · academic & community",
+    "contactTitle": "Contact",
+    "contactAside": "Yaoundé, Cameroon — September 2026",
+    "skillsTitle": "Skills",
+    "skillsAside": "Languages · frameworks · tools"
+  },
+  "skills": {
+    "lead": "An overview of the technologies I actually use — not an exhaustive list. Whatever's missing, I'll learn when the moment comes.",
+    "groups": {
+      "languages": "Languages",
+      "frameworks": "Frameworks",
+      "data": "Databases",
+      "tools": "Tools & embedded"
+    }
+  },
+  "about": {
+    "p1": "I was born in Yaoundé, I grew up here, and this is where I write software today. My technical path started at the University Institute of Technology in Ngaoundéré (DUT in software engineering, ranked 3rd of 100, mention Bien), then continued at the University Institute of Science, Technology and Ethics where I earned my professional Bachelor's degree with the highest honours — first of my promotion, GPA of 17.75/20.",
+    "p2": "In 2024, I joined BkSquare SARL as a research intern to design a facial-recognition system. The project was validated, adopted in-house, and the company hired me at the end of the internship. Since then, I've been working on application maintenance, internal-process digitalisation, and data-flow optimisation.",
+    "p3": "Alongside that, I coordinated the IT communities of the Adamaoua and Far-North regions (2023–2024), chaired the IUT Ngaoundéré Computer Club (2021–2022), and gave private tutoring in mathematics and computer science. Teaching taught me to choose my words carefully — it's useful for writing readable code.",
+    "signature": "Conceptual rigor, tangible impact: putting artificial intelligence and software engineering at the service of concrete, measurable solutions.",
+    "side": {
+      "education": "Education",
+      "eduLine1": "B.Sc. software engineering",
+      "eduLine2": "Top honours · 1st / 25",
+      "role": "Currently",
+      "roleLine1": "Developer — BkSquare SARL",
+      "roleLine2": "Yaoundé, since 2024",
+      "languages": "Languages",
+      "languagesValue": "French (native) · English (B2)"
+    }
   },
   "distinctions": {
     "items": [
@@ -69,8 +100,9 @@
     ]
   },
   "footer": {
-    "contact": "Write to",
-    "location": "Yaoundé, Cameroon",
+    "contact": "Contact",
+    "networks": "Networks",
+    "location": "Based in",
     "buildLabel": "edition",
     "buildDate": "sep. 2026"
   }
