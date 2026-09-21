@@ -46,6 +46,28 @@
     "distinctionsTitle": "Distinctions",
     "distinctionsAside": "Trois · académique & communauté"
   },
+  "distinctions": {
+    "items": [
+      {
+        "label": "Prime présidentielle",
+        "title": "Excellence académique — Licence 1",
+        "year": "2021",
+        "issuer": "République du Cameroun"
+      },
+      {
+        "label": "Prime présidentielle",
+        "title": "Excellence académique — Licence 2",
+        "year": "2022",
+        "issuer": "République du Cameroun"
+      },
+      {
+        "label": "Prix — GDG Ngaoundéré",
+        "title": "Quiz — écosystème Google & IA",
+        "year": "2022",
+        "issuer": "Communauté"
+      }
+    ]
+  },
   "footer": {
     "contact": "Écrire à",
     "location": "Yaoundé, Cameroun",

@@ -7,6 +7,8 @@ import { Analytics } from "@vercel/analytics/next";
 
 import { routing } from "@/i18n/routing";
 import { inter, jetbrainsMono } from "@/lib/fonts";
+import { Topbar } from "@/components/layout/Topbar";
+import { Footer } from "@/components/layout/Footer";
 
 import "@/styles/main.css";
 
@@ -25,7 +27,9 @@ export async function generateMetadata({
   return {
     title: t("title"),
     description: t("description"),
-    metadataBase: new URL("https://portfolio.julios.dev"),
+    metadataBase: new URL(
+      process.env.NEXT_PUBLIC_SITE_URL || "https://portfolio.julios.dev"
+    ),
     alternates: {
       canonical: `/${locale}`,
       languages: {
@@ -63,7 +67,11 @@ export default async function LocaleLayout({
       className={`${inter.variable} ${jetbrainsMono.variable}`}
     >
       <body>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          <Topbar />
+          {children}
+          <Footer />
+        </NextIntlClientProvider>
         <Analytics />
       </body>
     </html>

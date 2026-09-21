@@ -1,0 +1,52 @@
+.wrap {
+  display: inline-flex;
+  align-items: baseline;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+  font-variant-caps: all-small-caps;
+  font-feature-settings: "smcp" 1, "c2sc" 1, "lnum" 1;
+}
+
+.active,
+.inactive {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  transition: color var(--dur-med) var(--ease);
+}
+
+.active {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.inactive {
+  color: var(--muted);
+}
+.inactive:hover {
+  color: var(--text);
+}
+
+.sep {
+  color: var(--dim);
+  padding: 0 4px;
+  cursor: default;
+}
+
+/* utilitaire pour le focus visible */
+.active:focus-visible,
+.inactive:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* hack pour éviter que ce composant reste vide */
+.hidden {
+  display: none;
+}

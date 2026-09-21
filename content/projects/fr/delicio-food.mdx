@@ -1,0 +1,32 @@
+---
+title: "Delicio Food"
+slug: "delicio-food"
+year: 2023
+status: "prototype"
+summary: "Application mobile Flutter pour localiser les restaurants proches. Persistance SQLite, intégration Google Maps, filtrage instantané."
+stack: ["flutter", "dart", "gmaps", "sqlite"]
+badges:
+  - { label: "Prototype mobile", variant: "muted" }
+metrics:
+  - { value: "< 300 ms", label: "Filtrage" }
+  - { value: "60 fps", label: "Interface" }
+order: 3
+---
+
+# Trouver un restaurant proche, filtré par ce qu'on cherche vraiment.
+
+Delicio Food est né d'un constat : les applis de recherche
+n'aidaient pas à trancher entre dix propositions équivalentes. Il
+manquait un filtrage rapide et une **carte qui se rafraîchit à
+l'instant** où l'utilisateur change son critère.
+
+J'ai développé l'application avec **Flutter et Dart**, intégré
+Google Maps et la géolocalisation GPS, et organisé une persistance
+SQLite pour les favoris et l'historique — de sorte que
+l'application reste utilisable en réseau dégradé. Le calcul de
+distance et le filtrage tournent en dessous de **300 ms** sur les
+appareils testés.
+
+L'expérience est optimisée pour rester fluide (jusqu'à
+**60 images par seconde** sur Android testé), ce qui compte dans un
+usage de rue, une main sur le téléphone.

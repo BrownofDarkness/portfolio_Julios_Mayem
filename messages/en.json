@@ -46,6 +46,28 @@
     "distinctionsTitle": "Distinctions",
     "distinctionsAside": "Three · academic & community"
   },
+  "distinctions": {
+    "items": [
+      {
+        "label": "Presidential award",
+        "title": "Academic excellence — Bachelor 1",
+        "year": "2021",
+        "issuer": "Republic of Cameroon"
+      },
+      {
+        "label": "Presidential award",
+        "title": "Academic excellence — Bachelor 2",
+        "year": "2022",
+        "issuer": "Republic of Cameroon"
+      },
+      {
+        "label": "GDG Ngaoundéré Prize",
+        "title": "Quiz — Google ecosystem & AI",
+        "year": "2022",
+        "issuer": "Community"
+      }
+    ]
+  },
   "footer": {
     "contact": "Write to",
     "location": "Yaoundé, Cameroon",

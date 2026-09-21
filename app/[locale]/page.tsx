@@ -1,45 +1,86 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 
-/**
- * Home — squelette provisoire de Phase 0.
- * Sera remplacé en Phase 1 par le vrai composant Hero + sections.
- */
+import { routing, type Locale } from "@/i18n/routing";
+import { getProjects } from "@/lib/content";
+
+import { Hero } from "@/components/hero/Hero";
+import { SectionHead } from "@/components/section/SectionHead";
+import { ProjectsGrid } from "@/components/project/ProjectsGrid";
+import { ProjectCard } from "@/components/project/ProjectCard";
+import { NotesTeaser } from "@/components/section/NotesTeaser";
+import {
+  DistinctionsGrid,
+  type DistinctionData,
+} from "@/components/distinction/Distinction";
+
+import styles from "./home.module.css";
+
 export default async function HomePage({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
+  const { locale: raw } = await params;
+
+  if (!routing.locales.includes(raw as Locale)) return null;
+  const locale = raw as Locale;
   setRequestLocale(locale);
 
   const t = await getTranslations();
+  const projects = await getProjects(locale);
 
   return (
-    <main className="wrap" style={{ padding: "6rem 2rem" }}>
-      <p className="mono" style={{ color: "var(--muted)", fontSize: "11px" }}>
-        {t("hero.location")} — {t("hero.role")}
-      </p>
-      <h1 style={{ marginTop: "1rem" }}>{t("hero.titleLine1")}</h1>
-      <p
-        style={{
-          color: "var(--text-2)",
-          maxWidth: "34rem",
-          marginTop: "1rem",
-          fontSize: "17px",
-        }}
-      >
-        {t("hero.titleLine2")}
-      </p>
-      <p
-        className="mono"
-        style={{
-          marginTop: "3rem",
-          color: "var(--dim)",
-          fontSize: "10.5px",
-        }}
-      >
-        Phase 0 · setup en cours — Home réel arrive en Phase 1.
-      </p>
-    </main>
+    <>
+      <Hero />
+
+      <div className="wrap">
+        {/* ---------- Section Projets ---------- */}
+        <section className={styles.block} id="travail">
+          <SectionHead
+            index="01."
+            title={t("sections.projectsTitle")}
+            aside={t("sections.projectsAside")}
+          />
+          <ProjectsGrid>
+            {projects.map((p) => (
+              <ProjectCard key={p.slug} project={p} />
+            ))}
+          </ProjectsGrid>
+        </section>
+
+        {/* ---------- Section Notes ---------- */}
+        <section className={styles.block} id="notes">
+          <SectionHead
+            index="02."
+            title={t("sections.notesTitle")}
+            aside={t("sections.notesAside")}
+          />
+          <NotesTeaser locale={locale} />
+        </section>
+
+        {/* ---------- Section Distinctions ---------- */}
+        <section className={styles.block} id="distinctions">
+          <SectionHead
+            index="03."
+            title={t("sections.distinctionsTitle")}
+            aside={t("sections.distinctionsAside")}
+          />
+          <DistinctionsGridClient />
+        </section>
+      </div>
+    </>
   );
+}
+
+/**
+ * On délègue à un sous-composant serveur pour récupérer proprement
+ * le tableau de distinctions depuis next-intl (rich content).
+ */
+async function DistinctionsGridClient() {
+  const t = await getTranslations("distinctions");
+
+  // next-intl v4 : t.raw() renvoie un objet non-string tel qu'écrit dans le JSON
+  const items = t.raw("items") as DistinctionData[];
+
+  return <DistinctionsGrid items={items} />;
 }

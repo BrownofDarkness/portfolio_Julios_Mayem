@@ -1,0 +1,47 @@
+.foot {
+  margin-top: 5rem;
+  padding: 2.5rem 0 3rem;
+  border-top: 1px solid var(--border);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.contact {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.email {
+  color: var(--text);
+  text-decoration: none;
+  transition: color var(--dur-med) var(--ease);
+}
+.email:hover { color: var(--blue); }
+
+.sep { color: var(--dim); }
+
+.location { color: var(--muted); }
+
+.build {
+  color: var(--dim);
+  font-variant-numeric: tabular-nums;
+}
+
+.tab {
+  font-variant-numeric: tabular-nums;
+}
+
+.live {
+  color: var(--green);
+}

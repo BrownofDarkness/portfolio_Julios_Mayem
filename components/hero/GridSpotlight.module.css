@@ -1,0 +1,82 @@
+/* -------------------------------------------------------------
+   GridSpotlight — deux couches :
+   1) Une grille sombre "toujours visible", très discrète (base v4).
+   2) Une grille bleue "spotlight" masquée par un radial-gradient
+      centré sur (--mx, --my) mis à jour au mousemove.
+   ------------------------------------------------------------- */
+
+@property --mx {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 50%;
+}
+@property --my {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 20%;
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  --mx: 50%;
+  --my: 20%;
+}
+
+/* Couche 1 : la grille dim persistente */
+.grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(
+    ellipse at 50% 0%,
+    black 0%,
+    black 55%,
+    transparent 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse at 50% 0%,
+    black 0%,
+    black 55%,
+    transparent 100%
+  );
+}
+
+/* Couche 2 : la grille bleue "spotlight" révélée par le curseur */
+.grid::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(90, 155, 216, 0.22) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(90, 155, 216, 0.22) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(
+    280px at var(--mx) var(--my),
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.5) 35%,
+    transparent 70%
+  );
+  -webkit-mask-image: radial-gradient(
+    280px at var(--mx) var(--my),
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.5) 35%,
+    transparent 70%
+  );
+  transition: opacity var(--dur-slow) var(--ease);
+}
+
+/* Cachée sur mobile et si mouvement réduit */
+@media (max-width: 780px) {
+  .grid::after { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .grid::after { display: none; }
+}

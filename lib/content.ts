@@ -20,6 +20,14 @@ export const projectSchema = z.object({
   client: z.string().optional(),
   summary: z.string(),
   stack: z.array(z.string()).default([]),
+  badges: z
+    .array(
+      z.object({
+        label: z.string(),
+        variant: z.enum(["gold", "cyan", "muted"]).default("muted"),
+      })
+    )
+    .default([]),
   metrics: z
     .array(
       z.object({
@@ -28,6 +36,7 @@ export const projectSchema = z.object({
       })
     )
     .default([]),
+  wide: z.boolean().default(false),
   order: z.number().int().default(0),
 });
 
@@ -53,10 +62,10 @@ function contentDir(kind: "projects" | "notes", locale: Locale) {
 
 /* ---------- Loader générique ---------- */
 
-async function readCollection<T>(
+async function readCollection<S extends z.ZodTypeAny>(
   dir: string,
-  schema: z.ZodType<T>
-): Promise<Array<T & { body: string }>> {
+  schema: S
+): Promise<Array<z.output<S> & { body: string }>> {
   let entries: string[] = [];
   try {
     entries = await fs.readdir(dir);
@@ -70,7 +79,7 @@ async function readCollection<T>(
     files.map(async (file) => {
       const raw = await fs.readFile(path.join(dir, file), "utf-8");
       const { data, content } = matter(raw);
-      const parsed = schema.parse(data);
+      const parsed = schema.parse(data) as z.output<S>;
       return { ...parsed, body: content };
     })
   );

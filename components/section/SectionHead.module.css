@@ -1,0 +1,41 @@
+.head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 2.25rem;
+  padding-bottom: 1.15rem;
+  border-bottom: 1px solid var(--border);
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1.65rem;
+  letter-spacing: -0.024em;
+  color: var(--text);
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+  margin: 0;
+}
+
+.num {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--dim);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.aside {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  /* small caps réelles */
+  font-variant-caps: all-small-caps;
+  font-feature-settings: "smcp" 1, "c2sc" 1, "lnum" 1;
+  font-variant-numeric: tabular-nums;
+}
