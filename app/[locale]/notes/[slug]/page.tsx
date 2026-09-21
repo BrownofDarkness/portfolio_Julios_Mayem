@@ -6,7 +6,6 @@ import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
 
 import { routing, type Locale } from "@/i18n/routing";
-import { Link } from "@/i18n/navigation";
 import { getNote, getNotes } from "@/lib/content";
 import { mdxComponents } from "@/components/mdx/mdx-components";
 
@@ -63,9 +62,9 @@ export default async function NotePage({
   return (
     <div className="wrap">
       <nav className={styles.crumb}>
-        <Link href="/notes" className={styles.crumbLink}>
+        <a href={`/${locale}#notes`} className={styles.crumbLink}>
           ← {t("nav.notes")}
-        </Link>
+        </a>
       </nav>
 
       <header className={styles.head}>
