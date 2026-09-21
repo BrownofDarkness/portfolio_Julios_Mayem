@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "title": "Julios Mayem — Ingénieur logiciel, vision par ordinateur",
+    "description": "Portfolio de Julios Mayem : développeur camerounais orienté intelligence artificielle et vision par ordinateur. Yaoundé, Cameroun."
+  },
+  "nav": {
+    "work": "Travail",
+    "caseStudy": "Étude de cas",
+    "notes": "Notes",
+    "distinctions": "Distinctions",
+    "contact": "Contact",
+    "search": "Rechercher",
+    "changeLanguage": "Changer de langue"
+  },
+  "hero": {
+    "location": "Yaoundé, Cameroun",
+    "role": "Ingénieur logiciel",
+    "titleLine1": "Julios Mayem.",
+    "titleLine2": "J'entraîne des modèles de vision qui tournent sur du matériel modeste.",
+    "leadPart1": "Développeur chez",
+    "leadPart2": "depuis 2024, recruté à l'issue d'un stage de recherche en reconnaissance faciale.",
+    "signature": "Rigueur conceptuelle, impact tangible",
+    "signatureEnding": "— c'est la manière dont j'aborde chaque système.",
+    "ctaProjects": "Voir les projets",
+    "ctaContact": "Me contacter"
+  },
+  "now": {
+    "label": "Currently",
+    "status": "actif",
+    "rows": {
+      "role": "rôle",
+      "location": "basé à",
+      "focus": "focus",
+      "available": "disponible",
+      "updated": "édité"
+    },
+    "footnote": "En ce moment, je débogue une pipeline OpenCV qui refuse de tourner correctement sur du matériel ARM."
+  },
+  "sections": {
+    "projectsTitle": "Projets sélectionnés",
+    "projectsAside": "Cinq projets · 2022 — 2026",
+    "caseStudyTitle": "Étude de cas",
+    "notesTitle": "Notes techniques & recherche",
+    "notesSubtitle": "Un carnet de notes courtes sur des sujets techniques précis — pour documenter la façon dont je réfléchis et je résous des problèmes concrets.",
+    "notesAside": "À venir — trois premiers sujets",
+    "distinctionsTitle": "Distinctions",
+    "distinctionsAside": "Trois · académique & communauté"
+  },
+  "footer": {
+    "contact": "Écrire à",
+    "location": "Yaoundé, Cameroun",
+    "buildLabel": "édition",
+    "buildDate": "sept. 2026"
+  }
+}

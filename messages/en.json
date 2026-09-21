@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "title": "Julios Mayem — Software Engineer, computer vision",
+    "description": "Portfolio of Julios Mayem: Cameroonian developer focused on artificial intelligence and computer vision. Yaoundé, Cameroon."
+  },
+  "nav": {
+    "work": "Work",
+    "caseStudy": "Case study",
+    "notes": "Notes",
+    "distinctions": "Awards",
+    "contact": "Contact",
+    "search": "Search",
+    "changeLanguage": "Change language"
+  },
+  "hero": {
+    "location": "Yaoundé, Cameroon",
+    "role": "Software engineer",
+    "titleLine1": "Julios Mayem.",
+    "titleLine2": "I train computer-vision models that run on modest hardware.",
+    "leadPart1": "Developer at",
+    "leadPart2": "since 2024, hired after a research internship in facial recognition.",
+    "signature": "Conceptual rigor, tangible impact",
+    "signatureEnding": "— that's how I approach every system.",
+    "ctaProjects": "See the projects",
+    "ctaContact": "Get in touch"
+  },
+  "now": {
+    "label": "Currently",
+    "status": "active",
+    "rows": {
+      "role": "role",
+      "location": "based in",
+      "focus": "focus",
+      "available": "available",
+      "updated": "edited"
+    },
+    "footnote": "Currently debugging an OpenCV pipeline that refuses to run properly on ARM hardware."
+  },
+  "sections": {
+    "projectsTitle": "Selected work",
+    "projectsAside": "Five projects · 2022 — 2026",
+    "caseStudyTitle": "Case study",
+    "notesTitle": "Technical notes & research",
+    "notesSubtitle": "A short-form notebook on precise technical topics — documenting how I think and solve concrete problems.",
+    "notesAside": "Coming soon — first three topics",
+    "distinctionsTitle": "Distinctions",
+    "distinctionsAside": "Three · academic & community"
+  },
+  "footer": {
+    "contact": "Write to",
+    "location": "Yaoundé, Cameroon",
+    "buildLabel": "edition",
+    "buildDate": "sep. 2026"
+  }
+}

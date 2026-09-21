@@ -1,0 +1,32 @@
+---
+title: "KKBSECU"
+slug: "kkbsecu"
+year: 2024
+status: "production"
+client: "BkSquare SARL"
+summary: "Intelligent facial-recognition security system for BkSquare SARL. OpenCV pipeline, CustomTkinter interface, Firebase logging."
+stack: ["python", "opencv", "customtkinter", "firebase", "2tup"]
+metrics:
+  - { value: "> 95 %", label: "Recognition" }
+  - { value: "19 / 20", label: "Thesis" }
+order: 1
+---
+
+# Facial recognition for access control in a constrained environment.
+
+BkSquare wanted to reinforce access to a room containing sensitive
+computing equipment, without installing heavy infrastructure. I
+designed a facial-authentication system that runs on a modest fixed
+workstation, with a standard HD camera, and **logs every attempt**
+locally and to Firebase.
+
+The pipeline was implemented in Python with OpenCV for acquisition
+and detection, a recognition model trained on an internal sample,
+and an operator UI in CustomTkinter. Software modelling followed
+the **2TUP** process, supported by UML diagrams — that's what let
+me keep the code readable despite the rapid iterations the company
+was asking for.
+
+The system was defended as an end-of-degree thesis, **rated 19/20
+and named best defence project**. It's now in internal use at
+BkSquare, and I was hired at the end of the internship.

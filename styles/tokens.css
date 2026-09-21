@@ -1,0 +1,72 @@
+/* =============================================================
+   tokens.css — Le socle de tout le design system.
+   Palette OLED chaude + accent bleu/cyan + or (distinctions).
+   Durées non-rondes + easing physique.
+   Ne jamais introduire de valeur en dur ailleurs : tout passe par ici.
+   ============================================================= */
+
+:root {
+  /* ---------- Palette de fond (OLED profond) ---------- */
+  --bg:        #08090B;
+  --panel:     #12141A;
+  --panel-2:   #191C24;
+  --panel-3:   #1E222C;
+  --border:    #22262F;
+  --border-2:  #2D3240;
+
+  /* ---------- Textes (désaturés, jamais #FFF) ---------- */
+  --text:      #E8EAEE;
+  --text-2:    #B5BAC4;
+  --muted:     #7C818C;
+  --dim:       #4A4F5A;
+
+  /* ---------- Accents — brief Julios respecté ---------- */
+  --blue:      #5A9BD8;      /* accent principal, CTA, liens */
+  --blue-soft: #6BA9E0;
+  --blue-dim:  #3E6E9E;
+  --cyan:      #4EBFC9;      /* statut actif, accents ciblés */
+  --cyan-dim:  #2A7A80;
+  --gold:      #C9A961;      /* distinctions uniquement */
+  --gold-soft: rgba(201, 169, 97, 0.14);
+  --green:     #7EE787;      /* état "ok / online" uniquement */
+
+  /* ---------- Durées non-rondes + easing physique ---------- */
+  --dur-fast:  168ms;
+  --dur-med:   237ms;
+  --dur-slow:  413ms;
+  --dur-hero:  830ms;
+  --ease:      cubic-bezier(0.32, 0.72, 0, 1);
+  --ease-out:  cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* ---------- Espacements de base (multiples de 4) ---------- */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.5rem;
+  --space-6:  2rem;
+  --space-8:  3rem;
+  --space-10: 4rem;
+  --space-12: 5rem;
+  --space-16: 7rem;
+
+  /* ---------- Rayons discrets (jamais shadcn 8-12px) ---------- */
+  --radius-1: 4px;
+  --radius-2: 6px;
+  --radius-3: 8px;
+
+  /* ---------- Contenu max-width ---------- */
+  --wrap-max: 74rem;
+
+  /* ---------- Fonts (populés par next/font dans le layout) ---------- */
+  --font-sans: var(--font-inter), -apple-system, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+}
+
+/* ---------- Custom media queries (via PostCSS preset-env) ---------- */
+@custom-media --sm  (min-width: 640px);
+@custom-media --md  (min-width: 780px);
+@custom-media --lg  (min-width: 960px);
+@custom-media --xl  (min-width: 1200px);
+@custom-media --dark (prefers-color-scheme: dark);
+@custom-media --reduced-motion (prefers-reduced-motion: reduce);

@@ -1,0 +1,8 @@
+/* =============================================================
+   main.css — Point d'entrée orchestrant tout le design system.
+   Importé une seule fois depuis app/[locale]/layout.tsx.
+   ============================================================= */
+
+@import "./tokens.css";
+@import "./base.css";
+@import "./typography.css";

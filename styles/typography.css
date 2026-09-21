@@ -1,0 +1,80 @@
+/* =============================================================
+   typography.css — Réglages de craft typographique.
+   Small caps réelles, chiffres tabulaires, letter-spacing progressif.
+   Utilitaires réutilisables + réglages sur les balises structurantes.
+   ============================================================= */
+
+/* ---------- Utilitaires typographiques ---------- */
+
+/* Mono : chiffres tabulaires + zero slash pour lisibilité */
+.mono {
+  font-family: var(--font-mono);
+  font-feature-settings: "tnum" 1, "zero" 1, "ss01" 1;
+  letter-spacing: 0;
+}
+
+/* Chiffres tabulaires + lining (utilisé dans tables et métriques) */
+.tab {
+  font-variant-numeric: tabular-nums lining-nums;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+}
+
+/* Small caps RÉELLES (via OpenType) — jamais text-transform: uppercase */
+.smcp {
+  font-variant-caps: all-small-caps;
+  font-feature-settings: "smcp" 1, "c2sc" 1, "onum" 0, "lnum" 1;
+  letter-spacing: 0.06em;
+}
+
+/* Chiffres old-style (par défaut sur body, à réactiver si besoin) */
+.onum {
+  font-feature-settings: "onum" 1, "lnum" 0;
+}
+
+/* ---------- Titres — letter-spacing progressif ---------- */
+h1, h2, h3, h4 {
+  font-family: var(--font-sans);
+  color: var(--text);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  letter-spacing: -0.033em;
+  line-height: 1.05;
+}
+h2 {
+  font-size: 1.65rem;
+  letter-spacing: -0.024em;
+}
+h3 {
+  font-size: 1.375rem;
+  letter-spacing: -0.02em;
+}
+h4 {
+  font-size: 1.05rem;
+  letter-spacing: -0.014em;
+  font-weight: 500;
+}
+
+/* ---------- Paragraphes ---------- */
+p {
+  line-height: 1.6;
+}
+
+strong { font-weight: 600; color: var(--text); }
+em     { font-style: italic; color: var(--text); }
+
+/* ---------- Liens inline dans le corps ---------- */
+a.inline {
+  color: var(--text);
+  border-bottom: 1px solid var(--border-2);
+  padding-bottom: 1px;
+  transition: color var(--dur-med) var(--ease),
+              border-color var(--dur-med) var(--ease);
+}
+a.inline:hover {
+  color: var(--blue);
+  border-color: var(--blue);
+}

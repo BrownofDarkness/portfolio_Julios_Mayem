@@ -1,0 +1,33 @@
+---
+title: "KKBSECU"
+slug: "kkbsecu"
+year: 2024
+status: "production"
+client: "BkSquare SARL"
+summary: "Système intelligent de sécurité par reconnaissance faciale pour BkSquare SARL. Pipeline OpenCV, interface CustomTkinter, journalisation Firebase."
+stack: ["python", "opencv", "customtkinter", "firebase", "2tup"]
+metrics:
+  - { value: "> 95 %", label: "Reconnaissance" }
+  - { value: "19 / 20", label: "Mémoire" }
+order: 1
+---
+
+# Reconnaissance faciale pour un contrôle d'accès en environnement contraint.
+
+BkSquare voulait renforcer l'accès à une salle contenant du matériel
+informatique sensible, sans installer d'infrastructure lourde. J'ai
+conçu un système d'authentification faciale qui tourne sur un poste
+fixe modeste, avec une caméra HD standard, et qui **journalise chaque
+tentative** en local puis dans Firebase.
+
+Le pipeline a été implémenté en Python avec OpenCV pour l'acquisition
+et la détection, un modèle de reconnaissance entraîné sur un
+échantillon interne, et une interface opérateur en CustomTkinter. La
+modélisation logicielle a suivi le processus **2TUP**, appuyée par
+des diagrammes UML — c'est ce qui m'a permis de garder le code
+lisible malgré les itérations rapides demandées par l'entreprise.
+
+Le système a été soutenu comme mémoire de fin de licence,
+**noté 19/20 et désigné meilleur projet de soutenance**. Il est
+aujourd'hui en usage interne chez BkSquare, et j'ai été recruté à
+l'issue du stage.
