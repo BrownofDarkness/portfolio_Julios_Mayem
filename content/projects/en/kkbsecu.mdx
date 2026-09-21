@@ -17,6 +17,14 @@ order: 1
 
 # Facial recognition for access control in a constrained environment.
 
+<Figure
+  ratio="hero"
+  num="01"
+  dims="≈ 1600 × 900 px"
+  caption="Operator interface during an identification event (BkSquare, Yaoundé, 2024).">
+  Screenshot of the CustomTkinter interface at work, or a photo of the control station installed at BkSquare.
+</Figure>
+
 BkSquare wanted to reinforce access to a room containing sensitive
 computing equipment, without installing heavy infrastructure. I
 designed a facial-authentication system that runs on a modest fixed
@@ -30,6 +38,17 @@ the **2TUP** process, supported by UML diagrams — that's what let
 me keep the code readable despite the rapid iterations the company
 was asking for.
 
+<Figure
+  ratio="inline"
+  num="02"
+  caption="Simplified software architecture — acquisition, detection, recognition, logging.">
+  Pipeline diagram: camera capture → OpenCV processing → Firebase sync.
+</Figure>
+
 The system was defended as an end-of-degree thesis, **rated 19/20
 and named best defence project**. It's now in internal use at
 BkSquare, and I was hired at the end of the internship.
+
+<Callout kind="insight" label="What I take from it">
+Constraining the hardware forces the model to stay honest. A standard HD camera and a modest workstation impose choices (resolution, batching, framerate) that, made upfront, also improve code readability.
+</Callout>

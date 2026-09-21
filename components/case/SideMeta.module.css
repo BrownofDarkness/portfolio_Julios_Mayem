@@ -1,0 +1,45 @@
+.side {
+  position: sticky;
+  top: 5.5rem;
+  align-self: start;
+  padding-left: 1.75rem;
+  border-left: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .side {
+    position: static;
+    padding-left: 1.25rem;
+    margin-top: 2rem;
+  }
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+  font-variant-caps: all-small-caps;
+  font-feature-settings: "smcp" 1, "c2sc" 1, "lnum" 1;
+}
+
+.value {
+  color: var(--text);
+  line-height: 1.55;
+  font-size: 14.5px;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 13.5px;
+}

@@ -1,0 +1,135 @@
+/* -------------------------------------------------------------
+   Styles appliqués aux balises HTML rendues depuis MDX.
+   Utilise notre design system (tokens, typo).
+   ------------------------------------------------------------- */
+
+.h1 {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 1.85rem;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--text);
+  margin: 0 0 1.5rem;
+  max-width: 34rem;
+}
+
+.h2 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1.35rem;
+  letter-spacing: -0.018em;
+  color: var(--text);
+  margin: 2.5rem 0 1rem;
+}
+
+.h3 {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 1.1rem;
+  letter-spacing: -0.014em;
+  color: var(--text);
+  margin: 2rem 0 0.75rem;
+}
+
+.p {
+  font-size: 16.5px;
+  line-height: 1.7;
+  color: var(--text);
+  margin: 0 0 1.25rem;
+  max-width: 40rem;
+}
+.p:has(+ .p) { margin-bottom: 1rem; }
+
+.a {
+  color: var(--blue);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(90, 155, 216, 0.35);
+  padding-bottom: 1px;
+  transition: color var(--dur-med) var(--ease),
+              border-color var(--dur-med) var(--ease);
+}
+.a:hover {
+  color: var(--blue-soft);
+  border-bottom-color: var(--blue-soft);
+}
+
+.strong {
+  font-weight: 500;
+  color: var(--text);
+  /* Léger surlignage bleu subtil */
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    transparent 60%,
+    rgba(90, 155, 216, 0.14) 60%,
+    rgba(90, 155, 216, 0.14) 95%,
+    transparent 95%
+  );
+  padding: 0 2px;
+}
+
+.em {
+  font-style: italic;
+  color: var(--text);
+}
+
+.ul, .ol {
+  margin: 0 0 1.25rem;
+  padding-left: 1.25rem;
+  max-width: 40rem;
+}
+.li {
+  font-size: 16.5px;
+  line-height: 1.65;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+}
+.ul .li::marker { color: var(--blue); }
+.ol .li::marker { color: var(--muted); font-family: var(--font-mono); font-size: 14px; }
+
+.quote {
+  border-left: 2px solid var(--blue);
+  padding: 0.5rem 0 0.5rem 1.25rem;
+  margin: 1.75rem 0;
+  font-style: italic;
+  color: var(--text-2);
+  font-size: 17px;
+  line-height: 1.55;
+  max-width: 40rem;
+}
+
+.code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 0.1rem 0.35rem;
+  color: var(--text);
+}
+
+.pre {
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-2);
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  line-height: 1.55;
+  margin: 1.5rem 0;
+  color: var(--text);
+}
+.pre .code {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 3rem auto;
+  max-width: 6rem;
+}

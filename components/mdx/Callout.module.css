@@ -1,0 +1,32 @@
+.wrap {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-3);
+  padding: 1.35rem 1.5rem;
+  margin: 1.75rem 0;
+  background: var(--panel);
+  position: relative;
+}
+
+.note   { border-left: 2px solid var(--blue); }
+.quote  { border-left: 2px solid var(--gold); }
+.insight { border-left: 2px solid var(--cyan); }
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  font-variant-caps: all-small-caps;
+  font-feature-settings: "smcp" 1, "c2sc" 1, "lnum" 1;
+  margin-bottom: 0.5rem;
+}
+.note .label   { color: var(--blue); }
+.quote .label  { color: var(--gold); }
+.insight .label { color: var(--cyan); }
+
+.body {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text);
+}
+.body p { margin: 0; }
+.body p + p { margin-top: 0.75rem; }

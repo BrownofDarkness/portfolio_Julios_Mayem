@@ -1,0 +1,33 @@
+.crumb {
+  padding-top: 2.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.crumbLink {
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color var(--dur-med) var(--ease);
+}
+.crumbLink:hover { color: var(--blue); }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 16rem;
+  gap: 4rem;
+  padding-bottom: 5rem;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding-bottom: 3rem;
+  }
+}
+
+.body {
+  min-width: 0;
+  max-width: 44rem;
+}

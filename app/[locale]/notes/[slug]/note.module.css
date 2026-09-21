@@ -1,0 +1,57 @@
+.crumb {
+  padding-top: 2.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.crumbLink {
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color var(--dur-med) var(--ease);
+}
+.crumbLink:hover { color: var(--blue); }
+
+.head {
+  max-width: 44rem;
+  padding: 2rem 0 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  color: var(--cyan);
+  letter-spacing: 0.05em;
+  font-variant-caps: all-small-caps;
+  font-feature-settings: "smcp" 1, "c2sc" 1, "lnum" 1;
+  margin-bottom: 1.25rem;
+}
+
+.tab {
+  font-variant-numeric: tabular-nums;
+}
+
+.title {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: clamp(2rem, 4.5vw, 2.75rem);
+  letter-spacing: -0.028em;
+  line-height: 1.1;
+  color: var(--text);
+  margin: 0 0 1rem;
+}
+
+.summary {
+  font-size: 17px;
+  color: var(--text-2);
+  line-height: 1.55;
+  max-width: 36rem;
+  margin: 0;
+}
+
+.body {
+  max-width: 44rem;
+  padding-bottom: 5rem;
+}

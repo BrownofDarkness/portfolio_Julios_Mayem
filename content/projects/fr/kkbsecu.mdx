@@ -17,6 +17,14 @@ order: 1
 
 # Reconnaissance faciale pour un contrôle d'accès en environnement contraint.
 
+<Figure
+  ratio="hero"
+  num="01"
+  dims="≈ 1600 × 900 px"
+  caption="Interface opérateur au moment d'une identification (BkSquare, Yaoundé, 2024).">
+  Capture de l'interface CustomTkinter en fonctionnement, ou photo du poste de contrôle installé chez BkSquare.
+</Figure>
+
 BkSquare voulait renforcer l'accès à une salle contenant du matériel
 informatique sensible, sans installer d'infrastructure lourde. J'ai
 conçu un système d'authentification faciale qui tourne sur un poste
@@ -30,7 +38,18 @@ modélisation logicielle a suivi le processus **2TUP**, appuyée par
 des diagrammes UML — c'est ce qui m'a permis de garder le code
 lisible malgré les itérations rapides demandées par l'entreprise.
 
+<Figure
+  ratio="inline"
+  num="02"
+  caption="Architecture logicielle simplifiée — acquisition, détection, reconnaissance, journalisation.">
+  Schéma du pipeline en trois couches : capture caméra, traitement OpenCV, synchronisation Firebase.
+</Figure>
+
 Le système a été soutenu comme mémoire de fin de licence,
 **noté 19/20 et désigné meilleur projet de soutenance**. Il est
 aujourd'hui en usage interne chez BkSquare, et j'ai été recruté à
 l'issue du stage.
+
+<Callout kind="insight" label="Ce que j'en retire">
+Contraindre le matériel force la clarté du modèle. Une caméra HD standard et un poste modeste imposent des choix (résolution, batching, cadence) qui, faits en amont, améliorent aussi la lisibilité du code.
+</Callout>
