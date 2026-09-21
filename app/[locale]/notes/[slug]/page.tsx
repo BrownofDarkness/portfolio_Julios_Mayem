@@ -32,6 +32,17 @@ export async function generateMetadata({
   const note = await getNote(locale as Locale, slug);
   if (!note) return {};
 
+  const kicker =
+    locale === "fr"
+      ? `Note technique · ${note.date}`
+      : `Technical note · ${note.date}`;
+
+  const ogUrl =
+    `/api/og?kind=case` +
+    `&title=${encodeURIComponent(note.title)}` +
+    `&subtitle=${encodeURIComponent(note.summary)}` +
+    `&kicker=${encodeURIComponent(kicker)}`;
+
   return {
     title: `${note.title} — Julios Mayem`,
     description: note.summary,
@@ -40,6 +51,13 @@ export async function generateMetadata({
       title: note.title,
       description: note.summary,
       type: "article",
+      images: [{ url: ogUrl, width: 1200, height: 630, alt: note.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: note.title,
+      description: note.summary,
+      images: [ogUrl],
     },
   };
 }

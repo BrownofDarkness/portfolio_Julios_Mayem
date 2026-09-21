@@ -54,6 +54,21 @@
   border-bottom-color: var(--blue-soft);
 }
 
+.aExt {
+  display: inline-block;
+  margin-left: 0.2rem;
+  font-family: var(--font-mono);
+  font-size: 0.75em;
+  color: var(--muted);
+  transform: translateY(-0.05em);
+  transition: transform var(--dur-med) var(--ease),
+              color var(--dur-med) var(--ease);
+}
+.a:hover .aExt {
+  color: var(--blue-soft);
+  transform: translate(1px, -2px);
+}
+
 .strong {
   font-weight: 500;
   color: var(--text);

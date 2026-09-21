@@ -23,6 +23,13 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
+  const tHero = await getTranslations({ locale, namespace: "hero" });
+
+  const ogUrl =
+    `/api/og?kind=default` +
+    `&title=${encodeURIComponent(tHero("titleLine1"))}` +
+    `&subtitle=${encodeURIComponent(tHero("titleLine2"))}` +
+    `&kicker=${encodeURIComponent(`${tHero("location")} · ${tHero("role")}`)}`;
 
   return {
     title: t("title"),
@@ -42,6 +49,13 @@ export async function generateMetadata({
       description: t("description"),
       locale: locale === "fr" ? "fr_FR" : "en_US",
       type: "website",
+      images: [{ url: ogUrl, width: 1200, height: 630, alt: t("title") }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("description"),
+      images: [ogUrl],
     },
   };
 }

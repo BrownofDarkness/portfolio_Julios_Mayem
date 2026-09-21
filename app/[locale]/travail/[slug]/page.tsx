@@ -39,6 +39,17 @@ export async function generateMetadata({
   const project = await getProject(locale as Locale, slug);
   if (!project) return {};
 
+  const kicker =
+    locale === "fr"
+      ? `Étude de cas · ${project.year}`
+      : `Case study · ${project.year}`;
+
+  const ogUrl =
+    `/api/og?kind=case` +
+    `&title=${encodeURIComponent(project.title)}` +
+    `&subtitle=${encodeURIComponent(project.summary)}` +
+    `&kicker=${encodeURIComponent(kicker)}`;
+
   return {
     title: `${project.title} — Julios Mayem`,
     description: project.summary,
@@ -49,6 +60,13 @@ export async function generateMetadata({
       title: project.title,
       description: project.summary,
       type: "article",
+      images: [{ url: ogUrl, width: 1200, height: 630, alt: project.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: project.title,
+      description: project.summary,
+      images: [ogUrl],
     },
   };
 }

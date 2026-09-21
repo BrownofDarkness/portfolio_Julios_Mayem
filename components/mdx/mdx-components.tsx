@@ -1,7 +1,40 @@
 import type { MDXRemoteProps } from "next-mdx-remote/rsc";
+import type { AnchorHTMLAttributes } from "react";
 import { Figure } from "./Figure";
 import { Callout } from "./Callout";
 import styles from "./mdx.module.css";
+
+/**
+ * Anchor MDX — détecte les liens externes et ajoute un petit
+ * marqueur ↗ discret. Applique aussi rel/noopener automatiquement.
+ */
+function MdxA(props: AnchorHTMLAttributes<HTMLAnchorElement>) {
+  const { href = "", children, ...rest } = props;
+  const isExternal =
+    typeof href === "string" &&
+    (href.startsWith("http://") || href.startsWith("https://"));
+
+  if (isExternal) {
+    return (
+      <a
+        className={styles.a}
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        {...rest}
+      >
+        {children}
+        <span className={styles.aExt} aria-hidden="true">↗</span>
+      </a>
+    );
+  }
+
+  return (
+    <a className={styles.a} href={href} {...rest}>
+      {children}
+    </a>
+  );
+}
 
 /**
  * Composants MDX exposés au corps des case studies et notes.
@@ -14,7 +47,7 @@ export const mdxComponents: MDXRemoteProps["components"] = {
   h2: (props) => <h2 className={styles.h2} {...props} />,
   h3: (props) => <h3 className={styles.h3} {...props} />,
   p:  (props) => <p className={styles.p} {...props} />,
-  a:  (props) => <a className={styles.a} {...props} />,
+  a: MdxA,
   ul: (props) => <ul className={styles.ul} {...props} />,
   ol: (props) => <ol className={styles.ol} {...props} />,
   li: (props) => <li className={styles.li} {...props} />,
