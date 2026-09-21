@@ -27,26 +27,26 @@
 
 .label {
   font-family: var(--font-mono);
-  font-size: 10.5px;
+  font-size: 13.5px;
   color: var(--gold);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
   font-variant-caps: all-small-caps;
   font-feature-settings: "smcp" 1, "c2sc" 1, "lnum" 1;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.4rem;
 }
 
 .title {
   font-family: var(--font-sans);
   font-weight: 500;
-  font-size: 14.5px;
+  font-size: 16.5px;
   color: var(--text);
-  letter-spacing: -0.008em;
+  letter-spacing: -0.012em;
   line-height: 1.4;
 }
 
 .meta {
   font-family: var(--font-mono);
-  font-size: 11.5px;
+  font-size: 14px;
   color: var(--muted);
   letter-spacing: 0.02em;
   font-variant-numeric: tabular-nums;

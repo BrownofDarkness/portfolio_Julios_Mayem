@@ -7,7 +7,7 @@
 }
 
 .subtitle {
-  font-size: 14.5px;
+  font-size: 16.5px;
   color: var(--text-2);
   line-height: 1.65;
   margin: 0 0 1rem;
@@ -25,9 +25,9 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  padding: 0.6rem 0;
+  padding: 0.85rem 0;
   border-top: 1px solid var(--border);
-  font-size: 13.5px;
+  font-size: 15.5px;
   gap: 1rem;
 }
 .item:last-child {
@@ -40,7 +40,7 @@
 
 .date {
   font-family: var(--font-mono);
-  font-size: 11.5px;
+  font-size: 14px;
   color: var(--muted);
   letter-spacing: 0.02em;
   font-variant-numeric: tabular-nums;
