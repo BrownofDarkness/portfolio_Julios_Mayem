@@ -16,6 +16,9 @@ html {
   hanging-punctuation: first last;
   color-scheme: dark;
   -webkit-text-size-adjust: 100%;
+  /* clip bloque le scroll horizontal sans créer de BFC —
+     évite la corruption du scroll container sur mobile WebKit */
+  overflow-x: clip;
 }
 
 body {
@@ -31,7 +34,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
 }
 
 ::selection {
@@ -39,7 +41,10 @@ body {
   color: var(--bg);
 }
 
-/* ---------- Grille de fond globale (subtile, sur tout le body) ---------- */
+/* ---------- Grille de fond globale ---------- */
+/* Sur desktop, la grille est dessinée par les bordures des cellules
+   de GlobalGridSpotlight (composant client). Sur mobile ou sans JS,
+   on fallback à un pattern statique via body::before. */
 body::before {
   content: "";
   position: fixed;
@@ -47,10 +52,9 @@ body::before {
   pointer-events: none;
   z-index: 0;
   background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.014) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.014) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.024) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.024) 1px, transparent 1px);
   background-size: 48px 48px;
-  /* Un très léger dégradé radial pour éviter l'effet "quadrillage uniforme" */
   mask-image: radial-gradient(
     ellipse 80% 80% at 50% 30%,
     black 0%,
@@ -63,6 +67,12 @@ body::before {
     rgba(0, 0, 0, 0.75) 40%,
     rgba(0, 0, 0, 0.4) 100%
   );
+}
+
+/* Sur desktop, on masque le fallback body::before pour éviter le
+   doublage avec les bordures des cellules interactives. */
+@media (min-width: 780px) {
+  body::before { display: none; }
 }
 
 /* Tout le contenu est au-dessus de la grille */

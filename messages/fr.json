@@ -6,6 +6,7 @@
   "nav": {
     "work": "Travail",
     "about": "À propos",
+    "skills": "Compétences",
     "notes": "Notes",
     "distinctions": "Distinctions",
     "contact": "Contact",
@@ -98,6 +99,20 @@
         "issuer": "Communauté"
       }
     ]
+  },
+  "contact": {
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "message": "Message",
+      "namePlaceholder": "Votre nom",
+      "emailPlaceholder": "votre@email.com",
+      "messagePlaceholder": "Décrivez votre projet, votre question…",
+      "send": "Envoyer",
+      "sending": "Envoi en cours…",
+      "success": "Message reçu — je vous réponds sous 48 heures.",
+      "error": "Échec de l'envoi. Réessayez ou écrivez-moi directement."
+    }
   },
   "footer": {
     "contact": "Contact",

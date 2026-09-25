@@ -1,0 +1,35 @@
+.grid {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  display: grid;
+  /* --spotlight-start est posé en JS à hero.bottom (px). La grille
+     est masquée au-dessus de cette ligne pour ne pas empieter sur
+     la zone du hero (qui a sa propre animation ambient). */
+  --spotlight-start: 0px;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent var(--spotlight-start),
+    black var(--spotlight-start)
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent var(--spotlight-start),
+    black var(--spotlight-start)
+  );
+}
+
+.cell {
+  border-right: 1px solid rgba(255, 255, 255, 0.024);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.024);
+  transition: border-color 200ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+@media (max-width: 780px) {
+  .grid { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .grid { display: none; }
+}

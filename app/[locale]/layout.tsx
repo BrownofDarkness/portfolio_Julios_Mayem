@@ -9,6 +9,7 @@ import { routing } from "@/i18n/routing";
 import { inter, jetbrainsMono } from "@/lib/fonts";
 import { Topbar } from "@/components/layout/Topbar";
 import { Footer } from "@/components/layout/Footer";
+import { GlobalGridSpotlight } from "@/components/spotlight/GlobalGridSpotlight";
 
 import "@/styles/main.css";
 
@@ -81,6 +82,7 @@ export default async function LocaleLayout({
       className={`${inter.variable} ${jetbrainsMono.variable}`}
     >
       <body>
+        <GlobalGridSpotlight />
         <NextIntlClientProvider>
           <Topbar />
           {children}

@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { LanguageSwitch } from "./LanguageSwitch";
+import { TopbarMobile } from "./TopbarMobile";
 import styles from "./Topbar.module.css";
 
 /**
@@ -14,11 +15,12 @@ export async function Topbar() {
   const t = await getTranslations("nav");
 
   const items = [
-    { href: "#travail", key: "work", num: "01" },
-    { href: "#a-propos", key: "about", num: "02" },
-    { href: "#notes", key: "notes", num: "03" },
-    { href: "#distinctions", key: "distinctions", num: "04" },
-    { href: "#contact-footer", key: "contact", num: "05" },
+    { href: "/#travail",      key: "work",         num: "01" },
+    { href: "/#a-propos",     key: "about",        num: "02" },
+    { href: "/#competences",  key: "skills",       num: "03" },
+    { href: "/#notes",        key: "notes",        num: "04" },
+    { href: "/#distinctions", key: "distinctions", num: "05" },
+    { href: "/contact",       key: "contact",      num: "06" },
   ] as const;
 
   return (
@@ -32,15 +34,22 @@ export async function Topbar() {
 
           <nav className={styles.nav} aria-label="Navigation principale">
             {items.map((item) => (
-              <a key={item.key} href={item.href} className={styles.link}>
+              <Link key={item.key} href={item.href} className={styles.link}>
                 <span className={styles.num}>{item.num}</span>
                 {t(item.key)}
-              </a>
+              </Link>
             ))}
           </nav>
 
           <div className={styles.right}>
             <LanguageSwitch />
+            <TopbarMobile
+              items={items.map((item) => ({
+                href: item.href,
+                num: item.num,
+                label: t(item.key),
+              }))}
+            />
           </div>
         </div>
       </div>

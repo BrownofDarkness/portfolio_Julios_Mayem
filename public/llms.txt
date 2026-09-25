@@ -1,0 +1,57 @@
+# Julios Mayem — Portfolio
+
+> Software engineer specialised in computer vision and AI, based in Yaoundé, Cameroon.
+
+## About
+
+Julios Mayem Yota Tamessuing is a software engineer based in Yaoundé, Cameroon.
+He holds a professional bachelor's degree in software engineering (graduated first in class, 17.75/20, highest honours) from IUSTE, Yaoundé.
+He received the Presidential Excellence Award twice (2021, 2022) and won the GDG Ngaoundéré AI & Google Ecosystem Quiz (2022).
+Since 2024 he works at BkSquare SARL as a software developer, hired after a research internship in facial recognition.
+
+## Core expertise
+
+- Computer vision (OpenCV, Python, CustomTkinter)
+- Embedded AI / inference on low-resource hardware
+- Mobile development (Flutter / Dart)
+- Database design (MERISE, MySQL)
+- DevOps / CI-CD (Codemagic, GitHub Actions)
+
+## Selected projects
+
+### KKBSECU — Facial recognition system
+Stack: Python, OpenCV, CustomTkinter, Firebase, 2TUP methodology
+Result: >95% recognition accuracy. Internship thesis scored 19/20.
+
+### GESCOM — Commercial management system
+Stack: MERISE, MySQL
+Result: manages 1,200+ product references with <2 s query response time.
+
+### Sygalin SAS — School website
+Stack: HTML, CSS, JavaScript, PHP, MySQL
+Result: Lighthouse score >90, load time <1.5 s.
+
+### Delicio Food — Mobile food ordering app
+Stack: Flutter, Dart, Google Maps SDK, SQLite
+Result: <300 ms app startup, 60 fps rendering.
+
+### Android maths quiz game
+Stack: Android native (Java)
+Result: 500+ exercise variations, APK <15 MB.
+
+## Contact
+
+Email: maesjulios@gmail.com
+Location: Yaoundé, Cameroon (UTC+1)
+Open to: Master's / PhD programmes, AI research contracts, lab positions.
+
+## Site structure
+
+- /fr — French version (default)
+- /en — English version
+- /fr/travail/[slug] — Project case studies (FR)
+- /en/work/[slug]   — Project case studies (EN)
+- /fr/notes/[slug]  — Technical notes (FR)
+- /en/notes/[slug]  — Technical notes (EN)
+- /fr/contact       — Contact page (FR)
+- /en/contact       — Contact page (EN)

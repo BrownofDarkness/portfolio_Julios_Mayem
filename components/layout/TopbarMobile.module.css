@@ -1,0 +1,106 @@
+/* Burger — visible uniquement sous 780px */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  padding: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--radius-1);
+  transition: background var(--dur-med) var(--ease);
+}
+.burger:hover { background: var(--panel); }
+
+@media (max-width: 780px) {
+  .burger { display: flex; }
+}
+
+.bar {
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background: var(--text-2);
+  border-radius: 2px;
+  transform-origin: center;
+  transition:
+    transform var(--dur-med) var(--ease),
+    opacity var(--dur-med) var(--ease);
+}
+
+/* Croix quand ouvert */
+.bar.barOpen:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.bar.barOpen:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.bar.barOpen:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* Overlay sombre derrière le drawer */
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 9, 11, 0.7);
+  z-index: 18;
+  backdrop-filter: blur(2px);
+}
+
+@media (max-width: 780px) {
+  .overlay { display: block; }
+}
+
+/* Drawer — panneau qui glisse depuis la droite */
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(280px, 80vw);
+  background: var(--panel);
+  border-left: 1px solid var(--border);
+  z-index: 19;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 1.5rem 2rem;
+  gap: 0.25rem;
+  transform: translateX(100%);
+  transition: transform var(--dur-slow) var(--ease);
+  visibility: hidden;
+}
+
+.drawerOpen {
+  transform: translateX(0);
+  visibility: visible;
+}
+
+/* Masque le drawer sur desktop */
+@media (min-width: 781px) {
+  .drawer  { display: none; }
+  .overlay { display: none !important; }
+}
+
+.link {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 15px;
+  color: var(--text-2);
+  text-decoration: none;
+  padding: 0.85rem 0.75rem;
+  border-radius: var(--radius-1);
+  transition: color var(--dur-med) var(--ease),
+              background var(--dur-med) var(--ease);
+}
+.link:hover {
+  color: var(--text);
+  background: var(--panel-2);
+}
+
+.num {
+  color: var(--dim);
+  font-size: 12px;
+  min-width: 2.2ch;
+  font-variant-numeric: tabular-nums;
+}

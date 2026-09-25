@@ -90,3 +90,6 @@
 @media (max-width: 780px) {
   .nav { display: none; }
 }
+
+/* z-index cohérent avec le drawer mobile (z-index 19) */
+.top { z-index: 20; }

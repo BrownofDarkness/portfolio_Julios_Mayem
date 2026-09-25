@@ -6,6 +6,7 @@
   "nav": {
     "work": "Work",
     "about": "About",
+    "skills": "Skills",
     "notes": "Notes",
     "distinctions": "Awards",
     "contact": "Contact",
@@ -98,6 +99,20 @@
         "issuer": "Community"
       }
     ]
+  },
+  "contact": {
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "your@email.com",
+      "messagePlaceholder": "Describe your project or question…",
+      "send": "Send",
+      "sending": "Sending…",
+      "success": "Message received — I'll reply within 48 hours.",
+      "error": "Failed to send. Try again or reach out directly."
+    }
   },
   "footer": {
     "contact": "Contact",

@@ -1,0 +1,18 @@
+.grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  display: grid;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.cell {
+  border-right: 1px solid rgba(255, 255, 255, 0.024);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.024);
+  /* Pas de transition CSS — GSAP gère l'animation avec son propre easing */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grid { display: none; }
+}

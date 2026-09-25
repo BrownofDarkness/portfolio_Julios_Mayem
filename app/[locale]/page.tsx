@@ -2,6 +2,8 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 
 import { routing, type Locale } from "@/i18n/routing";
 import { getProjects } from "@/lib/content";
+import { personSchema } from "@/lib/jsonld";
+import { JsonLd } from "@/components/JsonLd";
 
 import { Hero } from "@/components/hero/Hero";
 import { About } from "@/components/about/About";
@@ -33,6 +35,7 @@ export default async function HomePage({
 
   return (
     <>
+      <JsonLd data={personSchema(locale)} />
       <Hero />
 
       <div className="wrap">

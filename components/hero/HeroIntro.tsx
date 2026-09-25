@@ -16,24 +16,30 @@ export function HeroIntro({ children }: { children: ReactNode }) {
     const scope = ref.current;
     if (!scope) return;
 
-    const mm = gsap.matchMedia();
+    const elements = Array.from(
+      scope.querySelectorAll<HTMLElement>("[data-hero-el]")
+    );
+    if (elements.length === 0) return;
 
-    mm.add("(prefers-reduced-motion: no-preference)", () => {
-      const elements = scope.querySelectorAll<HTMLElement>("[data-hero-el]");
-      if (elements.length === 0) return;
+    const reducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
 
+    if (reducedMotion) return;
+
+    // Tout le code GSAP est dans le contexte : ctx.revert() restaure
+    // proprement l'état initial entre les deux passes de React Strict Mode.
+    const ctx = gsap.context(() => {
       gsap.set(elements, { opacity: 0, y: 8 });
-
-      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
-      tl.to(elements, {
+      gsap.timeline({ defaults: { ease: "power3.out" } }).to(elements, {
         opacity: 1,
         y: 0,
         duration: 0.413,
         stagger: 0.084,
       });
-    });
+    }, scope);
 
-    return () => mm.revert();
+    return () => ctx.revert();
   }, []);
 
   return <div ref={ref}>{children}</div>;

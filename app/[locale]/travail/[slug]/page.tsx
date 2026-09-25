@@ -7,6 +7,8 @@ import rehypeSlug from "rehype-slug";
 
 import { routing, type Locale } from "@/i18n/routing";
 import { getProject, getProjects } from "@/lib/content";
+import { projectSchema } from "@/lib/jsonld";
+import { JsonLd } from "@/components/JsonLd";
 import { CaseHeader } from "@/components/case/CaseHeader";
 import { SideMeta, type SideBlock } from "@/components/case/SideMeta";
 import { mdxComponents } from "@/components/mdx/mdx-components";
@@ -114,6 +116,7 @@ export default async function CaseStudyPage({
 
   return (
     <div className="wrap">
+      <JsonLd data={projectSchema(project, locale)} />
       <nav className={styles.crumb}>
         <a href={`/${locale}#travail`} className={styles.crumbLink}>
           ← {t("nav.work")}

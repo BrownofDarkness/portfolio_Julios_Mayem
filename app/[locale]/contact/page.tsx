@@ -2,6 +2,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing, type Locale } from "@/i18n/routing";
 import { SectionHead } from "@/components/section/SectionHead";
 import { Socials } from "@/components/socials/Socials";
+import { ContactForm } from "@/components/contact/ContactForm";
 
 import styles from "./contact.module.css";
 
@@ -27,29 +28,12 @@ export default async function ContactPage({
 
       <div className={styles.grid}>
         <div className={styles.left}>
-          <p className={styles.lead}>
-            {locale === "fr" ? (
-              <>
-                Le formulaire arrive bientôt. En attendant, écrivez-moi
-                directement — je réponds sous <b>48 heures</b>, ou plus
-                vite selon le fuseau.
-              </>
-            ) : (
-              <>
-                A proper form is coming soon. In the meantime, reach out
-                directly — I answer within <b>48 hours</b>, faster
-                depending on the timezone.
-              </>
-            )}
-          </p>
+          <ContactForm />
 
           <div className={styles.channels}>
             <div className={styles.channel}>
               <div className={styles.label}>Email</div>
-              <a
-                href="mailto:maesjulios@gmail.com"
-                className={styles.mainLink}
-              >
+              <a href="mailto:maesjulios@gmail.com" className={styles.mainLink}>
                 maesjulios@gmail.com
               </a>
             </div>
@@ -104,7 +88,7 @@ export default async function ContactPage({
                 </>
               ) : (
                 <>
-                  Master's / PhD<br />
+                  Master&apos;s / PhD<br />
                   Research contracts<br />
                   AI-lab positions
                 </>

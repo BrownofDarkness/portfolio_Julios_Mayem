@@ -1,9 +1,9 @@
 import { getTranslations } from "next-intl/server";
 import { Button } from "@/components/ui/Button";
-import { GridSpotlight } from "./GridSpotlight";
 import { NowPanel } from "./NowPanel";
 import { HeroPortrait } from "./HeroPortrait";
 import { HeroIntro } from "./HeroIntro";
+import { HeroAmbientGrid } from "@/components/spotlight/HeroAmbientGrid";
 import styles from "./Hero.module.css";
 
 /**
@@ -16,9 +16,8 @@ export async function Hero() {
   const t = await getTranslations();
 
   return (
-    <section className={styles.hero}>
-      <GridSpotlight />
-
+    <section id="hero" className={styles.hero}>
+      <HeroAmbientGrid />
       <div className={`wrap ${styles.wrap}`}>
         <div className={styles.grid}>
           <div className={styles.left}>
