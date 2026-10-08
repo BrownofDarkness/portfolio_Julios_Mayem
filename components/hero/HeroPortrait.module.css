@@ -1,3 +1,8 @@
+.img {
+  object-fit: cover;
+  object-position: center top;
+}
+
 .wrap {
   position: relative;
   aspect-ratio: 4 / 5;

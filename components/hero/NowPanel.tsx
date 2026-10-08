@@ -10,10 +10,10 @@ export async function NowPanel() {
   const t = await getTranslations("now");
 
   const rows = [
-    { k: t("rows.role"), v: "Dev · BkSquare" },
-    { k: t("rows.location"), v: "Yaoundé, CM" },
-    { k: t("rows.focus"), v: "opencv · pipelines", mono: true },
-    { k: t("rows.available"), v: "Master 2027" },
+    { k: t("rows.role"), v: "Dev & resp. info. · BkSquare" },
+    { k: t("rows.location"), v: "Yaoundé (Etoug-Ebe), CM" },
+    { k: t("rows.focus"), v: "python · flutter · vision · électronique", mono: true },
+    { k: t("rows.available"), v: "Cycle ingénieur / Master" },
     { k: t("rows.updated"), v: "21 sep. 2026", mono: true },
   ];
 

@@ -13,7 +13,7 @@ export function personSchema(locale: Locale) {
     name: "Julios Mayem",
     givenName: "Julios",
     familyName: "Mayem",
-    jobTitle: locale === "fr" ? "Ingénieur logiciel" : "Software Engineer",
+    jobTitle: locale === "fr" ? "Développeur logiciel & Bases de données" : "Software Developer & Databases",
     description:
       locale === "fr"
         ? "Développeur camerounais spécialisé en vision par ordinateur et IA, diplômé Licence (Très Bien, 1er/25), en poste chez BkSquare SARL depuis 2024."
@@ -73,7 +73,8 @@ export function personSchema(locale: Locale) {
       },
     },
     sameAs: [
-      "https://github.com/BrownofDarkness",
+      "https://github.com/Devmaes",
+      "https://www.linkedin.com/in/julios-mayem-yota-tamessuing-4700322b2",
     ],
   };
 }

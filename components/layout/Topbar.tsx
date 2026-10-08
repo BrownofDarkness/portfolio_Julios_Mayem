@@ -33,12 +33,19 @@ export async function Topbar() {
           </Link>
 
           <nav className={styles.nav} aria-label="Navigation principale">
-            {items.map((item) => (
-              <Link key={item.key} href={item.href} className={styles.link}>
-                <span className={styles.num}>{item.num}</span>
-                {t(item.key)}
-              </Link>
-            ))}
+            {items.map((item) =>
+              item.href.includes("#") ? (
+                <a key={item.key} href={item.href} className={styles.link}>
+                  <span className={styles.num}>{item.num}</span>
+                  {t(item.key)}
+                </a>
+              ) : (
+                <Link key={item.key} href={item.href as "/contact"} className={styles.link}>
+                  <span className={styles.num}>{item.num}</span>
+                  {t(item.key)}
+                </Link>
+              )
+            )}
           </nav>
 
           <div className={styles.right}>

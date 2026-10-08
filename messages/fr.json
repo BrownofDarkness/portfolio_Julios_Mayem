@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Julios Mayem — Ingénieur logiciel, vision par ordinateur",
-    "description": "Portfolio de Julios Mayem : développeur camerounais orienté intelligence artificielle et vision par ordinateur. Yaoundé, Cameroun."
+    "title": "Julios Mayem — Développeur logiciel & Bases de données",
+    "description": "Portfolio de Julios Mayem : développeur informatique camerounais passionné par les nouvelles technologies, la logique et les systèmes intelligents. Yaoundé, Cameroun."
   },
   "nav": {
     "work": "Travail",
@@ -15,13 +15,13 @@
   },
   "hero": {
     "location": "Yaoundé, Cameroun",
-    "role": "Ingénieur logiciel",
-    "titleLine1": "Julios Mayem.",
-    "titleLine2": "J'entraîne des modèles de vision qui tournent sur du matériel modeste.",
+    "role": "Développeur logiciel & Bases de données",
+    "titleLine1": "MAYEM YOTA TAMESSUING Julios.",
+    "titleLine2": "Vous imaginez, je construis : je transforme vos idées en produits technologiques robustes grâce au code.",
     "leadPart1": "Développeur chez",
-    "leadPart2": "depuis 2024, recruté à l'issue d'un stage de recherche en reconnaissance faciale.",
-    "signature": "Rigueur conceptuelle, impact tangible",
-    "signatureEnding": "— c'est la manière dont j'aborde chaque système.",
+    "leadPart2": "depuis 2024, passionné par les nouvelles technologies, la logique et les défis techniques complexes.",
+    "signature": "Développeur informatique avec plus de deux ans d'expérience",
+    "signatureEnding": "— passionné par les nouvelles technologies, la logique, les mathématiques et les défis techniques complexes.",
     "ctaProjects": "Voir les projets",
     "ctaContact": "Me contacter"
   },
@@ -35,13 +35,13 @@
       "available": "disponible",
       "updated": "édité"
     },
-    "footnote": "En ce moment, je débogue une pipeline OpenCV qui refuse de tourner correctement sur du matériel ARM."
+    "footnote": "en ce moment : développement d'applications, maintenance des systèmes et amélioration continue de mes compétences techniques."
   },
   "sections": {
     "aboutTitle": "À propos",
     "aboutAside": "Parcours · vision · engagement",
     "projectsTitle": "Projets sélectionnés",
-    "projectsAside": "Cinq projets · 2022 — 2026",
+    "projectsAside": "Six projets · 2022 — 2026",
     "caseStudyTitle": "Étude de cas",
     "notesTitle": "Notes techniques & recherche",
     "notesSubtitle": "Un carnet de notes courtes sur des sujets techniques précis — pour documenter la façon dont je réfléchis et je résous des problèmes concrets.",
@@ -63,16 +63,16 @@
     }
   },
   "about": {
-    "p1": "Je suis né à Yaoundé, j'y ai grandi, et c'est là que je code aujourd'hui. Mon parcours technique a commencé à l'IUT de Ngaoundéré (DUT en génie logiciel, classé 3ᵉ sur 100, mention Bien), puis s'est poursuivi à l'Institut universitaire des sciences des technologies et éthique où j'ai obtenu ma licence professionnelle avec la mention Très Bien — premier de promotion, moyenne de 17,75/20.",
-    "p2": "En 2024, j'ai rejoint BkSquare SARL en tant que stagiaire de recherche pour concevoir un système de reconnaissance faciale. Le projet a été validé, adopté en interne, et l'entreprise m'a recruté à l'issue du stage. Depuis, je travaille sur la maintenance des applications, la digitalisation des processus internes et l'optimisation des flux de données.",
-    "p3": "En parallèle, j'ai coordonné les communautés informatiques des régions de l'Adamaoua et de l'Extrême-Nord (2023–2024), présidé le Club Informatique de l'IUT de Ngaoundéré (2021–2022), et donné des cours particuliers de mathématiques et d'informatique. Enseigner m'a appris à choisir mes mots — c'est utile pour écrire du code lisible.",
-    "signature": "Rigueur conceptuelle et impact tangible : mettre l'intelligence artificielle et l'ingénierie logicielle au service de solutions concrètes et mesurables.",
+    "p1": "Né et grandi à Yaoundé, j'y évolue aujourd'hui comme développeur informatique. J'ai commencé mon parcours à l'IUT de Ngaoundéré, où j'ai obtenu un DUT en génie logiciel avec la mention Bien, puis j'ai poursuivi mes études à l'Institut universitaire des sciences, des technologies et de l'éthique, où j'ai obtenu une licence professionnelle avec la mention Très Bien, en terminant major de promotion.",
+    "p2": "En 2024, j'ai rejoint BkSquare SARL en tant que stagiaire de recherche pour concevoir un système de reconnaissance faciale. Le projet a été validé et adopté en interne, puis l'entreprise m'a recruté à l'issue du stage. Depuis, j'y exerce comme développeur et responsable informatique.",
+    "p3": "En parallèle de mon parcours académique et professionnel, je me suis investi dans plusieurs initiatives communautaires : coordination des communautés informatiques de l'Adamaoua et de l'Extrême-Nord entre 2023 et 2024, présidence du Club Informatique de l'IUT de Ngaoundéré en 2021–2022, ainsi que des cours particuliers en mathématiques et en informatique. Ces expériences ont renforcé mon sens de la communication, de la pédagogie et du travail en équipe — des qualités que j'applique aussi dans ma manière de concevoir et d'écrire du code.",
+    "signature": "« Et si quelques lignes de code pouvaient changer le monde ? »",
     "side": {
       "education": "Formation",
       "eduLine1": "Licence pro. génie logiciel",
       "eduLine2": "Mention Très Bien · 1ᵉʳ / 25",
       "role": "En poste",
-      "roleLine1": "Développeur — BkSquare SARL",
+      "roleLine1": "Développeur & resp. informatique — BkSquare SARL",
       "roleLine2": "Yaoundé, depuis 2024",
       "languages": "Langues",
       "languagesValue": "Français (langue maternelle) · Anglais (B2)"
@@ -84,19 +84,19 @@
         "label": "Prime présidentielle",
         "title": "Excellence académique — Licence 1",
         "year": "2021",
-        "issuer": "République du Cameroun"
+        "issuer": "République du Cameroun 🇨🇲"
       },
       {
         "label": "Prime présidentielle",
         "title": "Excellence académique — Licence 2",
         "year": "2022",
-        "issuer": "République du Cameroun"
+        "issuer": "République du Cameroun 🇨🇲"
       },
       {
-        "label": "Prix — GDG Ngaoundéré",
+        "label": "3ᵉ place — GDG Ngaoundéré",
         "title": "Quiz — écosystème Google & IA",
         "year": "2022",
-        "issuer": "Communauté"
+        "issuer": "Google Developer Group Ngaoundéré"
       }
     ]
   },

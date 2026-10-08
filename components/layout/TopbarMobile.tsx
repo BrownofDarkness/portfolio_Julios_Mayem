@@ -51,17 +51,7 @@ export function TopbarMobile({ items }: { items: Item[] }) {
         aria-label="Navigation mobile"
       >
         {items.map((item) =>
-          item.href.startsWith("/") ? (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={styles.link}
-              onClick={() => setOpen(false)}
-            >
-              <span className={styles.num}>{item.num}</span>
-              {item.label}
-            </Link>
-          ) : (
+          item.href.includes("#") ? (
             <a
               key={item.href}
               href={item.href}
@@ -71,6 +61,16 @@ export function TopbarMobile({ items }: { items: Item[] }) {
               <span className={styles.num}>{item.num}</span>
               {item.label}
             </a>
+          ) : (
+            <Link
+              key={item.href}
+              href={item.href as "/contact"}
+              className={styles.link}
+              onClick={() => setOpen(false)}
+            >
+              <span className={styles.num}>{item.num}</span>
+              {item.label}
+            </Link>
           )
         )}
       </nav>

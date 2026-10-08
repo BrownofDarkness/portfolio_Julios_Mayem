@@ -82,15 +82,15 @@ export default async function ContactPage({
             <div className={styles.sideValue}>
               {locale === "fr" ? (
                 <>
-                  Master / doctorat<br />
-                  Mission de recherche<br />
-                  Poste en labo IA
+                  Poursuite d&apos;études en ingénierie<br />
+                  Recherche appliquée<br />
+                  Développement logiciel
                 </>
               ) : (
                 <>
-                  Master&apos;s / PhD<br />
-                  Research contracts<br />
-                  AI-lab positions
+                  Engineering studies<br />
+                  Applied research<br />
+                  Software development
                 </>
               )}
             </div>

@@ -1,4 +1,4 @@
-import { SiGithub, SiX } from "@icons-pack/react-simple-icons";
+import { SiGithub, SiWhatsapp } from "@icons-pack/react-simple-icons";
 import type { SVGProps } from "react";
 import styles from "./Socials.module.css";
 
@@ -22,13 +22,10 @@ function LinkedinIcon({ size = 22, ...rest }: SVGProps<SVGSVGElement> & { size?:
   );
 }
 
-/**
- * Bloc de liens sociaux — logos SVG uniquement, cliquables.
- * Chaque icône reste monochrome par défaut (muted), passe au bleu
- * au hover. Un aria-label rend le lien lisible pour un lecteur d'écran.
- *
- * URLs actuelles : placeholders — à confirmer avec Julios.
- */
+const WA_NUMBER = "237656788959";
+const WA_MESSAGE = encodeURIComponent(
+  "Bonjour Julios, votre profil a retenu mon attention et je souhaiterais échanger avec vous au sujet d'une opportunité de formation."
+);
 
 type SocialItem = {
   href: string;
@@ -38,19 +35,19 @@ type SocialItem = {
 
 const items: SocialItem[] = [
   {
-    href: "https://github.com/BrownofDarkness",
+    href: "https://github.com/Devmaes",
     label: "GitHub",
     Icon: SiGithub as unknown as SocialItem["Icon"],
   },
   {
-    href: "https://www.linkedin.com/",
+    href: "https://www.linkedin.com/in/julios-mayem-yota-tamessuing-4700322b2",
     label: "LinkedIn",
     Icon: LinkedinIcon,
   },
   {
-    href: "https://twitter.com/",
-    label: "X",
-    Icon: SiX as unknown as SocialItem["Icon"],
+    href: `https://wa.me/${WA_NUMBER}?text=${WA_MESSAGE}`,
+    label: "WhatsApp",
+    Icon: SiWhatsapp as unknown as SocialItem["Icon"],
   },
 ];
 

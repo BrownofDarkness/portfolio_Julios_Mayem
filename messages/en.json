@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Julios Mayem — Software Engineer, computer vision",
-    "description": "Portfolio of Julios Mayem: Cameroonian developer focused on artificial intelligence and computer vision. Yaoundé, Cameroon."
+    "title": "Julios Mayem — Software Developer & Databases",
+    "description": "Portfolio of Julios Mayem: Cameroonian software developer passionate about new technologies, logic and intelligent systems. Yaoundé, Cameroon."
   },
   "nav": {
     "work": "Work",
@@ -15,13 +15,13 @@
   },
   "hero": {
     "location": "Yaoundé, Cameroon",
-    "role": "Software engineer",
-    "titleLine1": "Julios Mayem.",
-    "titleLine2": "I train computer-vision models that run on modest hardware.",
+    "role": "Software Developer & Databases",
+    "titleLine1": "MAYEM YOTA TAMESSUING Julios.",
+    "titleLine2": "You imagine, I build: I turn your ideas into robust technology products through code.",
     "leadPart1": "Developer at",
-    "leadPart2": "since 2024, hired after a research internship in facial recognition.",
-    "signature": "Conceptual rigor, tangible impact",
-    "signatureEnding": "— that's how I approach every system.",
+    "leadPart2": "since 2024, passionate about new technologies, logic and complex technical challenges.",
+    "signature": "Software developer with over two years of experience",
+    "signatureEnding": "— passionate about new technologies, logic, mathematics and complex technical challenges.",
     "ctaProjects": "See the projects",
     "ctaContact": "Get in touch"
   },
@@ -35,13 +35,13 @@
       "available": "available",
       "updated": "edited"
     },
-    "footnote": "Currently debugging an OpenCV pipeline that refuses to run properly on ARM hardware."
+    "footnote": "currently: application development, systems maintenance and continuous improvement of my technical skills."
   },
   "sections": {
     "aboutTitle": "About",
     "aboutAside": "Path · vision · engagement",
     "projectsTitle": "Selected work",
-    "projectsAside": "Five projects · 2022 — 2026",
+    "projectsAside": "Six projects · 2022 — 2026",
     "caseStudyTitle": "Case study",
     "notesTitle": "Technical notes & research",
     "notesSubtitle": "A short-form notebook on precise technical topics — documenting how I think and solve concrete problems.",
@@ -63,16 +63,16 @@
     }
   },
   "about": {
-    "p1": "I was born in Yaoundé, I grew up here, and this is where I write software today. My technical path started at the University Institute of Technology in Ngaoundéré (DUT in software engineering, ranked 3rd of 100, mention Bien), then continued at the University Institute of Science, Technology and Ethics where I earned my professional Bachelor's degree with the highest honours — first of my promotion, GPA of 17.75/20.",
-    "p2": "In 2024, I joined BkSquare SARL as a research intern to design a facial-recognition system. The project was validated, adopted in-house, and the company hired me at the end of the internship. Since then, I've been working on application maintenance, internal-process digitalisation, and data-flow optimisation.",
-    "p3": "Alongside that, I coordinated the IT communities of the Adamaoua and Far-North regions (2023–2024), chaired the IUT Ngaoundéré Computer Club (2021–2022), and gave private tutoring in mathematics and computer science. Teaching taught me to choose my words carefully — it's useful for writing readable code.",
-    "signature": "Conceptual rigor, tangible impact: putting artificial intelligence and software engineering at the service of concrete, measurable solutions.",
+    "p1": "Born and raised in Yaoundé, I work here today as a software developer. I started my studies at the IUT of Ngaoundéré, where I earned a DUT in software engineering with honours, then continued at the University Institute of Sciences, Technologies and Ethics, where I graduated with a professional Bachelor's degree with highest honours, ranking first in my class.",
+    "p2": "In 2024, I joined BkSquare SARL as a research intern to design a facial-recognition system. The project was validated and adopted in-house, and the company hired me at the end of the internship. Since then, I have been working there as a developer and IT manager.",
+    "p3": "Alongside my academic and professional journey, I have invested in several community initiatives: coordinating IT communities in the Adamaoua and Far-North regions from 2023 to 2024, chairing the IUT Ngaoundéré Computer Club in 2021–2022, and giving private tutoring in mathematics and computer science. These experiences strengthened my communication, teaching and teamwork skills — qualities I also apply in the way I design and write code.",
+    "signature": "\"What if a few lines of code could change the world?\"",
     "side": {
       "education": "Education",
       "eduLine1": "B.Sc. software engineering",
       "eduLine2": "Top honours · 1st / 25",
       "role": "Currently",
-      "roleLine1": "Developer — BkSquare SARL",
+      "roleLine1": "Developer & IT manager — BkSquare SARL",
       "roleLine2": "Yaoundé, since 2024",
       "languages": "Languages",
       "languagesValue": "French (native) · English (B2)"
@@ -84,19 +84,19 @@
         "label": "Presidential award",
         "title": "Academic excellence — Bachelor 1",
         "year": "2021",
-        "issuer": "Republic of Cameroon"
+        "issuer": "Republic of Cameroon 🇨🇲"
       },
       {
         "label": "Presidential award",
         "title": "Academic excellence — Bachelor 2",
         "year": "2022",
-        "issuer": "Republic of Cameroon"
+        "issuer": "Republic of Cameroon 🇨🇲"
       },
       {
-        "label": "GDG Ngaoundéré Prize",
+        "label": "3rd place — GDG Ngaoundéré",
         "title": "Quiz — Google ecosystem & AI",
         "year": "2022",
-        "issuer": "Community"
+        "issuer": "Google Developer Group Ngaoundéré"
       }
     ]
   },

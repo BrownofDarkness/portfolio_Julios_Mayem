@@ -1,25 +1,27 @@
+import Image from "next/image";
 import type { ReactNode } from "react";
 import styles from "./Figure.module.css";
 
 type FigureProps = {
+  /** Chemin vers l'image réelle (depuis /public) */
+  src?: string;
+  /** Texte alternatif pour l'image */
+  alt?: string;
   /** hero = 16:9 large · inline = 3:2 · portrait = 4:5 */
   ratio?: "hero" | "inline" | "portrait";
   /** Numérotation Fig. 01 · 02 · etc. — pour la caption */
   num?: string;
   /** Légende éditoriale sous l'image */
   caption?: ReactNode;
-  /** Description de l'image à insérer (visible en placeholder) */
+  /** Description placeholder (affiché quand pas de src) */
   children?: ReactNode;
-  /** Dimensions repère (dev only, sera retiré quand la photo arrive) */
+  /** Dimensions repère (dev only) */
   dims?: string;
 };
 
-/**
- * Figure — placeholder pour les visuels des case studies.
- * Quand l'image réelle arrivera (Phase 4), on remplacera le
- * contenu par une balise <Image /> next/image.
- */
 export function Figure({
+  src,
+  alt,
   ratio = "inline",
   num,
   caption,
@@ -37,12 +39,24 @@ export function Figure({
         {num ? (
           <span className={styles.cornerTl}>fig. {num} · {ratio === "hero" ? "16:9" : ratio === "portrait" ? "4:5" : "3:2"}</span>
         ) : null}
-        {dims ? <span className={styles.cornerBr}>{dims}</span> : null}
-        <div className={styles.label}>
-          <div className={styles.icon}>▦</div>
-          <div className={styles.title}>Visuel à insérer</div>
-          <div className={styles.note}>{children}</div>
-        </div>
+        {src ? (
+          <Image
+            src={src}
+            alt={alt ?? (typeof children === "string" ? children : "Figure")}
+            fill
+            className={styles.img}
+            sizes="(max-width: 780px) 100vw, 800px"
+          />
+        ) : (
+          <>
+            {dims ? <span className={styles.cornerBr}>{dims}</span> : null}
+            <div className={styles.label}>
+              <div className={styles.icon}>▦</div>
+              <div className={styles.title}>Visuel à insérer</div>
+              <div className={styles.note}>{children}</div>
+            </div>
+          </>
+        )}
       </figure>
       {caption ? (
         <div className={styles.caption}>
