@@ -11,6 +11,8 @@ const schema = z.object({
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 function emailHtml(name: string, email: string, message: string): string {
+  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://me-julios.vercel.app").replace(/\/$/, "");
+  const siteHost = siteUrl.replace(/^https?:\/\//, "");
   const escaped = message
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
@@ -98,7 +100,7 @@ function emailHtml(name: string, email: string, message: string): string {
   <tr>
     <td style="background:#08090B;padding:16px 32px;border-radius:0 0 8px 8px;border:1px solid #22262F;border-top:1px solid #22262F;">
       <p style="margin:0;font-size:11px;color:#4A4F5A;font-family:'Courier New',Courier,monospace;">
-        portfolio.julios.dev &nbsp;·&nbsp; Yaoundé, Cameroun &nbsp;·&nbsp; sept. 2026
+        <a href="${siteUrl}" style="color:#4A4F5A;text-decoration:none;">${siteHost}</a> &nbsp;·&nbsp; Yaoundé, Cameroun &nbsp;·&nbsp; oct. 2026
       </p>
     </td>
   </tr>
