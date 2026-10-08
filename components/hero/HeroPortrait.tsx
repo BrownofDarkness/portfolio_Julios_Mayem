@@ -10,7 +10,7 @@ export function HeroPortrait() {
         fill
         priority
         className={styles.img}
-        sizes="(max-width: 780px) 0px, 320px"
+        sizes="(max-width: 780px) calc(100vw - 3rem), 320px"
       />
     </figure>
   );
