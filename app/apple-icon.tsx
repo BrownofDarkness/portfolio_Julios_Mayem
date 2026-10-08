@@ -1,9 +1,5 @@
 import { ImageResponse } from "next/og";
 
-/**
- * Apple touch icon (180×180) — écran d'accueil iOS.
- * Version plus large de l'icône : point cyan + brand mono en dessous.
- */
 export const size = { width: 180, height: 180 };
 export const contentType = "image/png";
 
@@ -19,29 +15,29 @@ export default function AppleIcon() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          gap: 14,
+          gap: 12,
         }}
       >
         <div
           style={{
-            width: 44,
-            height: 44,
-            borderRadius: "50%",
-            background: "#4EBFC9",
-            boxShadow: "0 0 24px #4EBFC9",
-          }}
-        />
-        <div
-          style={{
-            fontSize: 24,
+            fontSize: 118,
+            fontWeight: 700,
             color: "#E8EAEE",
-            letterSpacing: "-0.02em",
+            lineHeight: 1,
             fontFamily: "sans-serif",
-            fontWeight: 500,
+            letterSpacing: "-0.04em",
           }}
         >
-          JM
+          J
         </div>
+        <div
+          style={{
+            width: 72,
+            height: 6,
+            background: "#4EBFC9",
+            borderRadius: 3,
+          }}
+        />
       </div>
     ),
     { ...size }
