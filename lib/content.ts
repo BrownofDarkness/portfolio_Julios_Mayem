@@ -6,7 +6,7 @@ import type { Locale } from "@/i18n/routing";
 
 /* =============================================================
    Content Collections — schéma typé + loader MDX.
-   Deux collections : projects, notes.
+   Deux collections : projects, publications.
    Chaque locale a son propre dossier (content/{kind}/{locale}/*.mdx).
    ============================================================= */
 
@@ -18,7 +18,12 @@ export const projectSchema = z.object({
   year: z.number().int(),
   status: z.enum(["memoire", "production", "client", "prototype", "livre", "archive"]),
   client: z.string().optional(),
+  /** Rôle personnel sur le projet (sinon libellé générique) */
+  role: z.string().optional(),
   summary: z.string(),
+  /** Dépôt public — ou privateCode: true pour un projet confidentiel */
+  repo: z.string().url().optional(),
+  privateCode: z.boolean().default(false),
   stack: z.array(z.string()).default([]),
   badges: z
     .array(
@@ -40,23 +45,25 @@ export const projectSchema = z.object({
   order: z.number().int().default(0),
 });
 
-export const noteSchema = z.object({
+export const publicationSchema = z.object({
   title: z.string(),
   slug: z.string(),
   date: z.string(),
   summary: z.string(),
+  /** article · retour d'expérience · note de veille · recherche appliquée */
+  kind: z.enum(["article", "experience", "watch", "research"]).default("article"),
   tags: z.array(z.string()).default([]),
   status: z.enum(["draft", "published", "coming"]).default("draft"),
 });
 
 export type ProjectMeta = z.infer<typeof projectSchema>;
-export type NoteMeta = z.infer<typeof noteSchema>;
+export type PublicationMeta = z.infer<typeof publicationSchema>;
 
 /* ---------- Chemins ---------- */
 
 const CONTENT_ROOT = path.join(process.cwd(), "content");
 
-function contentDir(kind: "projects" | "notes", locale: Locale) {
+function contentDir(kind: "projects" | "publications", locale: Locale) {
   return path.join(CONTENT_ROOT, kind, locale);
 }
 
@@ -101,12 +108,12 @@ export async function getProject(locale: Locale, slug: string) {
   return items.find((p) => p.slug === slug);
 }
 
-export async function getNotes(locale: Locale) {
-  const items = await readCollection(contentDir("notes", locale), noteSchema);
+export async function getPublications(locale: Locale) {
+  const items = await readCollection(contentDir("publications", locale), publicationSchema);
   return items.sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
-export async function getNote(locale: Locale, slug: string) {
-  const items = await getNotes(locale);
+export async function getPublication(locale: Locale, slug: string) {
+  const items = await getPublications(locale);
   return items.find((n) => n.slug === slug);
 }

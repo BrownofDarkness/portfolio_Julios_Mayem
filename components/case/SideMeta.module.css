@@ -25,7 +25,7 @@
 
 .label {
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: var(--fs-xs);
   color: var(--muted);
   letter-spacing: 0.05em;
   font-variant-caps: all-small-caps;
@@ -35,11 +35,23 @@
 .value {
   color: var(--text);
   line-height: 1.55;
-  font-size: 14.5px;
+  font-size: var(--fs-sm);
 }
 
 .mono {
   font-family: var(--font-mono);
   font-variant-numeric: tabular-nums;
-  font-size: 13.5px;
+  font-size: var(--fs-xs);
+}
+
+.link {
+  color: var(--blue);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(90, 155, 216, 0.35);
+  transition: color var(--dur-med) var(--ease),
+              border-color var(--dur-med) var(--ease);
+}
+.link:hover {
+  color: var(--blue-soft);
+  border-bottom-color: var(--blue-soft);
 }

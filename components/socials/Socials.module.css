@@ -36,3 +36,20 @@
   transition: color var(--dur-med) var(--ease);
   display: block;
 }
+
+/* ---------- Variante avec libellés visibles (page contact) ---------- */
+.labelled {
+  flex-wrap: wrap;
+}
+.labelled .link {
+  width: auto;
+  padding: 0 0.9rem;
+  gap: 0.55rem;
+}
+.label {
+  font-size: var(--fs-sm);
+  color: var(--text-2);
+}
+.link:hover .label {
+  color: var(--blue);
+}

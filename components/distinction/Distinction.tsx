@@ -1,3 +1,4 @@
+import { FlagCM } from "@/components/ui/FlagCM";
 import styles from "./Distinction.module.css";
 
 export type DistinctionData = {
@@ -5,6 +6,8 @@ export type DistinctionData = {
   title: string;
   year: string;
   issuer: string;
+  /** Code pays ISO : affiche le drapeau à côté de l'émetteur */
+  country?: "CM";
 };
 
 /**
@@ -18,6 +21,7 @@ export function Distinction({ item }: { item: DistinctionData }) {
       <div className={styles.title}>{item.title}</div>
       <div className={styles.meta}>
         <span className={styles.tab}>{item.year}</span> · {item.issuer}
+        {item.country === "CM" ? <FlagCM /> : null}
       </div>
     </article>
   );

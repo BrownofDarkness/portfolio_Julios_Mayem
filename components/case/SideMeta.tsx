@@ -4,6 +4,8 @@ export type SideBlock = {
   label: string;
   value: string;
   mono?: boolean;
+  /** Lien externe (ex. dépôt GitHub) */
+  href?: string;
 };
 
 type SideMetaProps = {
@@ -22,7 +24,13 @@ export function SideMeta({ blocks }: SideMetaProps) {
         <div key={b.label} className={styles.block}>
           <div className={styles.label}>{b.label}</div>
           <div className={b.mono ? `${styles.value} ${styles.mono}` : styles.value}>
-            {b.value}
+            {b.href ? (
+              <a href={b.href} target="_blank" rel="noopener noreferrer" className={styles.link}>
+                {b.value} ↗
+              </a>
+            ) : (
+              b.value
+            )}
           </div>
         </div>
       ))}

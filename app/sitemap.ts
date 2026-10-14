@@ -1,14 +1,14 @@
 import type { MetadataRoute } from "next";
-import { getProjects, getNotes } from "@/lib/content";
+import { getProjects, getPublications } from "@/lib/content";
 
-const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://portfolio.julios.dev";
+import { SITE_URL as BASE } from "@/lib/site";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const [projectsFr, projectsEn, notesFr, notesEn] = await Promise.all([
+  const [projectsFr, projectsEn, publicationsFr, publicationsEn] = await Promise.all([
     getProjects("fr"),
     getProjects("en"),
-    getNotes("fr"),
-    getNotes("en"),
+    getPublications("fr"),
+    getPublications("en"),
   ]);
 
   const now = new Date();
@@ -19,8 +19,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/en`,         lastModified: now, alternates: { languages: { fr: `${BASE}/fr`, en: `${BASE}/en` } } },
     { url: `${BASE}/fr/contact`, lastModified: now, alternates: { languages: { fr: `${BASE}/fr/contact`, en: `${BASE}/en/contact` } } },
     { url: `${BASE}/en/contact`, lastModified: now, alternates: { languages: { fr: `${BASE}/fr/contact`, en: `${BASE}/en/contact` } } },
-    { url: `${BASE}/fr/notes`,   lastModified: now, alternates: { languages: { fr: `${BASE}/fr/notes`,   en: `${BASE}/en/notes` } } },
-    { url: `${BASE}/en/notes`,   lastModified: now, alternates: { languages: { fr: `${BASE}/fr/notes`,   en: `${BASE}/en/notes` } } },
+    { url: `${BASE}/fr/publications`,   lastModified: now, alternates: { languages: { fr: `${BASE}/fr/publications`,   en: `${BASE}/en/publications` } } },
+    { url: `${BASE}/en/publications`,   lastModified: now, alternates: { languages: { fr: `${BASE}/fr/publications`,   en: `${BASE}/en/publications` } } },
   ];
 
   // ── Projets ───────────────────────────────────────────────────
@@ -35,31 +35,31 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   }));
 
-  // ── Notes ─────────────────────────────────────────────────────
-  const noteEntries: MetadataRoute.Sitemap = notesFr
+  // ── Publications ─────────────────────────────────────────────────────
+  const publicationEntries: MetadataRoute.Sitemap = publicationsFr
     .filter((n) => n.status === "published")
     .map((n) => ({
-      url: `${BASE}/fr/notes/${n.slug}`,
+      url: `${BASE}/fr/publications/${n.slug}`,
       lastModified: new Date(n.date),
       alternates: {
         languages: {
-          fr: `${BASE}/fr/notes/${n.slug}`,
-          en: `${BASE}/en/notes/${n.slug}`,
+          fr: `${BASE}/fr/publications/${n.slug}`,
+          en: `${BASE}/en/publications/${n.slug}`,
         },
       },
     }));
 
   // Vérifie que les slugs EN correspondent bien
-  const enNoteSet = new Set(notesEn.filter((n) => n.status === "published").map((n) => n.slug));
-  const noteEnEntries: MetadataRoute.Sitemap = notesEn
-    .filter((n) => n.status === "published" && enNoteSet.has(n.slug))
+  const enPublicationSet = new Set(publicationsEn.filter((n) => n.status === "published").map((n) => n.slug));
+  const publicationEnEntries: MetadataRoute.Sitemap = publicationsEn
+    .filter((n) => n.status === "published" && enPublicationSet.has(n.slug))
     .map((n) => ({
-      url: `${BASE}/en/notes/${n.slug}`,
+      url: `${BASE}/en/publications/${n.slug}`,
       lastModified: new Date(n.date),
       alternates: {
         languages: {
-          fr: `${BASE}/fr/notes/${n.slug}`,
-          en: `${BASE}/en/notes/${n.slug}`,
+          fr: `${BASE}/fr/publications/${n.slug}`,
+          en: `${BASE}/en/publications/${n.slug}`,
         },
       },
     }));
@@ -79,7 +79,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...staticPages,
     ...projectEntries,
     ...enProjectEntries,
-    ...noteEntries,
-    ...noteEnEntries,
+    ...publicationEntries,
+    ...publicationEnEntries,
   ];
 }

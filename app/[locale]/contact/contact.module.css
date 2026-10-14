@@ -17,7 +17,7 @@
 .left { max-width: 36rem; }
 
 .lead {
-  font-size: 17px;
+  font-size: var(--fs-body);
   line-height: 1.65;
   color: var(--text);
   margin: 0 0 2.5rem;
@@ -41,7 +41,7 @@
 
 .label {
   font-family: var(--font-mono);
-  font-size: 12.5px;
+  font-size: var(--fs-xs);
   color: var(--muted);
   letter-spacing: 0.04em;
   font-variant-caps: all-small-caps;
@@ -51,7 +51,7 @@
 .mainLink {
   color: var(--text);
   text-decoration: none;
-  font-size: 20px;
+  font-size: var(--fs-lg);
   font-weight: 500;
   letter-spacing: -0.012em;
   border-bottom: 1px solid var(--border-2);
@@ -78,7 +78,7 @@
   color: var(--text);
   text-decoration: none;
   font-family: var(--font-mono);
-  font-size: 15px;
+  font-size: var(--fs-md);
   transition: color var(--dur-med) var(--ease);
 }
 .item:hover { color: var(--blue); }
@@ -86,7 +86,7 @@
 
 .itemKey {
   color: var(--muted);
-  font-size: 13px;
+  font-size: var(--fs-xs);
   min-width: 6ch;
 }
 
@@ -130,11 +130,11 @@
 .sideValue {
   color: var(--text);
   line-height: 1.55;
-  font-size: 14.5px;
+  font-size: var(--fs-sm);
 }
 
 .sideMuted {
   color: var(--muted);
-  font-size: 13px;
+  font-size: var(--fs-xs);
   font-family: var(--font-mono);
 }

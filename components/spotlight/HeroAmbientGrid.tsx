@@ -7,8 +7,9 @@ import styles from "./HeroAmbientGrid.module.css";
 const CELL_SIZE = 48;
 const DIM_BORDER = "rgba(255, 255, 255, 0.024)";
 
-// BPM 50 → 1200 ms par battement
-const BEAT_MS       = Math.round((60 / 50) * 1000);
+// Un battement (lub + dub) toutes les 12 s : assez lent pour laisser
+// lire le hero sans que la grille détourne l'attention.
+const BEAT_MS       = 12_000;
 const DUB_OFFSET_MS = 180;
 
 // ─────────────────────────────────────────────────────────────

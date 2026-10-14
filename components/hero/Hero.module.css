@@ -31,7 +31,7 @@
 /* -------- Kicker -------- */
 .kicker {
   font-family: var(--font-mono);
-  font-size: 14px;
+  font-size: var(--fs-sm);
   color: var(--cyan);
   font-variant-caps: all-small-caps;
   font-feature-settings: "smcp" 1, "c2sc" 1, "lnum" 1;
@@ -54,7 +54,7 @@
 .title {
   font-family: var(--font-sans);
   font-weight: 600;
-  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-size: var(--fs-display);
   line-height: 1.05;
   letter-spacing: -0.033em;
   color: var(--text);
@@ -72,7 +72,7 @@
 
 /* -------- Lede -------- */
 .lede {
-  font-size: 17.5px;
+  font-size: var(--fs-body);
   color: var(--text-2);
   line-height: 1.6;
   max-width: 34rem;
@@ -85,10 +85,6 @@
   font-weight: 500;
 }
 
-.accent {
-  color: var(--cyan);
-  font-weight: 500;
-}
 
 /* -------- CTA row -------- */
 .ctaRow {

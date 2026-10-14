@@ -1,13 +1,23 @@
 import { getTranslations } from "next-intl/server";
 import styles from "./About.module.css";
 
+type EducationStep = {
+  level: string;
+  year: string;
+  title: string;
+  school: string;
+  detail: string;
+};
+
 /**
  * Section "À propos" éditoriale — bio en prose (pas de listes),
  * intègre formation + parcours associatif sans en faire un CV.
+ * Le parcours académique (L1 → L3) est détaillé dans la colonne latérale.
  * Une signature en fin. Contenu tiré du questionnaire de Julios.
  */
 export async function About() {
   const t = await getTranslations("about");
+  const education = t.raw("education") as EducationStep[];
 
   return (
     <div className={styles.wrap}>
@@ -25,10 +35,19 @@ export async function About() {
       <aside className={styles.side}>
         <div className={styles.sideBlock}>
           <div className={styles.sideLabel}>{t("side.education")}</div>
-          <div className={styles.sideValue}>
-            {t("side.eduLine1")}<br />
-            <span className={styles.sideMuted}>{t("side.eduLine2")}</span>
-          </div>
+          <ol className={styles.timeline}>
+            {education.map((step) => (
+              <li key={step.level} className={styles.step}>
+                <span className={styles.stepLevel}>
+                  {step.level} · {step.year}
+                </span>
+                <span className={styles.sideValue}>{step.title}</span>
+                <span className={styles.sideMuted}>
+                  {step.school} — {step.detail}
+                </span>
+              </li>
+            ))}
+          </ol>
         </div>
         <div className={styles.sideBlock}>
           <div className={styles.sideLabel}>{t("side.role")}</div>

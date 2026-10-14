@@ -1,5 +1,6 @@
 import { ImageResponse } from "next/og";
 import { NextRequest } from "next/server";
+import { FULL_NAME, SITE_HOST } from "@/lib/site";
 
 /**
  * Génération d'OG images à la volée.
@@ -23,10 +24,10 @@ const BORDER = "#22262F";
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const kind = searchParams.get("kind") ?? "default";
-  const title = searchParams.get("title") ?? "Julios Mayem";
+  const title = searchParams.get("title") ?? FULL_NAME;
   const subtitle =
     searchParams.get("subtitle") ??
-    "Ingénieur logiciel · vision par ordinateur";
+    "Développeur logiciel et bases de données";
   const kicker = searchParams.get("kicker") ?? "Yaoundé · 2026";
   const accent = kind === "case" ? CYAN : BLUE;
   const accentLabel = kind === "case" ? "case study" : "portfolio";
@@ -163,8 +164,8 @@ export async function GET(req: NextRequest) {
             letterSpacing: "0.02em",
           }}
         >
-          <span style={{ color: TEXT }}>Julios Mayem — Yaoundé, Cameroun</span>
-          <span style={{ color: GOLD, fontWeight: 500 }}>portfolio.julios.dev</span>
+          <span style={{ color: TEXT }}>{FULL_NAME} — Yaoundé, Cameroun</span>
+          <span style={{ color: GOLD, fontWeight: 500 }}>{SITE_HOST}</span>
         </div>
       </div>
     ),

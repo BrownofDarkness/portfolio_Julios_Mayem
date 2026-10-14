@@ -11,7 +11,7 @@ import { Skills } from "@/components/skills/Skills";
 import { SectionHead } from "@/components/section/SectionHead";
 import { ProjectsGrid } from "@/components/project/ProjectsGrid";
 import { ProjectCard } from "@/components/project/ProjectCard";
-import { NotesTeaser } from "@/components/section/NotesTeaser";
+import { PublicationsTeaser } from "@/components/section/PublicationsTeaser";
 import {
   DistinctionsGrid,
   type DistinctionData,
@@ -73,14 +73,14 @@ export default async function HomePage({
           <Skills />
         </section>
 
-        {/* ---------- Section Notes ---------- */}
-        <section className={styles.block} id="notes">
+        {/* ---------- Section Publications ---------- */}
+        <section className={styles.block} id="publications">
           <SectionHead
             index="04."
-            title={t("sections.notesTitle")}
-            aside={t("sections.notesAside")}
+            title={t("sections.publicationsTitle")}
+            aside={t("sections.publicationsAside")}
           />
-          <NotesTeaser locale={locale} />
+          <PublicationsTeaser locale={locale} />
         </section>
 
         {/* ---------- Section Distinctions ---------- */}

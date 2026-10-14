@@ -16,7 +16,7 @@
 
 .label {
   font-family: var(--font-mono);
-  font-size: 12.5px;
+  font-size: var(--fs-xs);
   color: var(--muted);
   letter-spacing: 0.04em;
   font-variant-caps: all-small-caps;
@@ -30,7 +30,7 @@
 .email {
   color: var(--text);
   text-decoration: none;
-  font-size: 17px;
+  font-size: var(--fs-body);
   font-weight: 500;
   letter-spacing: -0.01em;
   border-bottom: 1px solid var(--border-2);
@@ -58,14 +58,14 @@
   color: var(--text);
   text-decoration: none;
   font-family: var(--font-mono);
-  font-size: 14px;
+  font-size: var(--fs-sm);
   transition: color var(--dur-med) var(--ease);
 }
 .phone:hover { color: var(--blue); }
 
 .phoneKey {
   color: var(--muted);
-  font-size: 12.5px;
+  font-size: var(--fs-xs);
   min-width: 3ch;
 }
 
@@ -92,7 +92,7 @@
   color: var(--text);
   text-decoration: none;
   font-family: var(--font-mono);
-  font-size: 14px;
+  font-size: var(--fs-sm);
   transition: color var(--dur-med) var(--ease);
 }
 .social:hover { color: var(--blue); }
@@ -100,7 +100,7 @@
 
 .socialKey {
   color: var(--muted);
-  font-size: 12.5px;
+  font-size: var(--fs-xs);
   min-width: 6ch;
 }
 
@@ -123,7 +123,7 @@
 
 .locValue {
   color: var(--text);
-  font-size: 16px;
+  font-size: var(--fs-body);
   font-weight: 500;
   letter-spacing: -0.008em;
   margin-bottom: 1rem;
@@ -131,7 +131,7 @@
 
 .build {
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: var(--fs-xs);
   color: var(--dim);
   letter-spacing: 0.02em;
   line-height: 1.6;

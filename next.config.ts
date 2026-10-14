@@ -21,6 +21,14 @@ const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
   },
+  // La section « Notes » est devenue « Publications » (oct. 2026) :
+  // on garde les anciennes URL vivantes pour les liens déjà partagés.
+  async redirects() {
+    return [
+      { source: "/:locale(fr|en)/notes", destination: "/:locale/publications", permanent: true },
+      { source: "/:locale(fr|en)/notes/:slug", destination: "/:locale/publications/:slug", permanent: true },
+    ];
+  },
   experimental: {
     optimizePackageImports: ["gsap"],
   },

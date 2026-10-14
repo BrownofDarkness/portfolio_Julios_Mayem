@@ -12,7 +12,7 @@
 .title {
   font-family: var(--font-sans);
   font-weight: 600;
-  font-size: 1.65rem;
+  font-size: var(--fs-2xl);
   letter-spacing: -0.024em;
   color: var(--text);
   display: flex;
@@ -23,7 +23,7 @@
 
 .num {
   font-family: var(--font-mono);
-  font-size: 14.5px;
+  font-size: var(--fs-sm);
   color: var(--dim);
   font-weight: 500;
   font-variant-numeric: tabular-nums;
@@ -31,7 +31,7 @@
 
 .aside {
   font-family: var(--font-mono);
-  font-size: 14px;
+  font-size: var(--fs-sm);
   color: var(--muted);
   letter-spacing: 0.04em;
   /* small caps réelles */

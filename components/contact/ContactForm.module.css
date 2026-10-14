@@ -24,7 +24,7 @@
 
 .label {
   font-family: var(--font-mono);
-  font-size: 12.5px;
+  font-size: var(--fs-xs);
   color: var(--muted);
   letter-spacing: 0.04em;
   font-variant-caps: all-small-caps;
@@ -38,7 +38,7 @@
   border-radius: var(--radius-2);
   color: var(--text);
   font-family: var(--font-sans);
-  font-size: 15px;
+  font-size: var(--fs-md);
   line-height: 1.5;
   padding: 0.65rem 0.9rem;
   transition: border-color var(--dur-med) var(--ease),
@@ -75,7 +75,7 @@
   background: var(--blue);
   color: var(--bg);
   font-family: var(--font-mono);
-  font-size: 14px;
+  font-size: var(--fs-sm);
   font-weight: 500;
   letter-spacing: 0.01em;
   padding: 0.65rem 1.5rem;
@@ -100,7 +100,7 @@
   display: flex;
   align-items: center;
   gap: 0.65rem;
-  font-size: 14.5px;
+  font-size: var(--fs-sm);
   padding: 0.75rem 1rem;
   border-radius: var(--radius-2);
   border: 1px solid;

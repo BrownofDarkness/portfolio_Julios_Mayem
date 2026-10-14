@@ -13,7 +13,7 @@
 
 .label {
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: var(--fs-xs);
   letter-spacing: 0.05em;
   font-variant-caps: all-small-caps;
   font-feature-settings: "smcp" 1, "c2sc" 1, "lnum" 1;
@@ -24,7 +24,7 @@
 .insight .label { color: var(--cyan); }
 
 .body {
-  font-size: 15px;
+  font-size: var(--fs-md);
   line-height: 1.65;
   color: var(--text);
 }

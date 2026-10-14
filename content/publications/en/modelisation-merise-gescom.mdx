@@ -1,0 +1,43 @@
+---
+title: "Modelling GESCOM with MERISE: from requirements to a MySQL database"
+slug: "modelisation-merise-gescom"
+date: "2026-10-14"
+summary: "How the MERISE method structured the design of GESCOM, a sales management system: conceptual model, logical model, then the MySQL database."
+kind: "article"
+tags: ["modelling", "software-engineering", "merise", "mysql"]
+status: "coming"
+---
+
+{/* DRAFT — to be reviewed by Julios before setting status to "published". */}
+
+## Why MERISE
+
+GESCOM had to centralise sales, invoicing, margin tracking and stock
+management. That is first and foremost a data problem: who sells
+what, at what price, with how much stock left. MERISE, which clearly
+separates data from processing, fits it well.
+
+## From conceptual to physical
+
+The approach has three levels:
+
+1. **Conceptual data model** — business entities (item, customer,
+   sale, sale line, supplier, stock movement) and their associations,
+   independent of any technology.
+2. **Logical data model** — the conceptual model translated into
+   relational tables, primary keys and foreign keys.
+3. **Physical model** — the MySQL database itself: column types,
+   indexes and integrity constraints.
+
+## What the model made possible
+
+A clean model makes processing simple to write: margins follow
+directly from the recorded purchase and sale prices, and the
+out-of-stock alert comes down to comparing current stock with a
+per-item threshold.
+
+## MERISE or 2TUP?
+
+KKBSECU, by contrast, was modelled with 2TUP and UML: a system where
+behaviour (capture, recognition, alerts) matters more than data
+structure. The method follows the nature of the problem.

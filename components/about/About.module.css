@@ -14,12 +14,21 @@
 }
 
 .p {
-  font-size: 17px;
+  font-size: var(--fs-body);
   line-height: 1.7;
   color: var(--text);
   margin: 0 0 1.15rem;
 }
 .p:last-of-type { margin-bottom: 2rem; }
+
+/* Paragraphes longs : justifiés + césure sur desktop ; à gauche sur
+   mobile pour éviter les grands blancs entre les mots. */
+@media (min-width: 780px) {
+  .p {
+    text-align: justify;
+    hyphens: auto;
+  }
+}
 
 .signature {
   display: flex;
@@ -32,13 +41,13 @@
 .sigLabel {
   color: var(--gold);
   font-family: var(--font-mono);
-  font-size: 15px;
+  font-size: var(--fs-md);
 }
 
 .sigQuote {
   font-style: italic;
   color: var(--text-2);
-  font-size: 16px;
+  font-size: var(--fs-body);
   line-height: 1.55;
   max-width: 36rem;
 }
@@ -67,7 +76,7 @@
 
 .sideLabel {
   font-family: var(--font-mono);
-  font-size: 12.5px;
+  font-size: var(--fs-xs);
   color: var(--muted);
   letter-spacing: 0.04em;
   font-variant-caps: all-small-caps;
@@ -77,10 +86,37 @@
 .sideValue {
   color: var(--text);
   line-height: 1.5;
-  font-size: 14px;
+  font-size: var(--fs-sm);
 }
 
 .sideMuted {
   color: var(--muted);
-  font-size: 13px;
+  font-size: var(--fs-xs);
+}
+
+/* ---------- Parcours académique L1 → L3 ---------- */
+.timeline {
+  list-style: none;
+  margin: 0.2rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding-left: 0.9rem;
+  border-left: 1px solid var(--border-2);
+}
+.step:first-child { border-left-color: var(--blue-dim); }
+
+.stepLevel {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--blue);
+  font-variant-numeric: tabular-nums lining-nums;
 }

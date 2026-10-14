@@ -38,6 +38,20 @@
   --ease:      cubic-bezier(0.32, 0.72, 0, 1);
   --ease-out:  cubic-bezier(0.16, 1, 0.3, 1);
 
+  /* ---------- Échelle typographique (seules tailles autorisées) ----------
+     Deux familles (Inter + JetBrains Mono), neuf tailles. Toute
+     font-size en dur ailleurs doit passer par ces variables. */
+  --fs-micro:   12px;     /* coins de figures, repères techniques */
+  --fs-xs:      13px;     /* labels small caps, tags, métadonnées */
+  --fs-sm:      14px;     /* textes secondaires, cartes, side panels */
+  --fs-md:      15px;     /* liens nav, boutons, listes */
+  --fs-body:    17px;     /* paragraphes courants */
+  --fs-lg:      19px;     /* titres de cartes, h4 */
+  --fs-xl:      22px;     /* h3, intertitres de corps */
+  --fs-2xl:     1.75rem;  /* h2, titres de section */
+  --fs-page:    clamp(2.25rem, 4.5vw, 3rem);   /* h1 des pages internes */
+  --fs-display: clamp(2.25rem, 5vw, 3.5rem);   /* h1 du hero */
+
   /* ---------- Espacements de base (multiples de 4) ---------- */
   --space-1:  0.25rem;
   --space-2:  0.5rem;

@@ -1,13 +1,13 @@
 {
   "meta": {
-    "title": "Julios Mayem — Software Developer & Databases",
-    "description": "Portfolio of Julios Mayem: Cameroonian software developer passionate about new technologies, logic and intelligent systems. Yaoundé, Cameroon."
+    "title": "MAYEM YOTA TAMESSUING Julios — Software Developer & Databases",
+    "description": "Portfolio of MAYEM YOTA TAMESSUING Julios, Cameroonian software developer specialised in software engineering, databases, business applications and facial recognition."
   },
   "nav": {
     "work": "Work",
     "about": "About",
     "skills": "Skills",
-    "notes": "Notes",
+    "publications": "Publications",
     "distinctions": "Awards",
     "contact": "Contact",
     "search": "Search",
@@ -17,11 +17,9 @@
     "location": "Yaoundé, Cameroon",
     "role": "Software Developer & Databases",
     "titleLine1": "MAYEM YOTA TAMESSUING Julios.",
-    "titleLine2": "You imagine, I build: I turn your ideas into robust technology products through code.",
-    "leadPart1": "Developer at",
-    "leadPart2": "since 2024, passionate about new technologies, logic and complex technical challenges.",
-    "signature": "Software developer with over two years of experience",
-    "signatureEnding": "— passionate about new technologies, logic, mathematics and complex technical challenges.",
+    "titleLine2": "You imagine, I build your tech products through code…",
+    "leadPart1": "Software developer at",
+    "leadPart2": "since 2024, I develop and maintain internal applications, including GESCOM, a sales management system, and KKBSECU, a facial-recognition system for access control.",
     "ctaProjects": "See the projects",
     "ctaContact": "Get in touch"
   },
@@ -29,32 +27,40 @@
     "label": "Currently",
     "status": "active",
     "rows": {
-      "role": "role",
+      "role": "position",
       "location": "based in",
       "focus": "focus",
-      "available": "available",
-      "updated": "edited"
+      "available": "open to",
+      "updated": "updated"
     },
-    "footnote": "currently: application development, systems maintenance and continuous improvement of my technical skills."
+    "values": {
+      "role": "Developer · BkSquare SARL",
+      "location": "Yaoundé (Etoug-Ebe)",
+      "focus": "Python · SQL · Computer Vision · Flutter · electronics",
+      "available": "Engineering degree · master's · contract",
+      "updated": "Oct 14, 2026"
+    },
+    "footnoteDate": "Yaoundé — Oct 14, 2026",
+    "footnote": "Open to an engineering degree, a master's programme or a contract in software engineering, information systems and industrial R&D."
   },
   "sections": {
     "aboutTitle": "About",
-    "aboutAside": "Path · vision · engagement",
+    "aboutAside": "Path · education · engagement",
     "projectsTitle": "Selected work",
-    "projectsAside": "Six projects · 2022 — 2026",
+    "projectsAside": "Six projects · 2022–2026",
     "caseStudyTitle": "Case study",
-    "notesTitle": "Technical notes & research",
-    "notesSubtitle": "A short-form notebook on precise technical topics — documenting how I think and solve concrete problems.",
-    "notesAside": "Coming soon — first three topics",
-    "distinctionsTitle": "Distinctions",
+    "publicationsTitle": "Publications",
+    "publicationsSubtitle": "Articles, experience reports and technology-watch notes drawn from the projects I work on.",
+    "publicationsAside": "First three pieces · in preparation",
+    "distinctionsTitle": "Awards",
     "distinctionsAside": "Three · academic & community",
     "contactTitle": "Contact",
-    "contactAside": "Yaoundé, Cameroon — September 2026",
+    "contactAside": "Yaoundé, Cameroon",
     "skillsTitle": "Skills",
     "skillsAside": "Languages · frameworks · tools"
   },
   "skills": {
-    "lead": "An overview of the technologies I actually use — not an exhaustive list. Whatever's missing, I'll learn when the moment comes.",
+    "lead": "The technologies I actually use in my projects, grouped by purpose.",
     "groups": {
       "languages": "Languages",
       "frameworks": "Frameworks",
@@ -63,34 +69,57 @@
     }
   },
   "about": {
-    "p1": "Born and raised in Yaoundé, I work here today as a software developer. I started my studies at the IUT of Ngaoundéré, where I earned a DUT in software engineering with honours, then continued at the University Institute of Sciences, Technologies and Ethics, where I graduated with a professional Bachelor's degree with highest honours, ranking first in my class.",
-    "p2": "In 2024, I joined BkSquare SARL as a research intern to design a facial-recognition system. The project was validated and adopted in-house, and the company hired me at the end of the internship. Since then, I have been working there as a developer and IT manager.",
-    "p3": "Alongside my academic and professional journey, I have invested in several community initiatives: coordinating IT communities in the Adamaoua and Far-North regions from 2023 to 2024, chairing the IUT Ngaoundéré Computer Club in 2021–2022, and giving private tutoring in mathematics and computer science. These experiences strengthened my communication, teaching and teamwork skills — qualities I also apply in the way I design and write code.",
-    "signature": "\"What if a few lines of code could change the world?\"",
+    "p1": "Born and raised in Yaoundé, I work here today as a software developer. I earned a DUT (two-year university diploma) in computer engineering at the IUT of Ngaoundéré, with honours, then a professional bachelor's degree in software engineering at the University Institute of Sciences, Technologies and Ethics (IUSTE), with highest honours, graduating first in my class.",
+    "p2": "In 2024, I joined BkSquare SARL as a research intern to design a facial-recognition system. The project was validated and adopted in-house, and the company hired me at the end of the internship. I now work there as a developer and IT manager. My goal is to pursue an engineering degree or a master's programme to deepen my work in software engineering, information systems and industrial R&D.",
+    "p3": "Alongside this, I have been involved in several community initiatives: coordinating IT communities in the Adamaoua and Far North regions from 2023 to 2024, chairing the IUT Ngaoundéré computer club in 2021–2022, and giving private tutoring in mathematics and computer science. These experiences strengthened my communication, teaching and teamwork skills.",
+    "signature": "“What if a few lines of code could change the world?”",
     "side": {
       "education": "Education",
-      "eduLine1": "B.Sc. software engineering",
-      "eduLine2": "Top honours · 1st / 25",
       "role": "Currently",
       "roleLine1": "Developer & IT manager — BkSquare SARL",
       "roleLine2": "Yaoundé, since 2024",
       "languages": "Languages",
       "languagesValue": "French (native) · English (B2)"
-    }
+    },
+    "education": [
+      {
+        "level": "L3",
+        "year": "2024",
+        "title": "Professional bachelor's — software engineering",
+        "school": "IUSTE, Yaoundé",
+        "detail": "Highest honours · ranked 1st / 25"
+      },
+      {
+        "level": "L2",
+        "year": "2022",
+        "title": "DUT — computer engineering (2nd year)",
+        "school": "IUT of Ngaoundéré",
+        "detail": "With honours · Presidential excellence award"
+      },
+      {
+        "level": "L1",
+        "year": "2021",
+        "title": "DUT — computer engineering (1st year)",
+        "school": "IUT of Ngaoundéré",
+        "detail": "Presidential excellence award"
+      }
+    ]
   },
   "distinctions": {
     "items": [
       {
         "label": "Presidential award",
-        "title": "Academic excellence — Bachelor 1",
+        "title": "Academic excellence — 1st year",
         "year": "2021",
-        "issuer": "Republic of Cameroon 🇨🇲"
+        "issuer": "Republic of Cameroon",
+        "country": "CM"
       },
       {
         "label": "Presidential award",
-        "title": "Academic excellence — Bachelor 2",
+        "title": "Academic excellence — 2nd year",
         "year": "2022",
-        "issuer": "Republic of Cameroon 🇨🇲"
+        "issuer": "Republic of Cameroon",
+        "country": "CM"
       },
       {
         "label": "3rd place — GDG Ngaoundéré",
@@ -99,6 +128,10 @@
         "issuer": "Google Developer Group Ngaoundéré"
       }
     ]
+  },
+  "project": {
+    "repo": "View the GitHub repository",
+    "private": "Code not public — demo on request"
   },
   "contact": {
     "form": {
@@ -118,7 +151,9 @@
     "contact": "Contact",
     "networks": "Networks",
     "location": "Based in",
+    "place": "Yaoundé, Cameroon",
+    "online": "online",
     "buildLabel": "edition",
-    "buildDate": "sep. 2026"
+    "buildDate": "Oct 2026"
   }
 }

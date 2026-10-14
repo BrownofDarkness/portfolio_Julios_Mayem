@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Socials } from "@/components/socials/Socials";
+import { FlagCM } from "@/components/ui/FlagCM";
 import styles from "./Footer.module.css";
 
 /**
@@ -41,12 +42,15 @@ export async function Footer() {
 
           <div className={styles.location}>
             <div className={styles.label}>{t("location")}</div>
-            <div className={styles.locValue}>Yaoundé, Cameroun</div>
+            <div className={styles.locValue}>
+              {t("place")}
+              <FlagCM />
+            </div>
             <div className={styles.build}>
               v1.0.0 · build&nbsp;
-              <span className={styles.tab}>2026.09</span>
+              <span className={styles.tab}>2026.10</span>
               <br />
-              <span className={styles.live}>●</span> online
+              <span className={styles.live}>●</span> {t("online")}
             </div>
           </div>
         </div>

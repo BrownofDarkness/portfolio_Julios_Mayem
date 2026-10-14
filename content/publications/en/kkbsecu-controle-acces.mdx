@@ -1,0 +1,53 @@
+---
+title: "KKBSECU: facial-recognition access control on modest hardware"
+slug: "kkbsecu-controle-acces"
+date: "2026-10-14"
+summary: "Experience report on designing KKBSECU at BkSquare SARL: from camera capture to Firebase logging, and what the hardware constraints imposed."
+kind: "experience"
+tags: ["computer-vision", "opencv", "python", "firebase", "2tup"]
+status: "coming"
+---
+
+{/* DRAFT — to be reviewed by Julios before setting status to "published". */}
+
+## The need
+
+BkSquare SARL wanted to secure access to a room holding sensitive IT
+equipment without installing heavy infrastructure. The constraint was
+set from day one: a modest workstation, a standard HD camera, no
+dedicated GPU.
+
+## The pipeline
+
+The system runs in four stages:
+
+1. **Camera capture** — HD video acquisition with OpenCV.
+2. **OpenCV processing** — conversion, resizing and face detection on
+   each selected frame.
+3. **Recognition** — matching the detected face against a model
+   trained on an internal sample of authorised staff.
+4. **Logging** — every attempt, granted or denied, is recorded locally
+   and then synchronised to Firebase.
+
+The operator monitors everything from a CustomTkinter interface: live
+feed, alerts and user management.
+
+## Constraints imposed by the hardware
+
+Without a GPU, every processed frame has a cost. Input resolution,
+frames analysed per second and recognition accuracy had to be traded
+off against one another. Made early, these choices also made the code
+easier to read: each pipeline stage has a clear responsibility and
+explicit parameters.
+
+## Method
+
+Modelling followed the **2TUP** process, with UML use-case, class and
+sequence diagrams. That discipline kept the code maintainable despite
+the fast iterations the company asked for.
+
+## Outcome
+
+The system is in internal use at BkSquare. It was defended as my
+bachelor's thesis, graded 19/20, and I was hired at the end of the
+internship. The code is not public; a demo is available on request.

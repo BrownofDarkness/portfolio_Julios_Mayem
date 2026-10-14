@@ -1,0 +1,60 @@
+---
+title: "KKBSECU : un contrôle d'accès par reconnaissance faciale sur matériel modeste"
+slug: "kkbsecu-controle-acces"
+date: "2026-10-14"
+summary: "Retour d'expérience sur la conception de KKBSECU chez BkSquare SARL : de la capture caméra à la journalisation Firebase, et ce que les contraintes matérielles ont imposé."
+kind: "experience"
+tags: ["computer-vision", "opencv", "python", "firebase", "2tup"]
+status: "coming"
+---
+
+{/* BROUILLON — à relire et compléter par Julios avant de passer status à "published". */}
+
+## Le besoin
+
+BkSquare SARL voulait sécuriser l'accès à une salle contenant du
+matériel informatique sensible, sans installer d'infrastructure
+lourde. La contrainte était posée dès le départ : un poste fixe
+modeste, une caméra HD standard, pas de GPU dédié.
+
+## Le pipeline
+
+Le système suit quatre étapes :
+
+1. **Capture caméra** — acquisition du flux vidéo HD avec OpenCV.
+2. **Traitement OpenCV** — conversion, redimensionnement et
+   détection des visages dans chaque image retenue.
+3. **Reconnaissance** — comparaison du visage détecté avec un modèle
+   entraîné sur un échantillon interne de collaborateurs autorisés.
+4. **Journalisation** — chaque tentative, acceptée ou refusée, est
+   enregistrée en local puis synchronisée dans Firebase.
+
+L'opérateur suit le tout depuis une interface développée avec
+CustomTkinter : flux en direct, alertes et gestion des utilisateurs.
+
+**[à compléter : algorithme de détection et de reconnaissance
+utilisé, taille de l'échantillon, résolution et cadence retenues.]**
+
+## Les choix imposés par le matériel
+
+Sur un poste sans GPU, chaque image traitée a un coût. Il a fallu
+arbitrer entre résolution d'entrée, nombre d'images analysées par
+seconde et précision de la reconnaissance. Faits en amont, ces
+choix ont aussi rendu le code plus lisible : chaque étape du
+pipeline a une responsabilité claire et des paramètres explicites.
+
+**[à compléter : un exemple chiffré d'arbitrage, si documenté.]**
+
+## Méthode
+
+La modélisation a suivi le processus **2TUP**, avec des diagrammes
+UML pour les cas d'utilisation, les classes et les séquences. Cette
+discipline a permis de garder le code maintenable malgré les
+itérations rapides demandées par l'entreprise.
+
+## Résultat
+
+Le système est en usage interne chez BkSquare. Il a été soutenu
+comme mémoire de fin de licence, noté 19/20, et j'ai été recruté à
+l'issue du stage. Le code n'est pas public ; une démonstration est
+possible sur demande.

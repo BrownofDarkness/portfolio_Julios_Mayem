@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { FlagCM } from "@/components/ui/FlagCM";
 import styles from "./NowPanel.module.css";
 
 /**
@@ -10,11 +11,11 @@ export async function NowPanel() {
   const t = await getTranslations("now");
 
   const rows = [
-    { k: t("rows.role"), v: "Dev & resp. info. · BkSquare" },
-    { k: t("rows.location"), v: "Yaoundé (Etoug-Ebe), CM" },
-    { k: t("rows.focus"), v: "python · flutter · vision · électronique", mono: true },
-    { k: t("rows.available"), v: "Cycle ingénieur / Master" },
-    { k: t("rows.updated"), v: "21 sep. 2026", mono: true },
+    { k: t("rows.role"), v: t("values.role") },
+    { k: t("rows.location"), v: t("values.location"), flag: true },
+    { k: t("rows.focus"), v: t("values.focus"), mono: true },
+    { k: t("rows.available"), v: t("values.available") },
+    { k: t("rows.updated"), v: t("values.updated"), mono: true },
   ];
 
   return (
@@ -35,13 +36,14 @@ export async function NowPanel() {
               className={r.mono ? `${styles.v} ${styles.mono}` : styles.v}
             >
               {r.v}
+              {r.flag ? <FlagCM /> : null}
             </span>
           </div>
         ))}
       </div>
 
       <div className={styles.footnote}>
-        <span className={styles.ts}>Yaoundé — 21 sep. 2026</span>
+        <span className={styles.ts}>{t("footnoteDate")}</span>
         {t("footnote")}
       </div>
     </aside>

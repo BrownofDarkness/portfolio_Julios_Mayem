@@ -6,16 +6,17 @@ import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
 
 import { routing, type Locale } from "@/i18n/routing";
-import { getNote, getNotes } from "@/lib/content";
+import { getPublication, getPublications } from "@/lib/content";
+import { publicationKindLabel, publicationDateLabel } from "@/lib/publications";
 import { mdxComponents } from "@/components/mdx/mdx-components";
 
-import styles from "./note.module.css";
+import styles from "./publication.module.css";
 
 export async function generateStaticParams() {
   const params: Array<{ locale: string; slug: string }> = [];
   for (const locale of routing.locales) {
-    const notes = await getNotes(locale);
-    for (const n of notes) {
+    const publications = await getPublications(locale);
+    for (const n of publications) {
       params.push({ locale, slug: n.slug });
     }
   }
@@ -29,13 +30,10 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale, slug } = await params;
   if (!routing.locales.includes(locale as Locale)) return {};
-  const note = await getNote(locale as Locale, slug);
+  const note = await getPublication(locale as Locale, slug);
   if (!note) return {};
 
-  const kicker =
-    locale === "fr"
-      ? `Note technique · ${note.date}`
-      : `Technical note · ${note.date}`;
+  const kicker = `${publicationKindLabel(note.kind, locale as Locale)} · ${note.date}`;
 
   const ogUrl =
     `/api/og?kind=case` +
@@ -44,9 +42,11 @@ export async function generateMetadata({
     `&kicker=${encodeURIComponent(kicker)}`;
 
   return {
-    title: `${note.title} — Julios Mayem`,
+    title: `${note.title} — MAYEM YOTA TAMESSUING Julios`,
     description: note.summary,
-    alternates: { canonical: `/${locale}/notes/${slug}` },
+    alternates: { canonical: `/${locale}/publications/${slug}` },
+    // Brouillons non validés : pas d'indexation tant que non publiés.
+    ...(note.status !== "published" ? { robots: { index: false } } : {}),
     openGraph: {
       title: note.title,
       description: note.summary,
@@ -62,7 +62,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function NotePage({
+export default async function PublicationPage({
   params,
 }: {
   params: Promise<{ locale: string; slug: string }>;
@@ -72,7 +72,7 @@ export default async function NotePage({
   const locale = raw as Locale;
   setRequestLocale(locale);
 
-  const note = await getNote(locale, slug);
+  const note = await getPublication(locale, slug);
   if (!note) notFound();
 
   const t = await getTranslations();
@@ -80,31 +80,40 @@ export default async function NotePage({
   return (
     <div className="wrap">
       <nav className={styles.crumb}>
-        <a href={`/${locale}#notes`} className={styles.crumbLink}>
-          ← {t("nav.notes")}
+        <a href={`/${locale}#publications`} className={styles.crumbLink}>
+          ← {t("nav.publications")}
         </a>
       </nav>
 
       <header className={styles.head}>
         <div className={styles.eyebrow}>
-          {t("sections.notesTitle")} · <span className={styles.tab}>{note.date}</span>
+          {publicationKindLabel(note.kind, locale)} ·{" "}
+          <span className={styles.tab}>{publicationDateLabel(note, locale)}</span>
         </div>
         <h1 className={styles.title}>{note.title}</h1>
         <p className={styles.summary}>{note.summary}</p>
       </header>
 
-      <article className={styles.body}>
-        <MDXRemote
-          source={note.body}
-          components={mdxComponents}
-          options={{
-            mdxOptions: {
-              remarkPlugins: [remarkGfm],
-              rehypePlugins: [rehypeSlug],
-            },
-          }}
-        />
-      </article>
+      {note.status !== "published" ? (
+        <p className={styles.pending}>
+          {locale === "fr"
+            ? "Publication en préparation — revenez bientôt."
+            : "Publication in preparation — check back soon."}
+        </p>
+      ) : (
+        <article className={styles.body}>
+          <MDXRemote
+            source={note.body}
+            components={mdxComponents}
+            options={{
+              mdxOptions: {
+                remarkPlugins: [remarkGfm],
+                rehypePlugins: [rehypeSlug],
+              },
+            }}
+          />
+        </article>
+      )}
     </div>
   );
 }

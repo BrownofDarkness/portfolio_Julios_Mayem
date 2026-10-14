@@ -28,6 +28,10 @@ export function Figure({
   children,
   dims,
 }: FigureProps) {
+  // Pas d'image : le placeholder n'est visible qu'en développement,
+  // jamais « Visuel à insérer » en production.
+  if (!src && process.env.NODE_ENV === "production") return null;
+
   const ratioClass =
     ratio === "hero" ? styles.ratioHero
     : ratio === "portrait" ? styles.ratioPortrait
