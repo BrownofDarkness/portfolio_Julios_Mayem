@@ -37,7 +37,7 @@ Stack: HTML, CSS, JavaScript, PHP, MySQL. Based on the case of IUSTE, with a pre
 ### Educational maths game (2022)
 Stack: Python, SQLite. Calculation quizzes by difficulty level with scoring.
 
-### AfriShape — Academic and career guidance platform (2023, team project)
+### AfriShape — Academic and career guidance platform (2026, team project)
 Stack: Django, Python, HTML, CSS, JavaScript. Contributed to the design and back-end development.
 Live at https://www.afrishape.org/. Code not public.
 

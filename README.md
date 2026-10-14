@@ -73,7 +73,7 @@ orienté intelligence artificielle et vision par ordinateur, Yaoundé, Cameroun.
 ├── public/
 │   ├── llms.txt                    # signal AI crawlers
 │   ├── portrait.png
-│   ├── logos/                      # logos des structures (BkSquare, IUSTE, AfriShape)
+│   ├── logos/                      # logos des structures (BkSquare, IUSTE, IUT, AfriShape)
 │   └── projects/                   # visuels des projets + schémas SVG (pipeline, MLD)
 ├── styles/
 │   ├── tokens.css                  # variables (palette, timings, ease)
