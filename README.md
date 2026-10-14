@@ -24,7 +24,7 @@ orienté intelligence artificielle et vision par ordinateur, Yaoundé, Cameroun.
 ├── app/
 │   ├── [locale]/
 │   │   ├── layout.tsx              # locale layout : fonts + provider + styles
-│   │   ├── page.tsx                # home (hero, projets, à propos, compétences, distinctions)
+│   │   ├── page.tsx                # home (hero, projets, à propos, compétences, publications)
 │   │   ├── not-found.tsx
 │   │   ├── contact/                # formulaire contact + canaux
 │   │   ├── travail/[slug]/         # case studies MDX
@@ -41,7 +41,6 @@ orienté intelligence artificielle et vision par ordinateur, Yaoundé, Cameroun.
 │   ├── about/                      # About
 │   ├── case/                       # CaseHeader, SideMeta (pages case study)
 │   ├── contact/                    # ContactForm (client, états idle/loading/success/error)
-│   ├── distinction/                # Distinction (section home, touche dorée)
 │   ├── hero/                       # Hero, HeroIntro (GSAP), HeroPortrait, NowPanel
 │   ├── layout/                     # Topbar, TopbarMobile (burger), Footer, LanguageSwitch
 │   ├── mdx/                        # Figure, Callout + mapping des composants MDX
@@ -52,7 +51,7 @@ orienté intelligence artificielle et vision par ordinateur, Yaoundé, Cameroun.
 │   ├── spotlight/
 │   │   ├── GlobalGridSpotlight     # grille globale réactive au curseur (sous le hero)
 │   │   └── HeroAmbientGrid         # grille hero — battement toutes les 12 s
-│   ├── ui/                         # Button, FlagCM (drapeau SVG)
+│   ├── ui/                         # Button, FlagCM (drapeau SVG), OrgLogo (logo de structure)
 │   └── JsonLd.tsx
 ├── content/
 │   ├── projects/{fr,en}/*.mdx
@@ -74,7 +73,8 @@ orienté intelligence artificielle et vision par ordinateur, Yaoundé, Cameroun.
 ├── public/
 │   ├── llms.txt                    # signal AI crawlers
 │   ├── portrait.png
-│   └── projects/                   # visuels hero des projets
+│   ├── logos/                      # logos des structures (BkSquare, IUSTE, AfriShape)
+│   └── projects/                   # visuels des projets + schémas SVG (pipeline, MLD)
 ├── styles/
 │   ├── tokens.css                  # variables (palette, timings, ease)
 │   ├── base.css                    # reset + fondations
@@ -116,7 +116,7 @@ npm run dev
 ## Design system — les non-négociables
 
 - **Palette** : `#08090B` ardoise OLED + `#5A9BD8` bleu + `#4EBFC9` cyan +
-  `#C9A961` or (distinctions uniquement).
+  `#C9A961` or (touches rares : badge mémoire, signature).
 - **Typographie** : deux familles seulement, Inter (corps, titres) + JetBrains
   Mono (métadonnées, tags). Tailles uniquement via l'échelle `--fs-*` de
   `tokens.css` (jamais de `font-size` en dur). Paragraphes longs justifiés
@@ -140,7 +140,9 @@ Le frontmatter est validé par un **schéma Zod** (`lib/content.ts`) —
 un fichier mal formé bloquera le build.
 
 - **Projets** : `repo` (URL GitHub) ou `privateCode: true` (affiche « Code non
-  public — démo sur demande ») ; `role` pour préciser le rôle personnel.
+  public — démo sur demande ») ; `role` pour préciser le rôle personnel ;
+  `site` (lien vers le projet en ligne) ; `logo` (logo de la structure, dans
+  le bloc contexte). Ne publier que des chiffres documentés.
   Une `<Figure>` sans `src` n'est affichée qu'en développement.
 - **Publications** : `kind` (`article`, `experience`, `watch`, `research`) et
   `status`. Tant que `status` ≠ `published`, la page affiche « en préparation »

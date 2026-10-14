@@ -3,37 +3,40 @@ title: "GESCOM"
 slug: "gescom"
 year: 2023
 status: "client"
-client: "Yaoundé SME"
-summary: "Design and development of a commercial management system for BkSquare SARL, integrating sales, invoicing, margin tracking and stock management, with MERISE modelling, MySQL database and automated stock-shortage alerts."
+role: "Design, MERISE modelling and development."
+summary: "Sales management system covering the till, invoicing, margin tracking, stock management and out-of-stock alerts, designed with the MERISE method on a MySQL database."
 stack: ["merise", "mysql", "desktop"]
 badges:
-  - { label: "Client · Yaoundé", variant: "muted" }
+  - { label: "Business application", variant: "muted" }
 metrics:
-  - { value: "1,200+", label: "SKUs" }
-  - { value: "< 2 s", label: "Checkout" }
+  - { value: "MERISE", label: "Modelling" }
+  - { value: "MySQL", label: "Database" }
+privateCode: true
 order: 2
 ---
 
-# Centralize sales, stock, and margins for a small business.
+# Centralise sales, stock and margins in a single tool.
 
 <Figure
+  src="/projects/gescom-mld-en.svg"
+  alt="Simplified logical data model of GESCOM: product, sale, sale line, invoice, stock movement and user tables, linked by their foreign keys"
   ratio="hero"
   num="01"
-  caption="Point-of-sale module in daily use (GESCOM, Yaoundé, 2023).">
-  Screenshot of the POS module: SKU picker, real-time margin computation, stock-shortage alerts.
-</Figure>
+  caption="GESCOM simplified logical data model — sales, invoicing, stock and users."
+/>
 
-The shopkeeper was running the till by hand: notebooks,
-gut-feeling margin calculations, inventory gaps we could no longer
-explain. GESCOM had to absorb the daily register, invoicing, and
-stock tracking — without forcing a rewrite of his habits.
+GESCOM is a sales management system. It brings the till, invoicing,
+margin tracking and stock management together in one tool, with
+alerts when an item is about to run out.
 
-I modelled the information system with **MERISE**, designed the
-MySQL relational database, developed the point-of-sale and
-invoicing modules, and the margin calculations and stock-shortage
-alerts. The catalogue scaled to **1,200+ SKUs** with no visible
-degradation.
+I handled the design, modelling and development. The information
+system was modelled with **MERISE**, from the conceptual model to
+the logical model above, then implemented on a **MySQL** relational
+database. I then developed the till and invoicing modules, the
+margin calculations and the out-of-stock alert mechanism.
 
-After go-live, **undocumented inventory gaps vanished within the
-first month** — which, in a small business, translates directly
-into cash flow.
+MERISE suited the problem: GESCOM is first and foremost about data —
+who sells what, at what price, with how much stock left. A clean data
+model then keeps processing simple: margins follow from the recorded
+prices, and the out-of-stock alert comes down to comparing current
+stock with a threshold.

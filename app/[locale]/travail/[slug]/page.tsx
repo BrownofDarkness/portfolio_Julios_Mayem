@@ -102,6 +102,7 @@ export default async function CaseStudyPage({
     {
       label: locale === "fr" ? "contexte" : "context",
       value: project.client ?? "—",
+      logo: project.logo,
     },
     {
       label: "stack",
@@ -114,6 +115,14 @@ export default async function CaseStudyPage({
       mono: true,
     },
   ];
+
+  if (project.site) {
+    sideBlocks.push({
+      label: locale === "fr" ? "en ligne" : "live",
+      value: new URL(project.site).host.replace(/^www\./, ""),
+      href: project.site,
+    });
+  }
 
   // Preuve technique : dépôt public, ou mention explicite si confidentiel.
   if (project.repo) {

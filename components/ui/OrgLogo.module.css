@@ -1,0 +1,15 @@
+.tile {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  height: 40px;
+  padding: 5px 8px;
+  border-radius: var(--radius-1);
+  background: #F5F5F2;
+}
+
+.img {
+  height: 30px;
+  width: auto;
+  object-fit: contain;
+}

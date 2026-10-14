@@ -7,7 +7,7 @@
 
 MAYEM YOTA TAMESSUING Julios is a software developer based in Yaoundé, Cameroon.
 Education: DUT in computer engineering, IUT of Ngaoundéré (with honours), then a professional bachelor's degree in software engineering from IUSTE, Yaoundé (highest honours, ranked first in class).
-He received the Presidential Excellence Award twice (2021, 2022) and placed 3rd in the GDG Ngaoundéré AI & Google Ecosystem Quiz (2022).
+He received the Presidential Excellence Award twice (2021, 2022).
 Since 2024 he works at BkSquare SARL as a software developer and IT manager, hired after a research internship in facial recognition.
 
 ## Core expertise
@@ -25,19 +25,21 @@ Stack: Python, OpenCV, CustomTkinter, Firebase, 2TUP methodology.
 Bachelor's thesis graded 19/20. In internal production use. Code not public.
 
 ### GESCOM — Sales management system
-Stack: MERISE, MySQL. Sales, invoicing, margins, stock management and out-of-stock alerts.
+Stack: MERISE, MySQL. Till, invoicing, margins, stock management and out-of-stock alerts.
+Role: design, MERISE modelling and development. Code not public.
 
-### Delicio Food — Restaurant finder mobile app (prototype, 2023)
-Stack: Flutter, Dart, Google Maps, SQLite.
+### AfriDelight (project name: Delicio Food) — Restaurant finder mobile app (prototype, 2023)
+Stack: Flutter, Dart, Google Maps, SQLite. Code not public.
 
-### School website (2023)
-Stack: HTML, CSS, JavaScript, PHP, MySQL. Responsive site with a pre-registration module.
+### School showcase website — learning prototype (2023)
+Stack: HTML, CSS, JavaScript, PHP, MySQL. Based on the case of IUSTE, with a pre-registration module. Code not public.
 
 ### Educational maths game (2022)
 Stack: Python, SQLite. Calculation quizzes by difficulty level with scoring.
 
-### AfriShape — Academic and career guidance platform (2023)
-Stack: HTML, CSS, JavaScript.
+### AfriShape — Academic and career guidance platform (2023, team project)
+Stack: Django, Python, HTML, CSS, JavaScript. Contributed to the design and back-end development.
+Live at https://www.afrishape.org/. Code not public.
 
 ## Contact
 

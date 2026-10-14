@@ -1,15 +1,16 @@
 ---
-title: "Delicio Food"
+title: "AfriDelight"
 slug: "delicio-food"
 year: 2023
 status: "prototype"
-summary: "Flutter mobile app to locate nearby restaurants, with SQLite persistence, Google Maps integration and instant filtering."
+summary: "Flutter mobile app prototype for finding nearby restaurants: Google Maps, GPS geolocation, filtering, and SQLite persistence for favourites and history."
 stack: ["flutter", "dart", "gmaps", "sqlite"]
 badges:
   - { label: "Mobile prototype", variant: "muted" }
 metrics:
-  - { value: "< 300 ms", label: "Filter" }
-  - { value: "60 fps", label: "UI" }
+  - { value: "Google Maps", label: "Geolocation" }
+  - { value: "SQLite", label: "Favourites & history" }
+privateCode: true
 order: 3
 ---
 
@@ -20,20 +21,15 @@ order: 3
   alt="AfriDelight app — home screen with categories, recommended dishes and navigation (Flutter, 2023)"
   ratio="hero"
   num="01"
-  caption="Home screen — categories, recommended dishes, direct ordering (Flutter, 2023)."
+  caption="AfriDelight home screen — categories, recommended dishes, direct ordering (Flutter, 2023)."
 />
 
-Delicio Food started from a plain observation: search apps didn't
-help you decide between ten equivalent suggestions. What was missing
-was a fast filter and a **map that refreshes the instant** the user
-changes a criterion.
+AfriDelight (developed under the project name Delicio Food) started
+from a plain observation: search apps don't help you choose between
+ten equivalent suggestions. What was missing was a fast filter and a
+map that updates as soon as the user changes a criterion.
 
-I built the app with **Flutter and Dart**, integrated Google Maps
-and GPS geolocation, and organised SQLite persistence for favourites
-and history — so the app remains usable on a degraded network.
-Distance calculation and filtering run under **300 ms** on tested
-devices.
-
-The experience is tuned to stay fluid (up to **60 frames per second**
-on tested Android devices), which matters for street use, one hand
-on the phone.
+I built this prototype with **Flutter and Dart**. I integrated Google
+Maps and GPS geolocation, then set up **SQLite** persistence for
+favourites and history, so the app stays usable on an unstable
+network.

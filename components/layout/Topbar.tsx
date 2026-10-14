@@ -19,8 +19,7 @@ export async function Topbar() {
     { href: "/#a-propos",     key: "about",        num: "02" },
     { href: "/#competences",  key: "skills",       num: "03" },
     { href: "/#publications", key: "publications", num: "04" },
-    { href: "/#distinctions", key: "distinctions", num: "05" },
-    { href: "/contact",       key: "contact",      num: "06" },
+    { href: "/contact",       key: "contact",      num: "05" },
   ] as const;
 
   return (
