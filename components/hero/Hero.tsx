@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { Button } from "@/components/ui/Button";
 import { NowPanel } from "./NowPanel";
 import { HeroPortrait } from "./HeroPortrait";
@@ -15,6 +15,7 @@ import styles from "./Hero.module.css";
  */
 export async function Hero() {
   const t = await getTranslations();
+  const locale = await getLocale();
 
   return (
     <section id="hero" className={styles.hero}>
@@ -45,7 +46,7 @@ export async function Hero() {
                 <Button href="#travail" variant="primary" arrow>
                   {t("hero.ctaProjects")}
                 </Button>
-                <Button href="#contact" variant="ghost">
+                <Button href={`/${locale}/contact`} variant="ghost">
                   {t("hero.ctaContact")}
                 </Button>
               </div>
