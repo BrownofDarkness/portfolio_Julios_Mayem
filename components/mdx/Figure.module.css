@@ -43,7 +43,7 @@
 .cornerBr {
   position: absolute;
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: var(--fs-micro);
   color: var(--dim);
   padding: 0.55rem 0.75rem;
   letter-spacing: 0.03em;
@@ -74,13 +74,13 @@
   justify-content: center;
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 16px;
+  font-size: var(--fs-body);
   margin-bottom: 0.3rem;
 }
 
 .title {
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: var(--fs-xs);
   color: var(--text-2);
   letter-spacing: 0.04em;
   font-variant-caps: all-small-caps;
@@ -89,7 +89,7 @@
 
 .note {
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: var(--fs-micro);
   color: var(--muted);
   line-height: 1.55;
   max-width: 26rem;
@@ -97,7 +97,7 @@
 
 .caption {
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: var(--fs-xs);
   color: var(--muted);
   letter-spacing: 0.02em;
   margin: 0 0 1.75rem;

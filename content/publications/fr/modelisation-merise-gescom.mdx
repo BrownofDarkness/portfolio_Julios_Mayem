@@ -1,0 +1,52 @@
+---
+title: "Modéliser GESCOM avec MERISE : du besoin à la base MySQL"
+slug: "modelisation-merise-gescom"
+date: "2026-10-14"
+summary: "Comment la méthode MERISE a structuré la conception de GESCOM, logiciel de gestion commerciale : modèle conceptuel, modèle logique, puis base MySQL."
+kind: "article"
+tags: ["modelisation", "genie-logiciel", "merise", "mysql"]
+status: "coming"
+---
+
+{/* BROUILLON — à relire et compléter par Julios avant de passer status à "published". */}
+
+## Pourquoi MERISE
+
+GESCOM devait centraliser les ventes, la facturation, le suivi des
+marges et la gestion des stocks. C'est avant tout un problème de
+données : qui vend quoi, à quel prix, avec quel stock restant.
+MERISE, qui sépare clairement les données des traitements, s'y
+prête bien.
+
+## Du conceptuel au physique
+
+La démarche suit trois niveaux :
+
+1. **Modèle conceptuel des données (MCD)** — les entités du métier
+   (article, client, vente, ligne de vente, fournisseur, mouvement
+   de stock) et leurs associations, indépendamment de toute
+   technologie.
+2. **Modèle logique des données (MLD)** — traduction du MCD en
+   tables relationnelles, clés primaires et clés étrangères.
+3. **Modèle physique** — la base MySQL elle-même : types de
+   colonnes, index et contraintes d'intégrité.
+
+**[à compléter : schéma simplifié de la base (MCD ou MLD) —
+voir les schémas envoyés.]**
+
+## Ce que la modélisation a rendu possible
+
+Un modèle propre rend les traitements simples à écrire : le calcul
+des marges découle directement des prix d'achat et de vente
+enregistrés, et l'alerte de rupture de stock se résume à comparer
+le stock courant à un seuil défini par article.
+
+**[à compléter : rôle exact sur le projet, stack applicative,
+chiffres documentés.]**
+
+## MERISE ou 2TUP ?
+
+KKBSECU, à l'inverse, a été modélisé avec 2TUP et UML : un système
+où le comportement (capture, reconnaissance, alertes) compte plus
+que la structure des données. Le choix de la méthode suit la nature
+du problème.

@@ -1,7 +1,7 @@
 import type { Locale } from "@/i18n/routing";
 import type { ProjectMeta } from "./content";
 
-const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://portfolio.julios.dev";
+import { SITE_URL as BASE, FULL_NAME } from "./site";
 
 // ── Person ────────────────────────────────────────────────────────────────────
 
@@ -10,14 +10,20 @@ export function personSchema(locale: Locale) {
     "@context": "https://schema.org",
     "@type": "Person",
     "@id": `${BASE}/${locale}#julios-mayem`,
-    name: "Julios Mayem",
+    name: FULL_NAME,
+    alternateName: [
+      "Julios Mayem",
+      "Mayem Julios",
+      "MAYEM YOTA TAMESSUING",
+      "Julios Mayem Yota Tamessuing",
+    ],
     givenName: "Julios",
-    familyName: "Mayem",
-    jobTitle: locale === "fr" ? "Développeur logiciel & Bases de données" : "Software Developer & Databases",
+    familyName: "Mayem Yota Tamessuing",
+    jobTitle: locale === "fr" ? "Développeur logiciel et bases de données" : "Software Developer & Databases",
     description:
       locale === "fr"
-        ? "Développeur camerounais spécialisé en vision par ordinateur et IA, diplômé Licence (Très Bien, 1er/25), en poste chez BkSquare SARL depuis 2024."
-        : "Cameroonian software engineer specialised in computer vision and AI, bachelor's graduate (highest honours, 1st/25), working at BkSquare SARL since 2024.",
+        ? "Développeur informatique camerounais spécialisé en génie logiciel, bases de données, applications métier et reconnaissance faciale. En poste chez BkSquare SARL depuis 2024."
+        : "Cameroonian software developer specialised in software engineering, databases, business applications and facial recognition. Working at BkSquare SARL since 2024.",
     url: `${BASE}/${locale}`,
     email: "maesjulios@gmail.com",
     address: {
@@ -28,7 +34,7 @@ export function personSchema(locale: Locale) {
     alumniOf: [
       {
         "@type": "EducationalOrganization",
-        name: "Institut Universitaire des Sciences des Technologies et Éthique",
+        name: "Institut universitaire des sciences, des technologies et de l'éthique (IUSTE)",
         address: {
           "@type": "PostalAddress",
           addressLocality: "Yaoundé",
@@ -48,12 +54,14 @@ export function personSchema(locale: Locale) {
     award: [
       "Prime présidentielle d'excellence — Licence 1 (2021)",
       "Prime présidentielle d'excellence — Licence 2 (2022)",
-      "Prix GDG Ngaoundéré — Quiz IA & Écosystème Google (2022)",
+      "3e place — Quiz IA et écosystème Google, GDG Ngaoundéré (2022)",
     ],
     knowsAbout: [
       "Computer Vision",
       "OpenCV",
       "Python",
+      "SQL",
+      "Génie logiciel",
       "Machine Learning",
       "Flutter",
       "Dart",
@@ -96,10 +104,11 @@ export function projectSchema(project: ProjectMeta, locale: Locale) {
     dateCreated: String(project.year),
     programmingLanguage: project.stack,
     url: `${BASE}${projectPath}`,
+    ...(project.repo ? { codeRepository: project.repo } : {}),
     author: {
       "@type": "Person",
       "@id": `${BASE}/${locale}#julios-mayem`,
-      name: "Julios Mayem",
+      name: FULL_NAME,
     },
     ...(project.client
       ? {

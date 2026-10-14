@@ -22,7 +22,7 @@
   align-items: center;
   gap: 0.7rem;
   font-family: var(--font-mono);
-  font-size: 15px;
+  font-size: var(--fs-md);
   font-weight: 500;
   color: var(--text);
   letter-spacing: -0.005em;
@@ -59,7 +59,7 @@
 
 .link {
   font-family: var(--font-mono);
-  font-size: 14.5px;
+  font-size: var(--fs-sm);
   color: var(--text-2);
   text-decoration: none;
   padding: 0.5rem 0.85rem;
@@ -76,7 +76,7 @@
 .num {
   color: var(--dim);
   margin-right: 0.45rem;
-  font-size: 12.5px;
+  font-size: var(--fs-xs);
   font-variant-numeric: tabular-nums;
 }
 

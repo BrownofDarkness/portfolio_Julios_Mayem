@@ -47,7 +47,7 @@
 .title {
   font-family: var(--font-sans);
   font-weight: 500;
-  font-size: 17px;
+  font-size: var(--fs-body);
   letter-spacing: -0.015em;
   color: var(--text);
   transition: color var(--dur-med) var(--ease);
@@ -55,7 +55,7 @@
 
 .date {
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: var(--fs-xs);
   color: var(--muted);
   letter-spacing: 0.02em;
   font-variant-numeric: tabular-nums;
@@ -64,7 +64,7 @@
 
 .summary {
   color: var(--text-2);
-  font-size: 15px;
+  font-size: var(--fs-md);
   line-height: 1.55;
   max-width: 42rem;
   margin: 0;

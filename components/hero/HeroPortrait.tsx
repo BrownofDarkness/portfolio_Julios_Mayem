@@ -3,10 +3,10 @@ import styles from "./HeroPortrait.module.css";
 
 export function HeroPortrait() {
   return (
-    <figure className={styles.wrap} aria-label="Portrait de Julios Mayem">
+    <figure className={styles.wrap}>
       <Image
         src="/portrait.png"
-        alt="Julios Mayem — Développeur logiciel, Yaoundé, Cameroun"
+        alt="Portrait de MAYEM YOTA TAMESSUING Julios, développeur logiciel à Yaoundé, Cameroun"
         fill
         priority
         className={styles.img}

@@ -10,13 +10,13 @@ export const routing = defineRouting({
       fr: "/travail/[slug]",
       en: "/work/[slug]",
     },
-    "/notes": {
-      fr: "/notes",
-      en: "/notes",
+    "/publications": {
+      fr: "/publications",
+      en: "/publications",
     },
-    "/notes/[slug]": {
-      fr: "/notes/[slug]",
-      en: "/notes/[slug]",
+    "/publications/[slug]": {
+      fr: "/publications/[slug]",
+      en: "/publications/[slug]",
     },
     "/contact": {
       fr: "/contact",

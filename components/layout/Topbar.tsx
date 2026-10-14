@@ -18,7 +18,7 @@ export async function Topbar() {
     { href: "/#travail",      key: "work",         num: "01" },
     { href: "/#a-propos",     key: "about",        num: "02" },
     { href: "/#competences",  key: "skills",       num: "03" },
-    { href: "/#notes",        key: "notes",        num: "04" },
+    { href: "/#publications", key: "publications", num: "04" },
     { href: "/#distinctions", key: "distinctions", num: "05" },
     { href: "/contact",       key: "contact",      num: "06" },
   ] as const;
@@ -27,7 +27,7 @@ export async function Topbar() {
     <header className={styles.top}>
       <div className="wrap">
         <div className={styles.row}>
-          <Link href="/" className={styles.brand} aria-label="Julios Mayem">
+          <Link href="/" className={styles.brand} aria-label="MAYEM YOTA TAMESSUING Julios — accueil">
             <span className={styles.dot} aria-hidden="true" />
             julios.mayem
           </Link>

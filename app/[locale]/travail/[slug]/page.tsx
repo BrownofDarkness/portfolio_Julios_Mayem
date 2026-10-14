@@ -53,7 +53,7 @@ export async function generateMetadata({
     `&kicker=${encodeURIComponent(kicker)}`;
 
   return {
-    title: `${project.title} — Julios Mayem`,
+    title: `${project.title} — MAYEM YOTA TAMESSUING Julios`,
     description: project.summary,
     alternates: {
       canonical: `/${locale}/${locale === "fr" ? "travail" : "work"}/${slug}`,
@@ -94,9 +94,10 @@ export default async function CaseStudyPage({
     {
       label: locale === "fr" ? "rôle" : "role",
       value:
-        locale === "fr"
+        project.role ??
+        (locale === "fr"
           ? "Conception, modélisation, développement."
-          : "Design, modelling, implementation.",
+          : "Design, modelling, implementation."),
     },
     {
       label: locale === "fr" ? "contexte" : "context",
@@ -113,6 +114,13 @@ export default async function CaseStudyPage({
       mono: true,
     },
   ];
+
+  // Preuve technique : dépôt public, ou mention explicite si confidentiel.
+  if (project.repo) {
+    sideBlocks.push({ label: "code", value: t("project.repo"), href: project.repo });
+  } else if (project.privateCode) {
+    sideBlocks.push({ label: "code", value: t("project.private") });
+  }
 
   return (
     <div className="wrap">

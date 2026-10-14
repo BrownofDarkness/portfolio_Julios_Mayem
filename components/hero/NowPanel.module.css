@@ -16,7 +16,7 @@
 
 .label {
   font-family: var(--font-mono);
-  font-size: 13.5px;
+  font-size: var(--fs-xs);
   color: var(--muted);
   letter-spacing: 0.03em;
   font-variant-caps: all-small-caps;
@@ -25,7 +25,7 @@
 
 .status {
   font-family: var(--font-mono);
-  font-size: 13.5px;
+  font-size: var(--fs-xs);
   color: var(--green);
   letter-spacing: 0.03em;
   font-variant-caps: all-small-caps;
@@ -54,27 +54,27 @@
   justify-content: space-between;
   align-items: baseline;
   padding: 0.45rem 0;
-  font-size: 15px;
+  font-size: var(--fs-md);
   gap: 1rem;
 }
 
 .k {
   font-family: var(--font-mono);
   color: var(--muted);
-  font-size: 14px;
+  font-size: var(--fs-sm);
   letter-spacing: 0;
 }
 
 .v {
   color: var(--text);
   font-weight: 500;
-  font-size: 15px;
+  font-size: var(--fs-md);
   text-align: right;
 }
 
 .v.mono {
   font-family: var(--font-mono);
-  font-size: 14px;
+  font-size: var(--fs-sm);
   font-variant-numeric: tabular-nums;
 }
 
@@ -82,14 +82,14 @@
   margin-top: 1rem;
   padding-top: 1rem;
   border-top: 1px dashed var(--border);
-  font-size: 14.5px;
+  font-size: var(--fs-sm);
   color: var(--text-2);
   line-height: 1.55;
 }
 
 .ts {
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: var(--fs-xs);
   color: var(--muted);
   display: block;
   margin-bottom: 0.35rem;

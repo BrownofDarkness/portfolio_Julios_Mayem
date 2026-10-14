@@ -54,22 +54,27 @@ const items: SocialItem[] = [
 type SocialsProps = {
   size?: number;
   className?: string;
+  /** Affiche le nom du réseau à côté du logo (page contact) */
+  withLabels?: boolean;
 };
 
-export function Socials({ size = 22, className }: SocialsProps) {
+export function Socials({ size = 22, className, withLabels = false }: SocialsProps) {
   return (
-    <ul className={`${styles.list} ${className ?? ""}`}>
+    <ul
+      className={`${styles.list} ${withLabels ? styles.labelled : ""} ${className ?? ""}`}
+    >
       {items.map(({ href, label, Icon }) => (
         <li key={label}>
           <a
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={label}
+            aria-label={withLabels ? undefined : label}
             title={label}
             className={styles.link}
           >
             <Icon size={size} className={styles.icon} />
+            {withLabels ? <span className={styles.label}>{label}</span> : null}
           </a>
         </li>
       ))}

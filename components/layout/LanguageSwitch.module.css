@@ -2,7 +2,7 @@
   display: inline-flex;
   align-items: baseline;
   font-family: var(--font-mono);
-  font-size: 14px;
+  font-size: var(--fs-sm);
   color: var(--muted);
   letter-spacing: 0.02em;
   font-variant-caps: all-small-caps;

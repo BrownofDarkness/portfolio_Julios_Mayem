@@ -32,7 +32,7 @@
 .corner {
   position: absolute;
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: var(--fs-micro);
   color: var(--dim);
   padding: 0.5rem 0.65rem;
   letter-spacing: 0.03em;
@@ -63,13 +63,13 @@
   justify-content: center;
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 18px;
+  font-size: var(--fs-lg);
   margin-bottom: 0.4rem;
 }
 
 .title {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: var(--fs-micro);
   color: var(--text-2);
   letter-spacing: 0.04em;
   font-variant-caps: all-small-caps;
@@ -78,7 +78,7 @@
 
 .note {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: var(--fs-micro);
   color: var(--muted);
   line-height: 1.5;
   max-width: 14rem;

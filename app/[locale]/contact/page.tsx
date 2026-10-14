@@ -3,6 +3,7 @@ import { routing, type Locale } from "@/i18n/routing";
 import { SectionHead } from "@/components/section/SectionHead";
 import { Socials } from "@/components/socials/Socials";
 import { ContactForm } from "@/components/contact/ContactForm";
+import { FlagCM } from "@/components/ui/FlagCM";
 
 import styles from "./contact.module.css";
 
@@ -32,7 +33,7 @@ export default async function ContactPage({
 
           <div className={styles.channels}>
             <div className={styles.channel}>
-              <div className={styles.label}>Email</div>
+              <div className={styles.label}>{t("contact.form.email")}</div>
               <a href="mailto:maesjulios@gmail.com" className={styles.mainLink}>
                 maesjulios@gmail.com
               </a>
@@ -62,7 +63,7 @@ export default async function ContactPage({
               <div className={styles.label}>
                 {locale === "fr" ? "Réseaux" : "Networks"}
               </div>
-              <Socials size={22} />
+              <Socials size={22} withLabels />
             </div>
           </div>
         </div>
@@ -72,7 +73,10 @@ export default async function ContactPage({
             <div className={styles.label}>
               {locale === "fr" ? "Basé à" : "Based in"}
             </div>
-            <div className={styles.sideValue}>Yaoundé, Cameroun</div>
+            <div className={styles.sideValue}>
+              {t("footer.place")}
+              <FlagCM />
+            </div>
             <div className={styles.sideMuted}>UTC+1</div>
           </div>
           <div className={styles.sideBlock}>

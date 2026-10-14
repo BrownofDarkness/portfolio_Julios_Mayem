@@ -37,7 +37,7 @@ function MdxA(props: AnchorHTMLAttributes<HTMLAnchorElement>) {
 }
 
 /**
- * Composants MDX exposés au corps des case studies et notes.
+ * Composants MDX exposés au corps des case studies et publications.
  * On surcharge les balises HTML natives pour appliquer notre
  * design system (h1, h2, h3, p, ul, ol, code, blockquote, etc.)
  * et on expose Figure/Callout pour un usage explicite.

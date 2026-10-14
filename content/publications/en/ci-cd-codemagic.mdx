@@ -1,0 +1,34 @@
+---
+title: "Continuous delivery for Flutter apps with Codemagic"
+slug: "ci-cd-codemagic"
+date: "2026-10-14"
+summary: "Experience report on setting up a Codemagic CI/CD pipeline for a Flutter mobile app: build, automatic signing and internal distribution."
+kind: "experience"
+tags: ["ci-cd", "flutter", "codemagic", "devops"]
+status: "coming"
+---
+
+{/* DRAFT — to be reviewed by Julios before setting status to "published". */}
+
+## Context
+
+During my internship at Sygalin SAS (2023), every new version of the
+Flutter mobile app was built, signed and distributed by hand. Every
+manual step is one more source of error and slows down each release.
+
+## The pipeline
+
+The Codemagic pipeline automatically chains:
+
+1. **Trigger** on every change pushed to the repository.
+2. **Build** of the Flutter app for Android and iOS.
+3. **Automatic signing**, with certificates stored in Codemagic
+   rather than on a developer's machine.
+4. **Internal distribution** through TestFlight and the Play Store
+   internal testing track.
+
+## What I take away
+
+A delivery pipeline is not a luxury reserved for large teams. On a
+small team, automating signing and distribution frees up time for
+the code and makes every release reproducible.

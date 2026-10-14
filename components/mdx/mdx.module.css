@@ -6,7 +6,7 @@
 .h1 {
   font-family: var(--font-sans);
   font-weight: 500;
-  font-size: 1.85rem;
+  font-size: var(--fs-2xl);
   letter-spacing: -0.02em;
   line-height: 1.15;
   color: var(--text);
@@ -17,7 +17,7 @@
 .h2 {
   font-family: var(--font-sans);
   font-weight: 600;
-  font-size: 1.35rem;
+  font-size: var(--fs-xl);
   letter-spacing: -0.018em;
   color: var(--text);
   margin: 2.5rem 0 1rem;
@@ -26,20 +26,29 @@
 .h3 {
   font-family: var(--font-sans);
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: var(--fs-lg);
   letter-spacing: -0.014em;
   color: var(--text);
   margin: 2rem 0 0.75rem;
 }
 
 .p {
-  font-size: 16.5px;
+  font-size: var(--fs-body);
   line-height: 1.7;
   color: var(--text);
   margin: 0 0 1.25rem;
   max-width: 40rem;
 }
 .p:has(+ .p) { margin-bottom: 1rem; }
+
+/* Paragraphes longs : justifiés + césure sur desktop ; à gauche sur
+   mobile pour éviter les grands blancs entre les mots. */
+@media (min-width: 780px) {
+  .p {
+    text-align: justify;
+    hyphens: auto;
+  }
+}
 
 .a {
   color: var(--blue);
@@ -95,13 +104,13 @@
   max-width: 40rem;
 }
 .li {
-  font-size: 16.5px;
+  font-size: var(--fs-body);
   line-height: 1.65;
   color: var(--text);
   margin-bottom: 0.4rem;
 }
 .ul .li::marker { color: var(--blue); }
-.ol .li::marker { color: var(--muted); font-family: var(--font-mono); font-size: 14px; }
+.ol .li::marker { color: var(--muted); font-family: var(--font-mono); font-size: var(--fs-sm); }
 
 .quote {
   border-left: 2px solid var(--blue);
@@ -109,7 +118,7 @@
   margin: 1.75rem 0;
   font-style: italic;
   color: var(--text-2);
-  font-size: 17px;
+  font-size: var(--fs-body);
   line-height: 1.55;
   max-width: 40rem;
 }
@@ -126,7 +135,7 @@
 
 .pre {
   font-family: var(--font-mono);
-  font-size: 13.5px;
+  font-size: var(--fs-xs);
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: var(--radius-2);

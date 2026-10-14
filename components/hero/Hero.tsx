@@ -4,6 +4,7 @@ import { NowPanel } from "./NowPanel";
 import { HeroPortrait } from "./HeroPortrait";
 import { HeroIntro } from "./HeroIntro";
 import { HeroAmbientGrid } from "@/components/spotlight/HeroAmbientGrid";
+import { FlagCM } from "@/components/ui/FlagCM";
 import styles from "./Hero.module.css";
 
 /**
@@ -24,6 +25,7 @@ export async function Hero() {
             <HeroIntro>
               <p className={styles.kicker} data-hero-el="kicker">
                 {t("hero.role")} · {t("hero.location")}
+                <FlagCM />
               </p>
 
               <h1 className={styles.title} data-hero-el="title">
@@ -36,11 +38,7 @@ export async function Hero() {
               <p className={styles.lede} data-hero-el="lede">
                 {t("hero.leadPart1")}{" "}
                 <em className={styles.emStrong}>BkSquare SARL</em>{" "}
-                {t("hero.leadPart2")}{" "}
-                <span className={styles.accent}>
-                  {t("hero.signature")}
-                </span>{" "}
-                {t("hero.signatureEnding")}
+                {t("hero.leadPart2")}
               </p>
 
               <div className={styles.ctaRow} data-hero-el="cta">

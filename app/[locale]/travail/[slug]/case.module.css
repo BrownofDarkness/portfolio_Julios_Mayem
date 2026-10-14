@@ -5,7 +5,7 @@
 
 .crumbLink {
   font-family: var(--font-mono);
-  font-size: 13.5px;
+  font-size: var(--fs-xs);
   color: var(--muted);
   text-decoration: none;
   transition: color var(--dur-med) var(--ease);
