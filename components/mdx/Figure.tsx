@@ -48,6 +48,8 @@ export function Figure({
             src={src}
             alt={alt ?? (typeof children === "string" ? children : "Figure")}
             fill
+            // Les schémas SVG sont servis tels quels (pas d'optimisation raster)
+            unoptimized={src.endsWith(".svg")}
             className={styles.img}
             sizes="(max-width: 780px) 100vw, 800px"
           />

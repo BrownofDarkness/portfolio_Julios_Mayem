@@ -10,9 +10,10 @@ badges:
   - { label: "Mémoire 19/20", variant: "gold" }
   - { label: "En production", variant: "cyan" }
 metrics:
-  - { value: "> 95 %", label: "Reconnaissance" }
+  - { value: "Temps réel", label: "Reconnaissance" }
   - { value: "HD", label: "Caméra" }
 privateCode: true
+logo: "/logos/bksquare.png"
 order: 1
 ---
 
@@ -40,11 +41,12 @@ des diagrammes UML — c'est ce qui m'a permis de garder le code
 lisible malgré les itérations rapides demandées par l'entreprise.
 
 <Figure
+  src="/projects/kkbsecu-pipeline.svg"
+  alt="Pipeline KKBSECU en six étapes : caméra HD, prétraitement OpenCV, détection du visage, reconnaissance, décision d'accès, journalisation locale et Firebase, avec une boucle de contrôle"
   ratio="inline"
   num="02"
-  caption="Architecture logicielle simplifiée — acquisition, détection, reconnaissance, journalisation.">
-  Schéma du pipeline en trois couches : capture caméra, traitement OpenCV, synchronisation Firebase.
-</Figure>
+  caption="Pipeline KKBSECU, de la capture caméra à la journalisation des événements."
+/>
 
 Le système a été soutenu comme mémoire de fin de licence,
 **noté 19/20 et désigné meilleur projet de soutenance**. Il est

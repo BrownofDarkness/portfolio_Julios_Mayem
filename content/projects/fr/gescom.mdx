@@ -3,38 +3,43 @@ title: "GESCOM"
 slug: "gescom"
 year: 2023
 status: "client"
-client: "PME de Yaoundé"
-summary: "Conception et développement d'un système de gestion commerciale pour BkSquare SARL, intégrant les ventes, la facturation, le suivi des marges et la gestion des stocks, avec modélisation MERISE, base de données MySQL et automatisation des alertes de rupture de stock."
+role: "Conception, modélisation MERISE et développement."
+summary: "Système de gestion commerciale intégrant la caisse, la facturation, le suivi des marges, la gestion des stocks et les alertes de rupture, conçu avec la méthode MERISE sur une base de données MySQL."
 stack: ["merise", "mysql", "desktop"]
 badges:
-  - { label: "Client · Yaoundé", variant: "muted" }
+  - { label: "Application métier", variant: "muted" }
 metrics:
-  - { value: "1 200+", label: "Références" }
-  - { value: "< 2 s", label: "Encaissement" }
+  - { value: "MERISE", label: "Modélisation" }
+  - { value: "MySQL", label: "Base de données" }
+privateCode: true
 order: 2
 ---
 
-# Centraliser les ventes, les stocks et les marges pour une PME.
+# Centraliser les ventes, les stocks et les marges dans un seul outil.
 
 <Figure
+  src="/projects/gescom-mld.svg"
+  alt="Modèle logique de données simplifié de GESCOM : tables produit, vente, ligne de vente, facture, mouvement de stock et utilisateur, reliées par leurs clés étrangères"
   ratio="hero"
   num="01"
-  caption="Module de caisse en usage quotidien (GESCOM, Yaoundé, 2023).">
-  Capture du module caisse : sélection de références, calcul de marge en direct, alertes de rupture de stock.
-</Figure>
+  caption="MLD simplifié de GESCOM — ventes, facturation, stocks et utilisateurs."
+/>
 
-Le commerçant faisait tourner sa caisse à la main : cahiers, calculs
-de marges au feeling, écarts d'inventaire qu'on ne parvenait plus à
-expliquer. GESCOM devait absorber la caisse quotidienne, la
-facturation et le suivi des stocks — sans imposer une refonte de ses
-habitudes.
+GESCOM est un système de gestion commerciale. Il regroupe dans un
+même outil la caisse, la facturation, le suivi des marges et la
+gestion des stocks, avec des alertes lorsqu'un article approche de
+la rupture.
 
-J'ai modélisé le système d'information avec **MERISE**, conçu la
-base relationnelle en MySQL, développé les modules de caisse et de
-facturation ainsi que les mécanismes de calcul des marges et
-d'alerte sur les ruptures de stock. Le catalogue a pu monter à plus
-de **1 200 références** sans dégradation perceptible.
+J'ai pris en charge la conception, la modélisation et le
+développement. Le système d'information a été modélisé avec
+**MERISE**, du modèle conceptuel au modèle logique ci-dessus, puis
+implémenté sur une base relationnelle **MySQL**. J'ai ensuite
+développé les modules de caisse et de facturation, le calcul des
+marges et le mécanisme d'alerte sur les ruptures de stock.
 
-Après la mise en service, les **écarts d'inventaire non documentés
-ont disparu dès le premier mois** — ce qui, dans une PME, se
-mesure directement en trésorerie.
+Le choix de MERISE tient à la nature du problème : GESCOM est avant
+tout une question de données — qui vend quoi, à quel prix, avec
+quel stock restant. Un modèle de données propre rend ensuite les
+traitements simples : les marges découlent des prix enregistrés, et
+l'alerte de rupture se résume à comparer le stock courant à un
+seuil.

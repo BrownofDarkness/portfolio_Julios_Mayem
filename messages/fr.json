@@ -8,7 +8,6 @@
     "about": "À propos",
     "skills": "Compétences",
     "publications": "Publications",
-    "distinctions": "Distinctions",
     "contact": "Contact",
     "search": "Rechercher",
     "changeLanguage": "Changer de langue"
@@ -52,8 +51,6 @@
     "publicationsTitle": "Publications",
     "publicationsSubtitle": "Articles, retours d'expérience et notes de veille tirés des projets que je mène.",
     "publicationsAside": "Trois premiers textes · en préparation",
-    "distinctionsTitle": "Distinctions",
-    "distinctionsAside": "Trois · académique et communauté",
     "contactTitle": "Contact",
     "contactAside": "Yaoundé, Cameroun",
     "skillsTitle": "Compétences",
@@ -85,6 +82,7 @@
       {
         "level": "L3",
         "year": "2024",
+        "logo": "/logos/iuste.png",
         "title": "Licence professionnelle — génie logiciel",
         "school": "IUSTE, Yaoundé",
         "detail": "Mention Très Bien · major (1ʳᵉ / 25)"
@@ -102,30 +100,6 @@
         "title": "DUT — génie informatique (1ʳᵉ année)",
         "school": "IUT de Ngaoundéré",
         "detail": "Prime présidentielle d'excellence"
-      }
-    ]
-  },
-  "distinctions": {
-    "items": [
-      {
-        "label": "Prime présidentielle",
-        "title": "Excellence académique — L1",
-        "year": "2021",
-        "issuer": "République du Cameroun",
-        "country": "CM"
-      },
-      {
-        "label": "Prime présidentielle",
-        "title": "Excellence académique — L2",
-        "year": "2022",
-        "issuer": "République du Cameroun",
-        "country": "CM"
-      },
-      {
-        "label": "3ᵉ place — GDG Ngaoundéré",
-        "title": "Quiz — écosystème Google et IA",
-        "year": "2022",
-        "issuer": "Google Developer Group Ngaoundéré"
       }
     ]
   },

@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { OrgLogo } from "@/components/ui/OrgLogo";
 import styles from "./About.module.css";
 
 type EducationStep = {
@@ -7,6 +8,7 @@ type EducationStep = {
   title: string;
   school: string;
   detail: string;
+  logo?: string;
 };
 
 /**
@@ -38,6 +40,7 @@ export async function About() {
           <ol className={styles.timeline}>
             {education.map((step) => (
               <li key={step.level} className={styles.step}>
+                {step.logo ? <OrgLogo src={step.logo} /> : null}
                 <span className={styles.stepLevel}>
                   {step.level} · {step.year}
                 </span>
@@ -51,6 +54,7 @@ export async function About() {
         </div>
         <div className={styles.sideBlock}>
           <div className={styles.sideLabel}>{t("side.role")}</div>
+          <OrgLogo src="/logos/bksquare.png" />
           <div className={styles.sideValue}>
             {t("side.roleLine1")}<br />
             <span className={styles.sideMuted}>{t("side.roleLine2")}</span>

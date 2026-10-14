@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Inter, 'Segoe UI', system-ui, sans-serif">
+  <title>Simplified logical data model of GESCOM</title>
+  <rect width="1280" height="720" fill="#0D0F13"/>
+  <text x="60" y="78" font-size="30" font-weight="600" fill="#E8EAEE">GESCOM simplified logical data model</text>
+  <text x="60" y="112" font-size="19" fill="#7C818C">MySQL database — sales, invoicing, stock and users</text>
+  <polyline points="320,255 340,255 340,225 360,225" fill="none" stroke="#5A9BD8" stroke-width="2"/>
+  <circle cx="320" cy="255" r="4" fill="#5A9BD8"/>
+  <circle cx="360" cy="225" r="4" fill="#5A9BD8"/>
+  <polyline points="490,430 490,366" fill="none" stroke="#5A9BD8" stroke-width="2"/>
+  <circle cx="490" cy="430" r="4" fill="#5A9BD8"/>
+  <circle cx="490" cy="366" r="4" fill="#5A9BD8"/>
+  <polyline points="620,535 640,535 640,505 660,505" fill="none" stroke="#5A9BD8" stroke-width="2"/>
+  <circle cx="620" cy="535" r="4" fill="#5A9BD8"/>
+  <circle cx="660" cy="505" r="4" fill="#5A9BD8"/>
+  <polyline points="790,430 790,366" fill="none" stroke="#5A9BD8" stroke-width="2"/>
+  <circle cx="790" cy="430" r="4" fill="#5A9BD8"/>
+  <circle cx="790" cy="366" r="4" fill="#5A9BD8"/>
+  <polyline points="960,535 940,535 940,505 920,505" fill="none" stroke="#5A9BD8" stroke-width="2"/>
+  <circle cx="960" cy="535" r="4" fill="#5A9BD8"/>
+  <circle cx="920" cy="505" r="4" fill="#5A9BD8"/>
+  <rect x="60" y="150" width="260" height="216" rx="8" fill="#12141A" stroke="#2D3240" stroke-width="2"/>
+  <path d="M60,158 a8,8 0 0 1 8,-8 h244 a8,8 0 0 1 8,8 v38 h-260 z" fill="#1E2A3A"/>
+  <text x="190" y="180" font-size="18" font-weight="600" fill="#E8EAEE" text-anchor="middle" letter-spacing="0.5">MOUVEMENT_STOCK</text>
+  <text x="78" y="231" font-size="17" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#B5BAC4">id_mouvement</text>
+  <text x="302" y="231" font-size="14" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#5A9BD8" text-anchor="end">PK</text>
+  <text x="78" y="261" font-size="17" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#B5BAC4">id_produit</text>
+  <text x="302" y="261" font-size="14" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#4EBFC9" text-anchor="end">FK</text>
+  <text x="78" y="291" font-size="17" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#B5BAC4">type</text>
+  <text x="78" y="321" font-size="17" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#B5BAC4">quantité</text>
+  <text x="78" y="351" font-size="17" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#B5BAC4">date</text>
+  <rect x="360" y="150" width="260" height="216" rx="8" fill="#12141A" stroke="#2D3240" stroke-width="2"/>
+  <path d="M360,158 a8,8 0 0 1 8,-8 h244 a8,8 0 0 1 8,8 v38 h-260 z" fill="#1E2A3A"/>
+  <text x="490" y="180" font-size="18" font-weight="600" fill="#E8EAEE" text-anchor="middle" letter-spacing="0.5">PRODUIT</text>
+  <text x="378" y="231" font-size="17" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#B5BAC4">id_produit</text>
+  <text x="602" y="231" font-size="14" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#5A9BD8" text-anchor="end">PK</text>
+  <text x="378" y="261" font-size="17" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#B5BAC4">référence</text>
+  <text x="378" y="291" font-size="17" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#B5BAC4">désignation</text>
+  <text x="378" y="321" font-size="17" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#B5BAC4">prix_vente</text>
+  <text x="378" y="351" font-size="17" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#B5BAC4">stock_actuel</text>
+  <rect x="660" y="150" width="260" height="216" rx="8" fill="#12141A" stroke="#2D3240" stroke-width="2"/>
+  <path d="M660,158 a8,8 0 0 1 8,-8 h244 a8,8 0 0 1 8,8 v38 h-260 z" fill="#1E2A3A"/>
+  <text x="790" y="180" font-size="18" font-weight="600" fill="#E8EAEE" text-anchor="middle" letter-spacing="0.5">UTILISATEUR</text>
+  <text x="678" y="231" font-size="17" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#B5BAC4">id_utilisateur</text>
+  <text x="902" y="231" font-size="14" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#5A9BD8" text-anchor="end">PK</text>
+  <text x="678" y="261" font-size="17" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#B5BAC4">nom</text>
+  <text x="678" y="291" font-size="17" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#B5BAC4">rôle</text>
+  <text x="678" y="321" font-size="17" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#B5BAC4">mot_de_passe_hash</text>
+  <rect x="360" y="430" width="260" height="216" rx="8" fill="#12141A" stroke="#2D3240" stroke-width="2"/>
+  <path d="M360,438 a8,8 0 0 1 8,-8 h244 a8,8 0 0 1 8,8 v38 h-260 z" fill="#1E2A3A"/>
+  <text x="490" y="460" font-size="18" font-weight="600" fill="#E8EAEE" text-anchor="middle" letter-spacing="0.5">LIGNE_VENTE</text>
+  <text x="378" y="511" font-size="17" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#B5BAC4">id_ligne</text>
+  <text x="602" y="511" font-size="14" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#5A9BD8" text-anchor="end">PK</text>
+  <text x="378" y="541" font-size="17" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#B5BAC4">id_vente</text>
+  <text x="602" y="541" font-size="14" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#4EBFC9" text-anchor="end">FK</text>
+  <text x="378" y="571" font-size="17" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#B5BAC4">id_produit</text>
+  <text x="602" y="571" font-size="14" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#4EBFC9" text-anchor="end">FK</text>
+  <text x="378" y="601" font-size="17" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#B5BAC4">quantité</text>
+  <text x="378" y="631" font-size="17" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#B5BAC4">prix_unitaire</text>
+  <rect x="660" y="430" width="260" height="216" rx="8" fill="#12141A" stroke="#2D3240" stroke-width="2"/>
+  <path d="M660,438 a8,8 0 0 1 8,-8 h244 a8,8 0 0 1 8,8 v38 h-260 z" fill="#1E2A3A"/>
+  <text x="790" y="460" font-size="18" font-weight="600" fill="#E8EAEE" text-anchor="middle" letter-spacing="0.5">VENTE</text>
+  <text x="678" y="511" font-size="17" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#B5BAC4">id_vente</text>
+  <text x="902" y="511" font-size="14" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#5A9BD8" text-anchor="end">PK</text>
+  <text x="678" y="541" font-size="17" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#B5BAC4">id_utilisateur</text>
+  <text x="902" y="541" font-size="14" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#4EBFC9" text-anchor="end">FK</text>
+  <text x="678" y="571" font-size="17" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#B5BAC4">date</text>
+  <text x="678" y="601" font-size="17" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#B5BAC4">total</text>
+  <text x="678" y="631" font-size="17" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#B5BAC4">mode_paiement</text>
+  <rect x="960" y="430" width="260" height="216" rx="8" fill="#12141A" stroke="#2D3240" stroke-width="2"/>
+  <path d="M960,438 a8,8 0 0 1 8,-8 h244 a8,8 0 0 1 8,8 v38 h-260 z" fill="#1E2A3A"/>
+  <text x="1090" y="460" font-size="18" font-weight="600" fill="#E8EAEE" text-anchor="middle" letter-spacing="0.5">FACTURE</text>
+  <text x="978" y="511" font-size="17" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#B5BAC4">id_facture</text>
+  <text x="1202" y="511" font-size="14" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#5A9BD8" text-anchor="end">PK</text>
+  <text x="978" y="541" font-size="17" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#B5BAC4">id_vente</text>
+  <text x="1202" y="541" font-size="14" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#4EBFC9" text-anchor="end">FK</text>
+  <text x="978" y="571" font-size="17" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#B5BAC4">numéro</text>
+  <text x="978" y="601" font-size="17" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#B5BAC4">date</text>
+  <text x="978" y="631" font-size="17" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#B5BAC4">montant</text>
+  <text x="60" y="690" font-size="16" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" fill="#7C818C">PK primary key · FK foreign key</text>
+</svg>

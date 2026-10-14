@@ -1,3 +1,4 @@
+import { OrgLogo } from "@/components/ui/OrgLogo";
 import styles from "./SideMeta.module.css";
 
 export type SideBlock = {
@@ -6,6 +7,8 @@ export type SideBlock = {
   mono?: boolean;
   /** Lien externe (ex. dépôt GitHub) */
   href?: string;
+  /** Logo de la structure, affiché au-dessus de la valeur */
+  logo?: string;
 };
 
 type SideMetaProps = {
@@ -23,6 +26,7 @@ export function SideMeta({ blocks }: SideMetaProps) {
       {blocks.map((b) => (
         <div key={b.label} className={styles.block}>
           <div className={styles.label}>{b.label}</div>
+          {b.logo ? <OrgLogo src={b.logo} /> : null}
           <div className={b.mono ? `${styles.value} ${styles.mono}` : styles.value}>
             {b.href ? (
               <a href={b.href} target="_blank" rel="noopener noreferrer" className={styles.link}>

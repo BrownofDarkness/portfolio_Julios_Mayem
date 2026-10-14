@@ -8,7 +8,6 @@
     "about": "About",
     "skills": "Skills",
     "publications": "Publications",
-    "distinctions": "Awards",
     "contact": "Contact",
     "search": "Search",
     "changeLanguage": "Change language"
@@ -52,8 +51,6 @@
     "publicationsTitle": "Publications",
     "publicationsSubtitle": "Articles, experience reports and technology-watch notes drawn from the projects I work on.",
     "publicationsAside": "First three pieces · in preparation",
-    "distinctionsTitle": "Awards",
-    "distinctionsAside": "Three · academic & community",
     "contactTitle": "Contact",
     "contactAside": "Yaoundé, Cameroon",
     "skillsTitle": "Skills",
@@ -85,6 +82,7 @@
       {
         "level": "L3",
         "year": "2024",
+        "logo": "/logos/iuste.png",
         "title": "Professional bachelor's — software engineering",
         "school": "IUSTE, Yaoundé",
         "detail": "Highest honours · ranked 1st / 25"
@@ -102,30 +100,6 @@
         "title": "DUT — computer engineering (1st year)",
         "school": "IUT of Ngaoundéré",
         "detail": "Presidential excellence award"
-      }
-    ]
-  },
-  "distinctions": {
-    "items": [
-      {
-        "label": "Presidential award",
-        "title": "Academic excellence — 1st year",
-        "year": "2021",
-        "issuer": "Republic of Cameroon",
-        "country": "CM"
-      },
-      {
-        "label": "Presidential award",
-        "title": "Academic excellence — 2nd year",
-        "year": "2022",
-        "issuer": "Republic of Cameroon",
-        "country": "CM"
-      },
-      {
-        "label": "3rd place — GDG Ngaoundéré",
-        "title": "Quiz — Google ecosystem & AI",
-        "year": "2022",
-        "issuer": "Google Developer Group Ngaoundéré"
       }
     ]
   },

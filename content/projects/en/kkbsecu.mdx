@@ -10,9 +10,10 @@ badges:
   - { label: "Thesis 19/20", variant: "gold" }
   - { label: "In production", variant: "cyan" }
 metrics:
-  - { value: "> 95 %", label: "Recognition" }
+  - { value: "Real-time", label: "Recognition" }
   - { value: "HD", label: "Camera" }
 privateCode: true
+logo: "/logos/bksquare.png"
 order: 1
 ---
 
@@ -40,11 +41,12 @@ me keep the code readable despite the rapid iterations the company
 was asking for.
 
 <Figure
+  src="/projects/kkbsecu-pipeline-en.svg"
+  alt="Six-stage KKBSECU pipeline: HD camera, OpenCV preprocessing, face detection, recognition, access decision, local and Firebase logging, with a control loop"
   ratio="inline"
   num="02"
-  caption="Simplified software architecture — acquisition, detection, recognition, logging.">
-  Pipeline diagram: camera capture → OpenCV processing → Firebase sync.
-</Figure>
+  caption="KKBSECU pipeline, from camera capture to event logging."
+/>
 
 The system was defended as an end-of-degree thesis, **rated 19/20
 and named best defence project**. It's now in internal use at

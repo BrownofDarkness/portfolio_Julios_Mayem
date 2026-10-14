@@ -24,6 +24,10 @@ export const projectSchema = z.object({
   /** Dépôt public — ou privateCode: true pour un projet confidentiel */
   repo: z.string().url().optional(),
   privateCode: z.boolean().default(false),
+  /** Site en ligne du projet (lien « Voir le site ») */
+  site: z.string().url().optional(),
+  /** Logo de la structure (depuis /public), affiché dans le contexte */
+  logo: z.string().optional(),
   stack: z.array(z.string()).default([]),
   badges: z
     .array(

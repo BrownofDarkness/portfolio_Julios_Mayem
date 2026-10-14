@@ -54,7 +54,6 @@ export function personSchema(locale: Locale) {
     award: [
       "Prime présidentielle d'excellence — Licence 1 (2021)",
       "Prime présidentielle d'excellence — Licence 2 (2022)",
-      "3e place — Quiz IA et écosystème Google, GDG Ngaoundéré (2022)",
     ],
     knowsAbout: [
       "Computer Vision",
